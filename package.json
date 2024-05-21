@@ -1,0 +1,25 @@
+{
+  "name": "saxophone-hero",
+  "version": "1.0.0",
+  "description": "software for Sky Macklay's saxophone quartet",
+  "main": "SaxHeroServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasoncharney/Saxophone-Hero.git"
+  },
+  "author": "Jason Charney",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jasoncharney/Saxophone-Hero/issues"
+  },
+  "homepage": "https://github.com/jasoncharney/Saxophone-Hero#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "node-osc": "^9.1.1",
+    "socket.io": "^4.7.5"
+  }
+}
