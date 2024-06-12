@@ -27,9 +27,7 @@ var client = io.of('/client');
 var saxio = socket(saxPlayer);
 var saxUser = saxio.of('/saxUser');
 
-
-
-var serverStatus = 0;
+var serverStatus = 0; //initialize server
 
 var oscServer = new osc.Server(connectSettings.maxSendPort, connectSettings.hostIP);
 var oscClient = new osc.Client(connectSettings.hostIP, connectSettings.maxListenPort);
@@ -45,7 +43,8 @@ var saxIDs = [-2, -2, -2, -2]; //-1 indicates no assignment yet
 //run at startup:
 console.clear();
 serverStatus = 1;
-console.log('Sax Hero Server Running:' + '\n' + connectSettings.hostIP + ':' + connectSettings.expressPort);
+console.log('Sax Hero Server Running:' + '\n' + 'Audience URL: ' + connectSettings.hostIP + ':' + connectSettings.expressPort);
+console.log( 'Player URL: ' + connectSettings.hostIP + ':' + connectSettings.saxPlayerPort);
 
 //Max should be started already. Tell Max the server is running - 200 ms after server starts.
 setTimeout(function () {
@@ -72,7 +71,7 @@ oscServer.on('/reset', function (msg){
 //the performer triggers "CHOOSE PLAYER!" to appear on the screen
 
 oscServer.on('/choosePlayer', function(msg){
-    console.log(msg);
+    client.emit('choosePlayer');
 });
 
 oscServer.on('/hi', function(msg){

@@ -1,7 +1,7 @@
 {
-	"hostIP": "192.168.0.77",
+	"hostIP": "192.168.0.76",
 	"expressPort": 3000,
-	"maxSendPort": 3336,
+	"maxSendPort": 3337,
 	"maxListenPort": 3338,
 	"saxPlayerPort": 4994
 }
