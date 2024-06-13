@@ -1,5 +1,5 @@
 var titleDisplay = 'SAXOPHONE HERO!' + '\n' + '\n' + 'Tap anywhere to join.'
-var displayInstruction = 'Turn up your volume.' + '\n' + '\n' + 'Wait for instructions.';
+var displayInstruction = 'Wait for instructions.';
 var orientationInstruction = 'Turn to landscape mode!';
 
 function welcomeScreen() {
@@ -27,13 +27,6 @@ function welcomeScreen() {
     }
 
     if (initialized == true && choosePlayerStatus == 1) {
-        sopranoButton.show();
-        sopranoButton.mousePressed(console.log('soprano'));
-
-        altoButton.show();
-        tenorButton.show();
-        bariButton.show();
-
 
         // const sopranoButton = document.createElement('button');
         // sopranoButton.textContent = 'Soprano';

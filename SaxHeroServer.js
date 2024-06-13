@@ -35,6 +35,11 @@ var oscClient = new osc.Client(connectSettings.hostIP, connectSettings.maxListen
 var userIDs = [];
 var numUsers;
 
+var sopranoIDs = [];
+var altoIDs = [];
+var tenorIDs = [];
+var bariIDs = [];
+
 //track the user ids for sax players who have joined and ID'd themselves.
 //Soprano = 0, Alto = 1, Tenor = 2, Bari = 3.
 
@@ -44,7 +49,7 @@ var saxIDs = [-2, -2, -2, -2]; //-1 indicates no assignment yet
 console.clear();
 serverStatus = 1;
 console.log('Sax Hero Server Running:' + '\n' + 'Audience URL: ' + connectSettings.hostIP + ':' + connectSettings.expressPort);
-console.log( 'Player URL: ' + connectSettings.hostIP + ':' + connectSettings.saxPlayerPort);
+console.log('Player URL: ' + connectSettings.hostIP + ':' + connectSettings.saxPlayerPort);
 
 //Max should be started already. Tell Max the server is running - 200 ms after server starts.
 setTimeout(function () {
@@ -54,27 +59,31 @@ setTimeout(function () {
 //Tell Max the server is no longer running.
 process.on('SIGINT', closeServer);
 
-function closeServer(){
+function closeServer() {
     serverStatus = 0;
     oscClient.send('/serverStatus', serverStatus);
-    setTimeout(function(){
+    setTimeout(function () {
         process.exit(0);
-    },100);
+    }, 100);
 }
 
 //LOOK: OSC Listeners from Max - control the server from the Max app.
 
-oscServer.on('/reset', function (msg){
-//reset the game! Kick everyone off.
+oscServer.on('/reset', function (msg) {
+    //reset the game! Kick everyone off.
 });
 
 //the performer triggers "CHOOSE PLAYER!" to appear on the screen
 
-oscServer.on('/choosePlayer', function(msg){
+oscServer.on('/choosePlayer', function (msg) {
     client.emit('choosePlayer');
 });
 
-oscServer.on('/hi', function(msg){
+oscServer.on('/phrase', function (msg){
+    client.emit('phrase',msg);
+});
+
+oscServer.on('/hi', function (msg) {
     client.emit('hi');
 });
 
@@ -83,42 +92,56 @@ oscServer.on('/hi', function(msg){
 client.on('connection', onConnect);
 saxUser.on('connection', onSaxPlayerConnect);
 
-function onSaxPlayerConnect(socket){
-    socket.on('myVoice', function(msg){
-        if (msg == 'soprano'){
+function onSaxPlayerConnect(socket) {
+    socket.on('myVoice', function (msg) {
+        if (msg == 'soprano') {
             saxIDs[0] = socket.id;
         }
-        if (msg == 'alto'){
+        if (msg == 'alto') {
             saxIDs[1] = socket.id;
         }
-        if (msg == 'tenor'){
+        if (msg == 'tenor') {
             saxIDs[2] = socket.id;
         }
-        if (msg == 'bari'){
+        if (msg == 'bari') {
             saxIDs[3] = socket.id;
         }
-    oscClient.send('/saxIDs',saxIDs);
+        oscClient.send('/saxIDs', saxIDs);
 
     });
 
-    socket.on('disconnect', function(){
+    socket.on('disconnect', function () {
         if (saxIDs.indexOf(socket.id) !== -1) {
             let removePlayer = saxIDs.indexOf(socket.id);
             saxIDs[removePlayer] = -2;
-            oscClient.send('/saxIDs',saxIDs);
+            oscClient.send('/saxIDs', saxIDs);
         }
     });
 }
 
-function onConnect(socket){
+function onConnect(socket) {
     //user must be initialized through their first tap on the screen 
     //socket.on('initializeMe', function (msg){
-        userIDs.push(socket.id);
-        numUsers = userIDs.length;
-        console.log('number of users: ' + numUsers);
-        oscClient.send('/numUsers', numUsers);
+    userIDs.push(socket.id);
+    numUsers = userIDs.length;
+    console.log('number of users: ' + numUsers);
+    oscClient.send('/numUsers', numUsers);
     //});
-
+    socket.on('myTeam', function (msg) {
+        if (msg = 'soprano') {
+            sopranoIDs.push(socket.id);
+            oscClient.send('/sopranoIDs',sopranoIDs);
+        }
+        if (msg = 'alto') {
+            altoIDs.push(socket.id);
+        }
+        if (msg = 'tenor') {
+            tenorIDs.push(socket.id);
+        }
+        if (msg = 'bari') {
+            bariIDs.push(socket.id);
+        }
+    });
     socket.on('disconnect', function () {
         if (userIDs.indexOf(socket.id) !== -1) {
             userIDs.splice(userIDs.indexOf(socket.id), 1);
@@ -126,7 +149,7 @@ function onConnect(socket){
         numUsers = userIDs.length;
         console.log('number of users: ' + numUsers);
         oscClient.send('/numberofUsers', numUsers);
-});
+    });
     //FIXME: If people disconnect intentionally or not, are they "out of the game"? How does the system compensate?
 
 }

@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="libraries/p5.js"></script>
+    <script src="libraries/scenemanager.js"></script>
     <script src="libraries/socket.io.min.js"></script>
     <!-- <script src="libraries/p5.sound.js"></script> -->
     <!-- <script src="libraries/p5.func.js"></script> -->
@@ -19,6 +20,12 @@
     <script src="libraries/StartAudioContext.js"></script>
     <script src="WelcomeScreen.js"></script>
     <script src="SaxHero.js"></script>
+    <script>
+        //keep the page from scrolling around when you move your fingers around
+        document.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+        }, { passive: false });
+    </script>
     <style type="text/css">
         body {
             margin: 0;
@@ -37,9 +44,9 @@
             outline: 0;
         }
 
-        button{
-            font-size:xx-large;
-            margin:4px 2px;
+        button {
+            font-size: xx-large;
+            margin: 4px 2px;
             text-align: center;
             align-items: center;
         }

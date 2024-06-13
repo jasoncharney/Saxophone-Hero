@@ -11,8 +11,6 @@ let choosePlayerStatus = 0; //brings up the buttons to select which team they're
 
 let shoeLimg, shoeRimg;
 
-let sopranoButton, altoButton, tenorButton, bariButton;
-
 let assignedTeam;
 
 let shoeL, shoeR;
@@ -20,23 +18,24 @@ let shoeL, shoeR;
 
 let touchArray = new Array(2); //only two touches on the screen at a time, please!
 
+let canvas;//reference the created canvas for using JS without p5
+
 function preload() {
     bg = loadImage('assets/grass.jpeg');
     shoeLimg = loadImage('assets/shoeL.png');
     shoeRimg = loadImage('assets/shoeR.png');
-    shoeL = new Tone.Player('assets/leftStep.wav').toDestination();
-    shoeR = new Tone.Player('assets/rightStep.wav').toDestination();
-    shoeL.autostart = true;
+    //soundFormats('wav', 'mp3');
+    //shoeL = loadSound('assets/leftStep');
 }
 
 function setup() {
     frameRate(60);
-    buttonSetup();
-    createCanvas(window.innerWidth, window.innerHeight);
-    
+    canvas = createCanvas(window.innerWidth, window.innerHeight);
+    canvas.position(0, 0);
+
     bg.resize(window.innerWidth, 0);
-    shoeLimg.resize(50,0);
-    shoeRimg.resize(50,0);
+    shoeLimg.resize(50, 0);
+    shoeRimg.resize(50, 0);
 
     centerX = width / 2;
     centerY = height / 2;
@@ -44,13 +43,12 @@ function setup() {
     socket.on('hi', function () {
         console.log('hi');
     });
-    noLoop();
 }
 
 function draw() {
     background(0);
     imageMode(CORNER);
-    image(bg,0,0);
+    image(bg, 0, 0);
     for (let touch of touches) {
         if (touch.x < centerX) {
             imageMode(CENTER);
@@ -68,22 +66,57 @@ function draw() {
 
 socket.on('choosePlayer', function (msg) {
     choosePlayerStatus = 1;
+    buttonSetup();
 });
 
+socket.on('phrase', function (msg) {
+    Tone.Transport.bpm.value = 120;
+    console.log(Tone.Transport.position);
+    Tone.Transport.stop();
+    Tone.Transport.start();
+    Tone.Transport.scheduleRepeat(function (time) {
+        //gridNoteSynth.triggerAttackRelease("C4", "16n", time);
+        console.log('hi');
+    }, "4n");
+});
+//test scroller!!!
+
+
+// var gridNoteSynth = new Tone.MonoSynth({
+//     "oscillator": {
+//         "type": "pulse"
+//     },
+//     "filterEnvelope": {
+//         "attack": 0.01,
+//         "sustain": 1,
+//         "release": 0.66,
+//         "octaves": 8
+//     },
+//     "envelope": {
+//         attack: 0.005,
+//         release: 0.05
+//     }
+// },).toDestination();
+
+function logPosition() {
+    console.log(Tone.Transport.position);
+}
 // function touchStarted() {
 //     Tone.loaded().then(() => {
 //         shoeL.start();
 //     });
 // }
 
-addEventListener('touchstart', function (event) {
-    if (initialized == false){
+
+addEventListener('touchstart', async () => {
+    if (initialized == false) {
+        await Tone.start();
         initialized = true;
+        console.log('initialized');
     }
 
-    if (audioContextStarted == true) {
-        shoeL.start();
-        console.log(Tone.Transport.position);
+    if (initialized == true) {
+        //shoeL.play();
         // if (event.touches[0].clientX < centerX) { //LOOK: figured this one out....now to limit the number in the X array.
         //     console.log('hi');
         //     // }
@@ -121,55 +154,51 @@ function htmlaudio() {
 //     console.log(deviceOrientation);
 // }
 
-function initializeAudio() {
-    StartAudioContext(Tone.context);
-    Tone.context.resume();
-    Tone.Transport.start();
-    audioContextStarted = true;
-    //htmlaudio();
-}
+// function initializeAudio() {
+//     StartAudioContext(Tone.context);
+//     audioContextStarted = true;
+//     htmlaudio();
+// }
 function buttonSetup() {
 
-    //TODO: Script these NOT through P5's button functions...need more specific event listeners.
-    // initButton = createButton('click');
+    //TODO: have these reaappear if the game has restarted!!! maybe just at the end of each level?
 
-    // initButton.mousePressed(initButtonCallback);
-
-    // initButton.position(centerX, centerY);
-
-    // if (initialized == false){
-    //     initButton.show();
-    // }
     sopranoButton = createButton('Team Soprano', 'soprano');
     sopranoButton.size(width, height * 0.25);
     sopranoButton.position(0, 0);
-
+    sopranoButton.id('sopranoButton');
 
     altoButton = createButton('Team Alto', 'alto');
     altoButton.size(width, height * 0.25);
     altoButton.position(0, height * 0.25);
+    altoButton.id('altoButton');
 
     tenorButton = createButton('Team Tenor', 'tenor');
     tenorButton.size(width, height * 0.25);
     tenorButton.position(0, height * 0.5);
+    tenorButton.id('tenorButton');
 
     bariButton = createButton('Team Bari', 'bari');
     bariButton.size(width, height * 0.25);
     bariButton.position(0, height * 0.75);
+    bariButton.id('bariButton');
 
-    sopranoButton.hide();
-    altoButton.hide();
-    tenorButton.hide();
-    bariButton.hide();
-
-    sopranoButton.mousePressed(console.log('soprano'));
-
+    document.getElementById('sopranoButton').addEventListener('click', function () { teamAssign('soprano'); });
+    document.getElementById('altoButton').addEventListener('click', function () { teamAssign('alto'); });
+    document.getElementById('tenorButton').addEventListener('click', function () { teamAssign('tenor'); });
+    document.getElementById('bariButton').addEventListener('click', function () { teamAssign('bari'); });
 }
-
 
 function teamAssign(_team) {
     assignedTeam = _team;
     console.log(assignedTeam);
+
+    socket.emit('myTeam', assignedTeam);
+    //assign the teams and then remove all the buttons.
+    document.getElementById('sopranoButton').remove();
+    document.getElementById('altoButton').remove();
+    document.getElementById('tenorButton').remove();
+    document.getElementById('bariButton').remove();
 }
 
 
