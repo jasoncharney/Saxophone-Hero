@@ -33,7 +33,8 @@ function setup() {
     canvas = createCanvas(window.innerWidth, window.innerHeight);
     canvas.position(0, 0);
 
-    bg.resize(window.innerWidth, 0);
+    bg.resize(window.innerWidth, window.innerHeight);
+    
     shoeLimg.resize(50, 0);
     shoeRimg.resize(50, 0);
 
@@ -59,7 +60,9 @@ function draw() {
             image(shoeRimg, touch.x, touch.y);
         }
     }
-    centerLine();
+    if (initialized == true){
+        centerLine();
+    }
     welcomeScreen();
 }
 //LOOK: Listeners
