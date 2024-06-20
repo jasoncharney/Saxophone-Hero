@@ -2,16 +2,16 @@
 let initialized = 0;
 let progress = 0;
 
-let totalTicks = soprano.endOfTrackTicks;
+let totalTicks = soprano1.tracks[0].endOfTrackTicks;
 let ticksY; //the height divided by number of ticks: convert ticks to vertical pixels.
 let crossMark; //the point at which the lines cross the playhead, where you tap each thumb.
-let notesObject = soprano.notes;
+let notesObject = soprano1.tracks[0].notes;
 let notesConstruct = [];
 let leftTrack, rightTrack; //empty graphics buffers for the scrolling notes
 
 //the midi note numbers that correspond to each thumb (left or right)
-let noteL = 60;
-let noteR = 61;
+let noteL = 72;
+let noteR = 69;
 
 let hashWidth; //the width of the graphics buffer to draw hashmarks
 
@@ -59,7 +59,7 @@ function mousePressed() {
         Tone.start();
         Tone.Transport.bpm.value = 120;
         Tone.Transport.start();
-        //playLoop.start(0);
+        playLoop.start(0);
         initialized = 1;
     }
     if (initialized == 1) {
@@ -131,13 +131,13 @@ function createNoteSquares() {
 function wrapNoteSquares(){//wrap the whole image buffer around to follow the progress
 push();
 translate(0,progress*height);
-image(leftTrack,width*0.125,0);
-image(rightTrack,width*0.625,0);
+image(leftTrack,width*0.33,0);
+image(rightTrack,width*0.66,0);
 pop();
 push();
 translate(0,progress*height);
-image(leftTrack,width*0.125,-height);
-image(rightTrack,width*0.625,-height); //wrap the image around!
+image(leftTrack,width*0.33,-height);
+image(rightTrack,width*0.66,-height); //wrap the image around!
 pop();
 }
 //draw the hashmarks as dotted lines like on a football field.
