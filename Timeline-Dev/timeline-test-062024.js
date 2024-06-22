@@ -16,10 +16,11 @@ Tone.Transport.loop = true;
 let playWindowLength =  Tone.Time("1m").toSeconds(); //adjust the window length
 
 console.log(playWindowLength);
+console.log(Tone.Transport.PPQ);
 
 let printPosition = new Tone.Loop(function (time) {
     console.log(Tone.Transport.position);
-}, "4n").start(0);
+}, "32n").start(0);
 
 
 function setup() {
@@ -42,10 +43,11 @@ function draw() {
 function mousePressed() {
     if (initialized == 0) {
         Tone.start();
-
+        Tone.Transport.PPQ.value = 480;
         Tone.Transport.start();
         //playLoop.start(0);
         initialized = 1;
+        console.log(Tone.Transport.PPQ);
     }
     if (initialized == 1) {
         calcProgress();

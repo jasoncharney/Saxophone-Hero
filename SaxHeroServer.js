@@ -21,6 +21,7 @@ var server = app.listen(connectSettings.expressPort);
 //sax players connect on separate port
 var saxPlayer = saxApp.listen(connectSettings.saxPlayerPort);
 
+//set up WebSockets
 var io = socket(server);
 var client = io.of('/client');
 
@@ -28,17 +29,29 @@ var saxio = socket(saxPlayer);
 var saxUser = saxio.of('/saxUser');
 
 var serverStatus = 0; //initialize server
+var choosePlayerFlag = 0; //toggle this after the player choice has been initiated but before the game starts
 
 var oscServer = new osc.Server(connectSettings.maxSendPort, connectSettings.hostIP);
 var oscClient = new osc.Client(connectSettings.hostIP, connectSettings.maxListenPort);
 
+//all audience players connected
 var userIDs = [];
 var numUsers;
 
+//audience players sorted into different groups
 var sopranoIDs = [];
 var altoIDs = [];
 var tenorIDs = [];
 var bariIDs = [];
+
+//let's try doing this in a single JS object.
+
+let teamIDs = {
+    "soprano":[],
+    "alto":[],
+    "tenor":[],
+    "bari":[]
+}
 
 //track the user ids for sax players who have joined and ID'd themselves.
 //Soprano = 0, Alto = 1, Tenor = 2, Bari = 3.
@@ -69,23 +82,36 @@ function closeServer() {
 
 //LOOK: OSC Listeners from Max - control the server from the Max app.
 
-oscServer.on('/reset', function (msg) {
-    //reset the game! Kick everyone off.
-});
+// oscServer.on('/reset', function (msg) {
+//     //reset the game! Kick everyone off.
+// });
 
 //the performer triggers "CHOOSE PLAYER!" to appear on the screen
 
 oscServer.on('/choosePlayer', function (msg) {
-    client.emit('choosePlayer');
+    choosePlayerFlag = 1; //new players joining will immediately get the choose player buttons
+    client.emit('choosePlayer', choosePlayerFlag);
 });
 
-oscServer.on('/phrase', function (msg){
-    client.emit('phrase',msg);
+// oscServer.on('/level', function (msg) {
+//     client.emit('level', msg);
+// });
+
+oscServer.on('/level', function (msg) {
+    for (let i = 0; i < saxIDs.length; i++) {
+        saxUser.to(saxIDs[i]).emit('changeLevel', msg[i+1]);//+1 because the first part of msg is address
+    }
+});
+
+oscServer.on('/transportState', function (msg){
+    let transportState = msg[1]
+    saxUser.emit('transportState', transportState);
 });
 
 oscServer.on('/hi', function (msg) {
     client.emit('hi');
 });
+
 
 //LOOK: Websocket Connections
 
@@ -109,6 +135,13 @@ function onSaxPlayerConnect(socket) {
         oscClient.send('/saxIDs', saxIDs);
 
     });
+    socket.on('sentTime',function(msg){
+        const serverTime = Date.now();
+        const {sentTime} = JSON.parse(msg);
+        const latency = serverTime - sentTime;
+        console.log(latency);
+        saxUser.to(socket.id).emit('latency', latency);
+    });
 
     socket.on('disconnect', function () {
         if (saxIDs.indexOf(socket.id) !== -1) {
@@ -121,32 +154,31 @@ function onSaxPlayerConnect(socket) {
 
 function onConnect(socket) {
     //user must be initialized through their first tap on the screen 
-    //socket.on('initializeMe', function (msg){
-    userIDs.push(socket.id);
-    numUsers = userIDs.length;
-    console.log('number of users: ' + numUsers);
-    oscClient.send('/numUsers', numUsers);
-    //});
+    socket.on('initializeMe', function (msg) {
+        userIDs.push(socket.id);
+        numUsers = userIDs.length;
+        console.log('number of users: ' + numUsers);
+        oscClient.send('/numUsers', numUsers);
+        client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the choose players button already triggered, bring up selection screen
+    });
     socket.on('myTeam', function (msg) {
-        if (msg = 'soprano') {
-            sopranoIDs.push(socket.id);
-            oscClient.send('/sopranoIDs',sopranoIDs);
-        }
-        if (msg = 'alto') {
-            altoIDs.push(socket.id);
-        }
-        if (msg = 'tenor') {
-            tenorIDs.push(socket.id);
-        }
-        if (msg = 'bari') {
-            bariIDs.push(socket.id);
-        }
+        let team = msg;
+        teamIDs[team].push(socket.id);
+        oscClient.send('/teamIDs', JSON.stringify(teamIDs));
     });
     socket.on('disconnect', function () {
         if (userIDs.indexOf(socket.id) !== -1) {
             userIDs.splice(userIDs.indexOf(socket.id), 1);
         }
         numUsers = userIDs.length;
+        for (let key in teamIDs){
+            let index = teamIDs[key].indexOf(socket.id);
+            if (index !== -1){
+                teamIDs[key].splice(index,1);
+                break; //assuming each user can only be in one team
+            }
+        }
+        oscClient.send('/teamIDs', JSON.stringify(teamIDs));
         console.log('number of users: ' + numUsers);
         oscClient.send('/numberofUsers', numUsers);
     });
