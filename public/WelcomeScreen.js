@@ -38,6 +38,9 @@ function playerHUD() {
             levelDisplay(level);
         }
     }
+    if (Tone.Transport.state == 'started' && accuracy != undefined){
+        accuracyDisplay(accuracy);
+    }
 
 }
 
@@ -65,4 +68,12 @@ function timeDisplay(_currentPosition){
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
     text(_currentPosition,centerX,centerY);
+}
+
+function accuracyDisplay(_accuracy){
+    textSize(hudSize);
+    stroke(0);
+    strokeWeight(hudStrokeWeight);
+    textAlign(CENTER);
+    text((_accuracy*100).toString()+'%', centerX, height-0.5*hudSize);
 }

@@ -26,7 +26,6 @@ metronomeSynth.release = 0.01;
 function preload() {
     for (let i = 0; i < numLevels; i++) {
         scorePages[i] = loadImage('assets/' + i.toString() + '.png');
-        console.log(i.toString());
     }
 }
 
@@ -68,6 +67,7 @@ socket.on('latency', function(msg){
 });
 
 socket.on('changeLevel', function (msg) {
+    console.log(msg);
     currentLevel = msg;
 });
 

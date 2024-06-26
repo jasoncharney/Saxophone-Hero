@@ -217,6 +217,6 @@ function onConnect(socket) {
         console.log('number of users: ' + numUsers);
         oscClient.send('/numberofUsers', numUsers);
     });
-    //FIXME: If people disconnect intentionally or not, are they "out of the game"? How does the system compensate?
+    //TODO: If people disconnect intentionally or not, are they "out of the game"? How does the system compensate?
 
 }

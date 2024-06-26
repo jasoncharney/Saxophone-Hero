@@ -64,7 +64,7 @@ class Thumbline {
     draw(_hashWidth) {
         fill(255);
         rectMode(CENTER);
-        setLineDash([]);
+        setLineDash([]); //TODO: as score gets long, will it be more efficient to only render hashes on screen? Or does it not matter?
         rect(this.rectCenter*width, this.ypos, _hashWidth, this.rectHeight);
     }
 }
