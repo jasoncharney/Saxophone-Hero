@@ -2,7 +2,7 @@
 	"name" : "SaxophoneHero-Max",
 	"version" : 1,
 	"creationdate" : 3799075969,
-	"modificationdate" : 3799160745,
+	"modificationdate" : 3802217162,
 	"viewrect" : [ -1627.0, 87.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -19,6 +19,10 @@
 		}
 ,
 		"code" : 		{
+			"datenow.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
 
 		}
 

@@ -1,6 +1,8 @@
 var titleDisplay = 'SAXOPHONE HERO!';
 var displayInstruction = 'Wait for instructions.';
 var orientationInstruction = 'Turn to landscape mode!';
+var hudStrokeWeight = 2;
+var hudSize = 0.02;
 
 function playerHUD() {
     if (initialized == false) {
@@ -25,24 +27,42 @@ function playerHUD() {
             text(orientationInstruction, centerX, centerY + textSize * 2);
         }
     }
-
-    if (initialized == true && choosePlayerStatus == 1) {
-        playerSize = width * 0.02;
-        textSize(playerSize);
-        stroke(0);
-        strokeWeight(5);
-        textAlign(LEFT);
-        text('team '+ assignedTeam,10,height-0.5*playerSize);
-        if (level );
+    if (initialized && assignedTeam){
+        teamDisplay(assignedTeam);
     }
+    if (initialized == true && choosePlayerStatus == 1) {
+        if (displayTime){
+            timeDisplay(Tone.Transport.position);
+        }
+             if (level !== -1){
+            levelDisplay(level);
+        }
+    }
+
 }
 
 function levelDisplay(_level){
-    levelSize = width * 0.02;
-    textSize(levelSize);
+    textSize(hudSize);
     stroke(0);
-    strokeWeight(5);
+    strokeWeight(hudStrokeWeight);
     textAlign(RIGHT);
-    let levelString = 'Level ' + _level.toString();
-    text(levelString, width-textWidth(textWidth(levelString),height-0.5*levelSize));
+    let levelString = 'Level ' + _level;
+    text(levelString, width,height-0.5*hudSize);
+}
+
+function teamDisplay(_assignedTeam){
+    textSize(hudSize);
+    stroke(0);
+    strokeWeight(hudStrokeWeight);
+    textAlign(LEFT);
+    text('team '+ _assignedTeam,10,height-0.5*hudSize);
+
+}
+
+function timeDisplay(_currentPosition){
+    textSize(hudSize);
+    stroke(0);
+    strokeWeight(hudStrokeWeight);
+    textAlign(CENTER);
+    text(_currentPosition,centerX,centerY);
 }

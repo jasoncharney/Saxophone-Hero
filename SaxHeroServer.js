@@ -47,10 +47,17 @@ var bariIDs = [];
 //let's try doing this in a single JS object.
 
 let teamIDs = {
-    "soprano":[],
-    "alto":[],
-    "tenor":[],
-    "bari":[]
+    "soprano": [],
+    "alto": [],
+    "tenor": [],
+    "bari": []
+}
+
+let teamLevels = {
+    "soprano": -1,
+    "alto": -1,
+    "tenor": -1,
+    "bari": -1
 }
 
 //track the user ids for sax players who have joined and ID'd themselves.
@@ -87,7 +94,11 @@ function closeServer() {
 // });
 
 //the performer triggers "CHOOSE PLAYER!" to appear on the screen
-
+oscServer.on('/ping', function (msg){
+    //console.log(msg[2]);
+    //console.log(Date.now()-msg[2]);
+    client.emit('ping', msg[1]-Date.now());
+});
 oscServer.on('/choosePlayer', function (msg) {
     choosePlayerFlag = 1; //new players joining will immediately get the choose player buttons
     client.emit('choosePlayer', choosePlayerFlag);
@@ -98,14 +109,37 @@ oscServer.on('/choosePlayer', function (msg) {
 // });
 
 oscServer.on('/level', function (msg) {
+    let teamLevels = JSON.parse(msg[1]); //turn the levels into a JSON object
+    if (choosePlayerFlag == 1) { //only attempt to send messages if players have been told to join teams
+        updateLevelsAndNotify(teamLevels);
+    }
+
     for (let i = 0; i < saxIDs.length; i++) {
-        saxUser.to(saxIDs[i]).emit('changeLevel', msg[i+1]);//+1 because the first part of msg is address
+        saxUser.to(saxIDs[i]).emit('changeLevel', msg[i + 1]);//+1 because the first part of msg is address
     }
 });
 
-oscServer.on('/transportState', function (msg){
+function updateLevelsAndNotify(newLevels){
+    for (let team in newLevels){
+        if (teamLevels.hasOwnProperty(team)){
+            teamLevels[team] = newLevels[team];
+            sendLevelUpdateToTeam(team);
+        }
+    }
+}
+function sendLevelUpdateToTeam(team){
+    if (teamLevels.hasOwnProperty(team)){
+        let level = teamLevels[team];
+        teamIDs[team].forEach(userID =>{
+            client.to(userID).emit('level', level);
+        });
+    }
+}
+
+oscServer.on('/transportState', function (msg) {
     let transportState = msg[1]
     saxUser.emit('transportState', transportState);
+    client.emit('transportState', transportState);
 });
 
 oscServer.on('/hi', function (msg) {
@@ -135,9 +169,9 @@ function onSaxPlayerConnect(socket) {
         oscClient.send('/saxIDs', saxIDs);
 
     });
-    socket.on('sentTime',function(msg){
+    socket.on('sentTime', function (msg) {
         const serverTime = Date.now();
-        const {sentTime} = JSON.parse(msg);
+        const { sentTime } = JSON.parse(msg);
         const latency = serverTime - sentTime;
         console.log(latency);
         saxUser.to(socket.id).emit('latency', latency);
@@ -165,16 +199,17 @@ function onConnect(socket) {
         let team = msg;
         teamIDs[team].push(socket.id);
         oscClient.send('/teamIDs', JSON.stringify(teamIDs));
+        client.to(socket.id).emit('level', teamLevels[team]); //send the current level of that team to them
     });
     socket.on('disconnect', function () {
         if (userIDs.indexOf(socket.id) !== -1) {
             userIDs.splice(userIDs.indexOf(socket.id), 1);
         }
         numUsers = userIDs.length;
-        for (let key in teamIDs){
+        for (let key in teamIDs) {
             let index = teamIDs[key].indexOf(socket.id);
-            if (index !== -1){
-                teamIDs[key].splice(index,1);
+            if (index !== -1) {
+                teamIDs[key].splice(index, 1);
                 break; //assuming each user can only be in one team
             }
         }

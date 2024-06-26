@@ -13,21 +13,53 @@ let shoeLimg, shoeRimg;
 
 let assignedTeam;
 
-let shoeL, shoeR;
+let shoeSampler;//object for holding shoe samples
+let shoeSize = 0.1; //the size of the shoe graphic is also the vertical area of the screen where a tap is counted as accurate.
 
-let crossMark; //the point at which the lines cross the playhead, where you tap each thumb
+//let shoeL, shoeR; //player objects for Tone
+
+let crossMark = window.innerHeight * 0.66; //the point at which the lines cross the playhead, where you tap each thumb
 
 let touchArray = new Array(2); //only two touches on the screen at a time, please!
 
 let canvas;//reference the created canvas for using JS without p5
 
+let level = -1; //the current level we're on!
+
+let displayTime = true; //draw the transport position at the bottom of the screen for troubleshooting
+
+let notesObject = soprano.notes; //reassign this from the single score file at team assignment time
+
+let thumblines = [];
+let playhead;
+let hashWidth;
+
+let secondsPerWindow = 4; //seconds of time displayed vertically
+
+//Metronome for testing
+let metronomeEnabled = true; //change to false to turn it off.
+const metronomeSynth = new Tone.MembraneSynth().toDestination();
+metronomeSynth.pitchDecay = 0;
+metronomeSynth.release = 0.01;
+
+
+console.log(notesObject);
+
 function preload() {
     bg = loadImage('assets/grass.jpeg');
     shoeLimg = loadImage('assets/shoeL.png');
     shoeRimg = loadImage('assets/shoeR.png');
+    shoeSampler = new Tone.Sampler({
+        urls: {
+            "C4": 'assets/leftStep.wav',
+            "C#4": 'assets/rightStep.wav'
+        }
+    }).toDestination();
     //soundFormats('wav', 'mp3');
     //shoeL = loadSound('assets/leftStep');
 }
+//LOOK: P5 Setup Function.
+
 
 function setup() {
     frameRate(60);
@@ -38,9 +70,11 @@ function setup() {
 
     bg.resize(window.innerWidth, window.innerHeight);
 
+    shoeSize = shoeSize * height;
+    hudSize = hudSize * width;
 
-    shoeLimg.resize(50, 0);
-    shoeRimg.resize(50, 0);
+    shoeLimg.resize(shoeSize, 0);
+    shoeRimg.resize(shoeSize, 0);
 
     centerX = width / 2;
     centerY = height / 2;
@@ -48,20 +82,65 @@ function setup() {
     crossMark = height * 0.66;
 
     initializeButton();
+    //set the static fields for the playhead and thumbline classes
+
+    let pixelsPerSecond = height / secondsPerWindow;
+    let zeroPoint = crossMark;
+    hashWidth = width * 0.33;
 
 
+    playhead = new Playhead(crossMark, window.innerHeight / secondsPerWindow);
 
-    //     socket.on('choosePlayer', function () {
-    //         console.log('Choose Player!');
-    //     });
+    playhead.reset();
+
+    for (let i = 0; i < notesObject.length; i++) {
+        thumblines.push(new Thumbline(notesObject[i].time, notesObject[i].duration, notesObject[i].midi, pixelsPerSecond, zeroPoint));
+    }
+    for (let thumbline of thumblines) {
+        thumbline.print();
+    }
+
 }
 
+//LOOK: P5 Draw function.
 
 function draw() {
     background(0);
     imageMode(CORNER);
     image(bg, 0, 0);
-    for (let touch of touches) {
+    if (initialized == true) {
+        crossMarkDraw();
+    }
+    if (Tone.Transport.state == 'started') {
+        //playhead.update(Tone.Transport.seconds);
+        //playhead.draw();
+        for (let thumbline of thumblines) {
+            thumbline.update(Tone.Transport.seconds);
+            thumbline.draw(hashWidth);
+        }
+    }
+    if (initialized == true) {
+        drawShoes();
+    }
+    playerHUD();
+
+}
+
+//Shoe draw and sound functions.
+function shoePlay(shoeSoundChoose) {
+    //play the left shoe sound if the touch is to the left of the center, otherwise play right
+    if (shoeSoundChoose < centerX) {
+        shoeSampler.triggerAttackRelease("C4", 0.5);
+    }
+    if (shoeSoundChoose >= centerX) {
+        shoeSampler.triggerAttackRelease("C#4", 0.5);
+    }
+}
+
+function drawShoes() {
+    //draw shoes for only the first two touches
+    let firstTwoTouches = touches.slice(0, 2);
+    for (let touch of firstTwoTouches) {
         if (touch.x < centerX) {
             imageMode(CENTER);
             image(shoeLimg, touch.x, touch.y);
@@ -71,12 +150,17 @@ function draw() {
             image(shoeRimg, touch.x, touch.y);
         }
     }
-    if (initialized == true) {
-        crossMarkDraw();
-    }
-    playerHUD();
 }
-
+function playMetronome(_status) {
+    if (_status == 1) {
+        Tone.Transport.scheduleRepeat((time) => {
+            metronomeSynth.triggerAttackRelease("A4", "8n", time);
+        }, "4n"); // "4n" is a quarter note, adjust as needed for different beat intervals
+    }
+    if (_status == 0) {
+        Tone.Transport.cancel();
+    }
+}
 //LOOK: Listeners
 
 socket.on('choosePlayer', function (msg) {
@@ -87,48 +171,60 @@ socket.on('choosePlayer', function (msg) {
     }
 });
 
-socket.on('phrase', function (msg) {
-    Tone.Transport.bpm.value = 120;
-    console.log(Tone.Transport.position);
-    Tone.Transport.stop();
-    Tone.Transport.start();
-    Tone.Transport.scheduleRepeat(function (time) {
-        //gridNoteSynth.triggerAttackRelease("C4", "16n", time);
-        console.log('hi');
-    }, "4n");
+socket.on('ping', function (msg){
+    console.log(msg);
+});
+socket.on('level', function (msg) {
+    level = msg;
+    setTransportPosition(level);
 });
 
-function logPosition() {
-    console.log(Tone.Transport.position);
+function setTransportPosition(_level) {
+    //set the transport position to a multiple of 8 (for which page we're on). TODO: get the victorylap logic in here though
+    newPosition = (_level * 8).toString() + ":0:0";
+    Tone.Transport.position = newPosition;
 }
-// function touchStarted() {
-//     Tone.loaded().then(() => {
-//         shoeL.start();
-//     });
-// }
 
+socket.on('transportState', function (msg) {
+    if (metronomeEnabled) {
+        playMetronome(msg);
+    }
+    if (msg == 1) {
+        Tone.Transport.start();
+    }
+    if (msg == 0) {
+        Tone.Transport.stop();
+        playhead.reset();
+    }
+});
 
 addEventListener('touchstart', function (event) {
-    let touchY = event.touches[0].clientY;
-
-    if (initialized == true) {
-        //shoeL.play();
-        // if (event.touches[0].clientX < centerX) { //LOOK: figured this one out....now to limit the number in the X array.
-        //     console.log('hi');
-        //     // }
+    let touch = event.touches[event.touches.length - 1];
+    if (initialized) {
+        shoePlay(touch.clientX);
     }
     //before even calculating accuracy, was the touch within the zone?
-    if (touchY > crossMark + 50 || touchY <= crossMark - 50) { //TODO: don't hard-code the zone - make percentage of screen
+    if (touch.clientY > crossMark + shoeSize || touch.clientY <= crossMark - shoeSize) {
         console.log('ouch');
     }
 });
 
-addEventListener('touchend', function (ev) {
-    console.log(touches);
+addEventListener('touchmove', function (event) {
+    let touch = event.touches;
+});
+
+addEventListener('touchend', function (event) {
+    let touch = event.touches;
 });
 
 
 //LOOK: Utilities
+
+
+function logPosition() {
+    console.log(Tone.Transport.position);
+}
+
 
 function crossMarkDraw() {
     strokeWeight(5);
@@ -156,8 +252,6 @@ function htmlaudio() {
 }
 
 function buttonSetup() {
-
-    //TODO: have these reaappear if the game has restarted!!! maybe just at the end of each level?
 
     sopranoButton = createButton('Team Soprano', 'soprano');
     sopranoButton.size(width, height * 0.25);
