@@ -62,8 +62,14 @@ let teamLevels = {
 
 //track the user ids for sax players who have joined and ID'd themselves.
 //Soprano = 0, Alto = 1, Tenor = 2, Bari = 3.
-
-var saxIDs = [-2, -2, -2, -2]; //-1 indicates no assignment yet
+// var saxIDs = [-2, -2, -2, -2]; //-1 indicates no assignment yet
+//new method: saxIDs should be a JS object. Initialize with nothing to start
+var saxIDs = {
+    "soprano":0,
+    "alto":0,
+    "tenor":0,
+    "bari":0
+}
 
 //run at startup:
 console.clear();
@@ -110,13 +116,13 @@ oscServer.on('/choosePlayer', function (msg) {
 
 oscServer.on('/level', function (msg) {
     let teamLevels = JSON.parse(msg[1]); //turn the levels into a JSON object
+    console.log(teamLevels);
     if (choosePlayerFlag == 1) { //only attempt to send messages if players have been told to join teams
         updateLevelsAndNotify(teamLevels);
     }
-
-    for (let i = 0; i < saxIDs.length; i++) {
-        saxUser.to(saxIDs[i]).emit('changeLevel', msg[i + 1]);//+1 because the first part of msg is address
-    }
+    // for (let i = 0; i < saxIDs.length; i++) {
+    //     saxUser.to(saxIDs[i]).emit('changeLevel', msg[i + 1]);//+1 because the first part of msg is address
+    // }
 });
 
 function updateLevelsAndNotify(newLevels){
@@ -127,23 +133,25 @@ function updateLevelsAndNotify(newLevels){
         }
     }
 }
+
 function sendLevelUpdateToTeam(team){
     if (teamLevels.hasOwnProperty(team)){
         let level = teamLevels[team];
         teamIDs[team].forEach(userID =>{
             client.to(userID).emit('level', level);
         });
-    }
+        let saxPlayer = saxIDs[team];
+            if (saxPlayer){
+                saxUser.to(saxPlayer).emit('level', level);
+                console.log(saxPlayer);
+            }
+        }
 }
 
 oscServer.on('/transportState', function (msg) {
     let transportState = msg[1]
     saxUser.emit('transportState', transportState);
     client.emit('transportState', transportState);
-});
-
-oscServer.on('/hi', function (msg) {
-    client.emit('hi');
 });
 
 
@@ -154,21 +162,10 @@ saxUser.on('connection', onSaxPlayerConnect);
 
 function onSaxPlayerConnect(socket) {
     socket.on('myVoice', function (msg) {
-        if (msg == 'soprano') {
-            saxIDs[0] = socket.id;
-        }
-        if (msg == 'alto') {
-            saxIDs[1] = socket.id;
-        }
-        if (msg == 'tenor') {
-            saxIDs[2] = socket.id;
-        }
-        if (msg == 'bari') {
-            saxIDs[3] = socket.id;
-        }
-        oscClient.send('/saxIDs', saxIDs);
-
+        saxIDs[msg] = socket.id;
+        oscClient.send('/saxIDs', JSON.stringify(saxIDs));
     });
+
     socket.on('sentTime', function (msg) {
         const serverTime = Date.now();
         const { sentTime } = JSON.parse(msg);
@@ -178,11 +175,12 @@ function onSaxPlayerConnect(socket) {
     });
 
     socket.on('disconnect', function () {
-        if (saxIDs.indexOf(socket.id) !== -1) {
-            let removePlayer = saxIDs.indexOf(socket.id);
-            saxIDs[removePlayer] = -2;
-            oscClient.send('/saxIDs', saxIDs);
+        for (let key in saxIDs){;
+            if (saxIDs[key] == socket.id){
+                saxIDs[key] = 0;
+            }
         }
+        oscClient.send('/saxIDs', JSON.stringify(saxIDs));
     });
 }
 

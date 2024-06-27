@@ -66,7 +66,7 @@ socket.on('latency', function(msg){
     latency = msg;
 });
 
-socket.on('changeLevel', function (msg) {
+socket.on('level', function (msg) {
     console.log(msg);
     currentLevel = msg;
 });
