@@ -174,6 +174,11 @@ oscServer.on('/transportState', function (msg) {
     }
 });
 
+oscServer.on('/beat', function(msg){
+    let barbeat = [msg[1],msg[2]];
+    saxUser.emit('beat',barbeat);
+    client.emit('beat',barbeat);
+});
 //from Max's transport, send out the loopreset when the loop goes around to 
 oscServer.on('/loopReset', function (msg) {
     client.emit('loopReset');

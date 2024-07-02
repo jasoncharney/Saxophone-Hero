@@ -183,17 +183,22 @@ socket.on('choosePlayer', function (msg) {
 
 socket.on('level', function (msg) {
     level = msg;
+    //Tone.Transport.schedule(setTransportPosition(level),Tone.Transport.loopEnd.value);TODO: get this 
     setTransportPosition(level);
-    //players who have joined since the previous level started can now join
-    if (Tone.Transport.state !== 'started' && assignedTeam !== null) {
-        setTransportState(1);
-    }
+    //TODO: players who have joined since the previous level started can now join
+    // if (Tone.Transport.state !== 'started' && assignedTeam !== null) {
+    //     setTransportState(1);
+    // }
     taps = [];
 });
 
 socket.on('ping', function (msg) {
     let myPing = Date.now() - parseInt(msg);
     calculateMyAverageLatency(myPing);
+});
+
+socket.on('beat', function (msg){
+    // metronomeSynth.triggerAttackRelease("A4", "8n", Tone.now());
 });
 
 function calculateMyAverageLatency(pingTime) {
@@ -222,6 +227,7 @@ socket.on('transportState', function (msg) {
 });
 
 function setTransportState(_state) {
+    console.log(_state);
     if (_state == 1) {
         Tone.Transport.loop = true;
         if (myLatency) {
