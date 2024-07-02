@@ -1,3 +1,3 @@
 function bang(){
-	outlet(0,Date.now());
+	outlet(0,Date.now().toString());
 	}

@@ -2,8 +2,8 @@
 	"name" : "SaxophoneHero-Max",
 	"version" : 1,
 	"creationdate" : 3799075969,
-	"modificationdate" : 3802217162,
-	"viewrect" : [ -1627.0, 87.0, 300.0, 500.0 ],
+	"modificationdate" : 3802712870,
+	"viewrect" : [ -431.0, 115.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -14,6 +14,16 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"levelui.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"playersui.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 
 		}

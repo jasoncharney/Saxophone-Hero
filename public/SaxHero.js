@@ -2,27 +2,28 @@
 
 var socket = io('/client');
 
-var centerX, centerY;
+var centerX, centerY; //middle of the screen
 
 var audioContextStarted = false; //audio context for Tone - need to start with tap
 
 let initialized = false; //user must tap "I'm ready!" event to allow sound/device orientation access.
 let choosePlayerStatus = 0; //brings up the buttons to select which team they're on
 
-let shoeLimg, shoeRimg;
+let shoeLimg, shoeRimg; //images for shoe taps
 
-let assignedTeam;
+let assignedTeam; //string holding the team name
 
 let shoeSampler;//object for holding shoe samples
-let shoeSize = 0.1; //the size of the shoe graphic is also the vertical area of the screen where a tap is counted as accurate.
+let shoeSize = 0.1; //the size of the shoe graphic
 
 let crossMark = window.innerHeight * 0.66; //the point at which the lines cross the playhead, where you tap each thumb
 
 let touchArray = new Array(2); //only two touches on the screen at a time, please!
 
-let canvas;//reference the created canvas for using JS without p5
+let canvas; //reference the created canvas for using JS without p5
 
-let level = -1; //the current level we're on!
+let level = -1; //the current level we're on! -1 is the initial level
+let victorylap = false; //if true, the current loop is a "victory lap" and the next loop will be the next level.
 
 let displayTime = true; //draw the transport position at the bottom of the screen for troubleshooting
 
@@ -30,6 +31,7 @@ let notesObject; //reassign this from the single score file at team assignment t
 let noteTimings = []; //single array that only contains the "seconds" of note events from the assigned voice.
 let taps = []; //array that stores all the taps for a level (hits and misses)
 let accuracy; //accuracy percentage for current level
+let sendAccuracyFlag = 0; //flip to 1 once a loop to send the accuracy to the server just once.
 
 let thumblines = [];
 let playhead;
@@ -39,14 +41,20 @@ let secondsPerWindow = 4; //seconds of time displayed vertically
 let pixelsPerSecond;
 let zeroPoint;
 
+let myLatency; //make a running calculation of my latency from last received values.
+let myLatencySamples = 100; //how many recent latency values to average
+let myLatencyBuffer = [];
+
 //Metronome for testing
-let metronomeEnabled = true; //change to false to turn it off.
+let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
 
 function preload() {
     bg = loadImage('assets/grass.jpeg');
+    titleFont = loadFont('/assets/VarsityTeam-Bold.otf');
+    hudFont = loadFont('/assets/CreatoDisplay-Bold.otf');
     shoeLimg = loadImage('assets/shoeL.png');
     shoeRimg = loadImage('assets/shoeR.png');
     shoeSampler = new Tone.Sampler({
@@ -55,11 +63,8 @@ function preload() {
             "C#4": 'assets/rightStep.wav'
         }
     }).toDestination();
-    //soundFormats('wav', 'mp3');
-    //shoeL = loadSound('assets/leftStep');
 }
 //LOOK: P5 Setup Function.
-
 
 function setup() {
     frameRate(60);
@@ -106,8 +111,6 @@ function draw() {
         crossMarkDraw();
     }
     if (Tone.Transport.state == 'started') {
-        //playhead.update(Tone.Transport.seconds);
-        //playhead.draw();
         for (let thumbline of thumblines) {
             thumbline.update(Tone.Transport.seconds);
             thumbline.draw(hashWidth);//TODO: loop around to reflect the Transport loop.
@@ -117,15 +120,18 @@ function draw() {
         drawShoes();
     }
     playerHUD();
+    sendAccuracy(Tone.Transport.progress);
+    pingDisplay(myLatency);
+
 
 }
+
 //Notes functions
 function populateNotes(team) {
     notesObject = score[team];
     for (let i = 0; i < notesObject.length; i++) {
         thumblines.push(new Thumbline(notesObject[i].time, notesObject[i].duration, notesObject[i].midi, pixelsPerSecond, zeroPoint)); //make the thumblines
         noteTimings.push(notesObject[i].time); //just collect all the timings into a single array
-        console.log(noteTimings);
     }
 }
 //Shoe draw and sound functions.
@@ -163,6 +169,8 @@ function playMetronome(_status) {
         Tone.Transport.cancel();
     }
 }
+
+
 //LOOK: Listeners
 
 socket.on('choosePlayer', function (msg) {
@@ -172,14 +180,30 @@ socket.on('choosePlayer', function (msg) {
     }
 });
 
-// socket.on('ping', function (msg){
-//     console.log(msg);
-// });
+
 socket.on('level', function (msg) {
     level = msg;
     setTransportPosition(level);
+    //players who have joined since the previous level started can now join
+    if (Tone.Transport.state !== 'started' && assignedTeam !== null) {
+        setTransportState(1);
+    }
     taps = [];
 });
+
+socket.on('ping', function (msg) {
+    let myPing = Date.now() - parseInt(msg);
+    calculateMyAverageLatency(myPing);
+});
+
+function calculateMyAverageLatency(pingTime) {
+    //latency is an average of a stream of incoming pings.
+    myLatencyBuffer.push(pingTime);
+    if (myLatencyBuffer.length > myLatencySamples) {
+        myLatencyBuffer.shift();
+    }
+    myLatency = myLatencyBuffer.reduce((a, b) => a + b) / myLatencyBuffer.length;
+}
 
 function setTransportPosition(_level) {
     //set the transport position to a multiple of 8 (for which page we're on). TODO: get the victorylap logic in here though
@@ -188,22 +212,30 @@ function setTransportPosition(_level) {
     let newEnd = (newStartBar + 8).toString() + ":0:0";
     Tone.Transport.position = newStart;
     Tone.Transport.setLoopPoints(newStart, newEnd);
-    console.log(newStart, newEnd);
 }
 
 socket.on('transportState', function (msg) {
     if (metronomeEnabled) {
         playMetronome(msg);
     }
-    if (msg == 1) {
+    setTransportState(msg);
+});
+
+function setTransportState(_state) {
+    if (_state == 1) {
         Tone.Transport.loop = true;
-        Tone.Transport.start();
+        if (myLatency) {
+            Tone.Transport.start(Tone.now() + myLatency * 0.001);//delay the start of the transport by my average latency (ms to seconds)
+        }
+        else {
+            Tone.Transport.start(Tone.now());
+        }
     }
-    if (msg == 0) {
+    if (_state == 0) {
         Tone.Transport.stop();
         playhead.reset();
     }
-});
+}
 
 addEventListener('touchstart', function (event) {
     let touch = event.touches[event.touches.length - 1];
@@ -213,12 +245,9 @@ addEventListener('touchstart', function (event) {
     if (assignedTeam != undefined && Tone.Transport.state == 'started') {
         judgeTap(Tone.Transport.seconds);
         accuracy = calculateAccuracy();
+
     }
 
-    //before even calculating accuracy, was the touch within the zone?
-    // if (touch.clientY > crossMark + shoeSize || touch.clientY <= crossMark - shoeSize) {
-    //     console.log('ouch');
-    // }
 });
 
 
@@ -235,15 +264,12 @@ function judgeTap(tapTime) {
     //checking to see if it's the correct thumb!
 
     let timingMargin = 0.125; //seconds by which the tap can deviate and still count
-    console.log(tapTime);
     for (let noteTiming of noteTimings) {
         if (Math.abs(tapTime - noteTiming) <= timingMargin) {
-            //console.log('hit!');
             taps.push(1);
             return;
         }
     }
-    //console.log('miss!');
     taps.push(0);
 }
 
@@ -256,8 +282,16 @@ function calculateAccuracy() {
     return (hitSum / taps.length).toFixed(2);
 }
 
-function sendAccuracy(){
-    //send my current accuracy value to the sever only once per 8 bars, at the end of each loop.
+//send my current accuracy value to the sever only once per 8 bars, at the end of each loop.
+//Reset the flag to 0 after the loop resets.
+function sendAccuracy(_progress) {
+    if (_progress >= 0.99 && sendAccuracyFlag == 0) {
+        socket.emit('accuracy', [assignedTeam, accuracy]);
+        sendAccuracyFlag = 1;
+    }
+    if (_progress < 0.99 && sendAccuracyFlag == 1) {
+        sendAccuracyFlag = 0;
+    }
 }
 
 addEventListener('touchmove', function (event) {
@@ -291,6 +325,13 @@ function setLineDash(list) {
     drawingContext.setLineDash(list);
 }
 
+//look for only the last part of the beat. Arguments: _bbs is the Transport position, sub is Bar/Beat/Sixteenths.
+//0 = bar, 1 = beat, 2 = 16ths
+function convertBeat(_bbs, sub) {
+    const parts = _bbs.split(':');
+    return parseInt(parts[sub], 10);
+}
+
 //WebAudio is linked to the ringer volume in iOS, so create a blank htmlaudio element so users don't have to unmute
 function htmlaudio() {
     var silenceDataURL = "data:audio/mp3;base64,//MkxAAHiAICWABElBeKPL/RANb2w+yiT1g/gTok//lP/W/l3h8QO/OCdCqCW2Cw//MkxAQHkAIWUAhEmAQXWUOFW2dxPu//9mr60ElY5sseQ+xxesmHKtZr7bsqqX2L//MkxAgFwAYiQAhEAC2hq22d3///9FTV6tA36JdgBJoOGgc+7qvqej5Zu7/7uI9l//MkxBQHAAYi8AhEAO193vt9KGOq+6qcT7hhfN5FTInmwk8RkqKImTM55pRQHQSq//MkxBsGkgoIAABHhTACIJLf99nVI///yuW1uBqWfEu7CgNPWGpUadBmZ////4sL//MkxCMHMAH9iABEmAsKioqKigsLCwtVTEFNRTMuOTkuNVVVVVVVVVVVVVVVVVVV//MkxCkECAUYCAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
@@ -302,59 +343,3 @@ function htmlaudio() {
     tag.play();
 }
 
-function buttonSetup() {
-
-    sopranoButton = createButton('Team Soprano', 'soprano');
-    sopranoButton.size(width, height * 0.25);
-    sopranoButton.position(0, 0);
-    sopranoButton.id('sopranoButton');
-
-    altoButton = createButton('Team Alto', 'alto');
-    altoButton.size(width, height * 0.25);
-    altoButton.position(0, height * 0.25);
-    altoButton.id('altoButton');
-
-    tenorButton = createButton('Team Tenor', 'tenor');
-    tenorButton.size(width, height * 0.25);
-    tenorButton.position(0, height * 0.5);
-    tenorButton.id('tenorButton');
-
-    bariButton = createButton('Team Bari', 'bari');
-    bariButton.size(width, height * 0.25);
-    bariButton.position(0, height * 0.75);
-    bariButton.id('bariButton');
-
-    document.getElementById('sopranoButton').addEventListener('click', function () { teamAssign('soprano'); });
-    document.getElementById('altoButton').addEventListener('click', function () { teamAssign('alto'); });
-    document.getElementById('tenorButton').addEventListener('click', function () { teamAssign('tenor'); });
-    document.getElementById('bariButton').addEventListener('click', function () { teamAssign('bari'); });
-}
-
-function teamAssign(_team) {
-    assignedTeam = _team;
-    populateNotes(assignedTeam);
-    socket.emit('myTeam', assignedTeam);
-    //assign the teams and then remove all the buttons.
-    document.getElementById('sopranoButton').remove();
-    document.getElementById('altoButton').remove();
-    document.getElementById('tenorButton').remove();
-    document.getElementById('bariButton').remove();
-}
-
-function initializeButton() {
-    initButton = createButton('Tap to start!', 'init');
-    //initButton.size(width, height * 0.25);
-    initButton.position(centerX, height * 0.75);
-    initButton.id('initButton');
-    document.getElementById('initButton').addEventListener('click', function () { initializeMe() });
-}
-
-function initializeMe() {
-    if (initialized == false) {
-        Tone.start();
-        initialized = true;
-        socket.emit('initializeMe');
-        console.log('initialized');
-        document.getElementById('initButton').remove();
-    }
-}
