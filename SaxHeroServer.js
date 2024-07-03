@@ -161,27 +161,34 @@ function sendLevelUpdateToTeam(team) {
     }
 }
 
+//LOOK: transport state change schedules in the future!
 oscServer.on('/transportState', function (msg) {
-    let transportState = msg[1];
+    let transportState = ([msg[1], msg[2]]);
     saxUser.emit('transportState', transportState);
     client.emit('transportState', transportState);
     //send the list of accuracies every 16 seconds
-    if (transportState == 1) {
+    if (transportState[0] == 1) {
         setTimeout(function () { setInterval(sendAccuracies, 16000) }, 16000);
     }
-    if (transportState == 0) {
+    if (transportState[0] == 0) {
         clearInterval(sendAccuracies);
     }
 });
 
-oscServer.on('/beat', function(msg){
-    let barbeat = [msg[1],msg[2]];
-    saxUser.emit('beat',barbeat);
-    client.emit('beat',barbeat);
+oscServer.on('/beat', function (msg) {
+    let barbeat = [msg[1], msg[2]];
+    saxUser.emit('beat', barbeat);
+    client.emit('beat', barbeat);
 });
 //from Max's transport, send out the loopreset when the loop goes around to 
 oscServer.on('/loopReset', function (msg) {
     client.emit('loopReset');
+});
+
+oscServer.on('/testSchedule', function (msg) {
+    let scheduleTime = parseInt(msg[1]);
+    console.log(msg[1]);
+    client.emit('test', scheduleTime);
 });
 //LOOK: Websocket Connections
 
@@ -260,8 +267,8 @@ function removePlayer(id) {
         }
     }
     //remove from the accuracies object
-    for (let team in teamAccuracies){
-        if (teamAccuracies[team][id]){
+    for (let team in teamAccuracies) {
+        if (teamAccuracies[team][id]) {
             delete teamAccuracies[team][id];
             return;
         }

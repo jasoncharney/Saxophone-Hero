@@ -46,7 +46,7 @@ let myLatencySamples = 100; //how many recent latency values to average
 let myLatencyBuffer = [];
 
 //Metronome for testing
-let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
+let metronomeEnabled = true; //change to false to turn it off. Just here for diagnostics.
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
@@ -161,8 +161,9 @@ function drawShoes() {
 }
 function playMetronome(_status) {
     if (_status == 1) {
+        let freq = random(220,440);
         Tone.Transport.scheduleRepeat((time) => {
-            metronomeSynth.triggerAttackRelease("A4", "8n", time);
+            metronomeSynth.triggerAttackRelease(freq, "8n", time);
         }, "4n"); // "4n" is a quarter note, adjust as needed for different beat intervals
     }
     if (_status == 0) {
@@ -197,9 +198,23 @@ socket.on('ping', function (msg) {
     calculateMyAverageLatency(myPing);
 });
 
-socket.on('beat', function (msg){
-    // metronomeSynth.triggerAttackRelease("A4", "8n", Tone.now());
-});
+// socket.on('beat', function (msg){
+//     // metronomeSynth.triggerAttackRelease("A4", "8n", Tone.now());
+// });
+
+// socket.on('test', function (msg) {
+//     console.log(msg);
+//     scheduleStart(msg);
+// });
+
+function scheduleStart(targetTime) {
+    const currentTime = Date.now();
+    const delay = targetTime - currentTime;
+
+    if (delay > 0) {
+        return delay;
+    }
+}
 
 function calculateMyAverageLatency(pingTime) {
     //latency is an average of a stream of incoming pings.
@@ -221,23 +236,28 @@ function setTransportPosition(_level) {
 
 socket.on('transportState', function (msg) {
     if (metronomeEnabled) {
-        playMetronome(msg);
+        playMetronome(msg[0]);
     }
+    console.log(msg);
     setTransportState(msg);
 });
 
 function setTransportState(_state) {
     console.log(_state);
-    if (_state == 1) {
+    let state = _state[0];
+    let _targetTime = parseInt(_state[1]);
+    if (state == 1) {
         Tone.Transport.loop = true;
-        if (myLatency) {
-            Tone.Transport.start(Tone.now() + myLatency * 0.001);//delay the start of the transport by my average latency (ms to seconds)
-        }
-        else {
-            Tone.Transport.start(Tone.now());
-        }
+        let del = '+' + ((_targetTime - Date.now())*0.001).toString();
+        console.log(del);
+        // if (myLatency) {
+        //     Tone.Transport.start(Tone.now() + myLatency * 0.001);//delay the start of the transport by my average latency (ms to seconds)
+        // }
+        // else {
+        Tone.Transport.start(del);
+        //}
     }
-    if (_state == 0) {
+    if (state == 0) {
         Tone.Transport.stop();
         playhead.reset();
     }
