@@ -99,6 +99,7 @@ function setup() {
 
     playhead.reset();
 
+
 }
 
 //LOOK: P5 Draw function.
@@ -107,7 +108,7 @@ function draw() {
     background(0);
     imageMode(CORNER);
     image(bg, 0, 0);
-    if (initialized == true) {
+    if (initialized) {
         crossMarkDraw();
     }
     if (Tone.Transport.state == 'started') {
@@ -116,7 +117,7 @@ function draw() {
             thumbline.draw(hashWidth);//TODO: loop around to reflect the Transport loop.
         }
     }
-    if (initialized == true) {
+    if (initialized) {
         drawShoes();
     }
     playerHUD();
@@ -138,10 +139,10 @@ function populateNotes(team) {
 function shoePlay(shoeSoundChoose) {
     //play the left shoe sound if the touch is to the left of the center, otherwise play right
     if (shoeSoundChoose < centerX) {
-        shoeSampler.triggerAttackRelease("C4", 0.5);
+        shoeSampler.triggerAttackRelease("C4", 0.2);
     }
     if (shoeSoundChoose >= centerX) {
-        shoeSampler.triggerAttackRelease("C#4", 0.5);
+        shoeSampler.triggerAttackRelease("C#4", 0.2);
     }
 }
 
@@ -161,7 +162,7 @@ function drawShoes() {
 }
 function playMetronome(_status) {
     if (_status == 1) {
-        let freq = random(220,440);
+        let freq = random(220, 440);
         Tone.Transport.scheduleRepeat((time) => {
             metronomeSynth.triggerAttackRelease(freq, "8n", time);
         }, "4n"); // "4n" is a quarter note, adjust as needed for different beat intervals
@@ -174,10 +175,18 @@ function playMetronome(_status) {
 
 //LOOK: Listeners
 
+//Each player requests the status of the game upon joining (received via WebSocket in response to message)
+//Using LocalStorage to see if they've joined before.
 socket.on('choosePlayer', function (msg) {
     choosePlayerStatus = msg;
     if (choosePlayerStatus == 1) {
-        buttonSetup();
+        let isTeamStored = localStorage.getItem('storedTeam');
+        if (isTeamStored) {
+            teamAssign(isTeamStored);
+        }
+        else {
+            buttonSetup();
+        }
     }
 });
 
@@ -198,14 +207,6 @@ socket.on('ping', function (msg) {
     calculateMyAverageLatency(myPing);
 });
 
-// socket.on('beat', function (msg){
-//     // metronomeSynth.triggerAttackRelease("A4", "8n", Tone.now());
-// });
-
-// socket.on('test', function (msg) {
-//     console.log(msg);
-//     scheduleStart(msg);
-// });
 
 function scheduleStart(targetTime) {
     const currentTime = Date.now();
@@ -243,19 +244,13 @@ socket.on('transportState', function (msg) {
 });
 
 function setTransportState(_state) {
-    console.log(_state);
     let state = _state[0];
     let _targetTime = parseInt(_state[1]);
     if (state == 1) {
         Tone.Transport.loop = true;
-        let del = '+' + ((_targetTime - Date.now())*0.001).toString();
+        let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
         console.log(del);
-        // if (myLatency) {
-        //     Tone.Transport.start(Tone.now() + myLatency * 0.001);//delay the start of the transport by my average latency (ms to seconds)
-        // }
-        // else {
         Tone.Transport.start(del);
-        //}
     }
     if (state == 0) {
         Tone.Transport.stop();
@@ -286,8 +281,8 @@ function judgeTap(tapTime) {
     // then it's deemed accurate. Otherwise: not accurate.
     // Extra taps decrease the accuracy.
 
-    //TODO: what happens if you miss a tap altogether? You could not play and still win!
-    //checking to see if it's the correct thumb!
+    //LOOK: If you don't tap, your accuracy does not diminish. So you can join a team and just watch without playing.
+    //Also, a little secret here...it doesn't matter which thumb goes where!
 
     let timingMargin = 0.125; //seconds by which the tap can deviate and still count
     for (let noteTiming of noteTimings) {
@@ -358,14 +353,13 @@ function convertBeat(_bbs, sub) {
     return parseInt(parts[sub], 10);
 }
 
-//WebAudio is linked to the ringer volume in iOS, so create a blank htmlaudio element so users don't have to unmute
-function htmlaudio() {
-    var silenceDataURL = "data:audio/mp3;base64,//MkxAAHiAICWABElBeKPL/RANb2w+yiT1g/gTok//lP/W/l3h8QO/OCdCqCW2Cw//MkxAQHkAIWUAhEmAQXWUOFW2dxPu//9mr60ElY5sseQ+xxesmHKtZr7bsqqX2L//MkxAgFwAYiQAhEAC2hq22d3///9FTV6tA36JdgBJoOGgc+7qvqej5Zu7/7uI9l//MkxBQHAAYi8AhEAO193vt9KGOq+6qcT7hhfN5FTInmwk8RkqKImTM55pRQHQSq//MkxBsGkgoIAABHhTACIJLf99nVI///yuW1uBqWfEu7CgNPWGpUadBmZ////4sL//MkxCMHMAH9iABEmAsKioqKigsLCwtVTEFNRTMuOTkuNVVVVVVVVVVVVVVVVVVV//MkxCkECAUYCAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
-    var tag = document.createElement("AUDIO");
-    tag.controls = false;
-    tag.preload = "auto";
-    tag.loop = false;
-    tag.src = silenceDataURL;
-    tag.play();
+//create and play blank audio object to make sound even if iOS ringer switch is muted.
+function unblockPlayback() {
+    const silence = document.createElement("AUDIO");
+    silence.setAttribute("x-webkit-airplay", "deny");//prevent AirPlay connection
+    silence.preload = "auto";
+    silence.loop = true;
+    silence.src = "assets/silence.wav";
+    silence.play();
 }
 

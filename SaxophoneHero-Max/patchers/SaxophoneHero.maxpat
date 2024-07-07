@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2378.0, 87.0, 1653.0, 959.0 ],
+		"rect" : [ -1699.0, 87.0, 1389.0, 706.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,17 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 945.0, 94.0, 100.0, 22.0 ],
+					"text" : "projector-display"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-125",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -59,7 +70,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 756.0, 995.0, 50.0, 62.0 ],
-					"text" : "1 \"1719965366023\""
+					"text" : "1 \"1720386532389\""
 				}
 
 			}
@@ -82,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 591.0, 970.0, 135.0, 22.0 ],
+					"patching_rect" : [ 601.986258685588837, 953.0, 135.0, 22.0 ],
 					"text" : "prepend /transportState"
 				}
 
@@ -107,7 +118,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 734.5, 864.0, 104.0, 22.0 ],
-					"text" : "\"1719965366023\""
+					"text" : "\"1720386532389\""
 				}
 
 			}
@@ -131,7 +142,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 689.0, 764.0, 104.0, 22.0 ],
-					"text" : "\"1719965361023\""
+					"text" : "\"1720386527389\""
 				}
 
 			}
@@ -358,7 +369,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.0, 948.0, 100.0, 22.0 ],
+					"patching_rect" : [ 284.554772555828094, 944.0, 100.0, 22.0 ],
 					"text" : "prepend /beat"
 				}
 
@@ -371,7 +382,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 278.554772555828094, 886.0, 50.0, 22.0 ],
-					"text" : "2 1"
+					"text" : "1520 4"
 				}
 
 			}
@@ -2821,7 +2832,7 @@
 					"patching_rect" : [ 1213.0, 306.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 528.0, 108.0, 73.0, 20.0 ],
-					"text" : "Baris: 0"
+					"text" : "Baris: 1"
 				}
 
 			}
@@ -4071,7 +4082,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-40", 1 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-38", 0 ]
 				}
 
@@ -4079,7 +4090,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-41", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-38", 0 ]
 				}
 
@@ -4094,6 +4105,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-41", 0 ]
 				}
 
@@ -4466,6 +4478,20 @@
 				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "projector-display.maxpat",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "qrcode-generator.js",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/n4m-qrcode-generator-master",
+				"patcherrelativepath" : "../n4m-qrcode-generator-master",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

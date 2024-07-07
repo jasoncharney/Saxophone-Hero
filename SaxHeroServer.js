@@ -119,22 +119,13 @@ oscServer.on('/level', function (msg) {
 //send arrays of accuracies to Max
 
 function updateAccuracies(team, id, newAccuracy) {
-    // if (teamAccuracies.hasOwnProperty(team)) {
-    //     if (teamAccuracies[team].hasOwnProperty(id)){
-    //         teamAccuracies[team][id] = newAccuracy;
-    //     }
-    //     else {
-    //         teamAccuracies[team][id] = id;
-    //         teamAccuracies[team][id] = newAccuracy;
-    //     }
-    // }
     if (teamAccuracies[team]) {
         teamAccuracies[team][id] = newAccuracy;
     }
 }
 
 function sendAccuracies() {
-    console.log(teamAccuracies);
+    //console.log(teamAccuracies);
     //console.log(calculateAverageAccuracies()); TODO: figure this out so it's calculated in the server and not in Max
     oscClient.send('/accuracies', JSON.stringify(teamAccuracies));
 }

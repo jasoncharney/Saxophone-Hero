@@ -119,21 +119,26 @@ function buttonSetup() {
     bariButton.position(0, height * 0.75);
     bariButton.id('bariButton');
 
-    document.getElementById('sopranoButton').addEventListener('click', function () { teamAssign('soprano'); });
-    document.getElementById('altoButton').addEventListener('click', function () { teamAssign('alto'); });
-    document.getElementById('tenorButton').addEventListener('click', function () { teamAssign('tenor'); });
-    document.getElementById('bariButton').addEventListener('click', function () { teamAssign('bari'); });
+    document.getElementById('sopranoButton').addEventListener('click', function () { teamAssignByTap('soprano'); });
+    document.getElementById('altoButton').addEventListener('click', function () { teamAssignByTap('alto'); });
+    document.getElementById('tenorButton').addEventListener('click', function () { teamAssignByTap('tenor'); });
+    document.getElementById('bariButton').addEventListener('click', function () { teamAssignByTap('bari'); });
 }
 
-function teamAssign(_team) {
-    assignedTeam = _team;
-    populateNotes(assignedTeam);
-    socket.emit('myTeam', assignedTeam);
+function teamAssignByTap(_team) {
+    teamAssign(_team);
+    localStorage.setItem('storedTeam',assignedTeam);
     //assign the teams and then remove all the buttons.
     document.getElementById('sopranoButton').remove();
     document.getElementById('altoButton').remove();
     document.getElementById('tenorButton').remove();
     document.getElementById('bariButton').remove();
+}
+
+function teamAssign(_team){
+    assignedTeam = _team;
+    populateNotes(assignedTeam);
+    socket.emit('myTeam', assignedTeam);
 }
 
 function initializeButton() {
@@ -142,14 +147,30 @@ function initializeButton() {
     initButton.position(centerX, height * 0.75);
     initButton.id('initButton');
     document.getElementById('initButton').addEventListener('click', function () { initializeMe() });
+    document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });
 }
 
 function initializeMe() {
     if (initialized == false) {
         Tone.start();
+        unblockPlayback();
         initialized = true;
         socket.emit('initializeMe');
         console.log('initialized');
         document.getElementById('initButton').remove();
     }
 }
+
+function enterFullScreen() {
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+      elem.msRequestFullscreen();
+    }
+  }
+  
