@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1699.0, 87.0, 1389.0, 706.0 ],
+		"rect" : [ -1299.0, 230.0, 1389.0, 706.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,17 +40,6 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 945.0, 94.0, 100.0, 22.0 ],
-					"text" : "projector-display"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-125",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -70,7 +59,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 756.0, 995.0, 50.0, 62.0 ],
-					"text" : "1 \"1720386532389\""
+					"text" : "0 \"1720398792850\""
 				}
 
 			}
@@ -118,7 +107,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 734.5, 864.0, 104.0, 22.0 ],
-					"text" : "\"1720386532389\""
+					"text" : "\"1720398792850\""
 				}
 
 			}
@@ -142,7 +131,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 689.0, 764.0, 104.0, 22.0 ],
-					"text" : "\"1720386527389\""
+					"text" : "\"1720398787850\""
 				}
 
 			}
@@ -178,7 +167,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1656.0, 836.0, 50.0, 22.0 ],
-					"text" : "0.1.0"
+					"text" : "16.1.0"
 				}
 
 			}
@@ -238,7 +227,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1354.0, 905.0, 50.0, 22.0 ],
-					"text" : "-8 0 0."
+					"text" : "8 0 0."
 				}
 
 			}
@@ -382,7 +371,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 278.554772555828094, 886.0, 50.0, 22.0 ],
-					"text" : "1520 4"
+					"text" : "44 3"
 				}
 
 			}
@@ -2832,7 +2821,7 @@
 					"patching_rect" : [ 1213.0, 306.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 528.0, 108.0, 73.0, 20.0 ],
-					"text" : "Baris: 1"
+					"text" : "Baris: 0"
 				}
 
 			}
@@ -4478,20 +4467,6 @@
 				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "projector-display.maxpat",
-				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "qrcode-generator.js",
-				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/n4m-qrcode-generator-master",
-				"patcherrelativepath" : "../n4m-qrcode-generator-master",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

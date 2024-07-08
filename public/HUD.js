@@ -45,6 +45,9 @@ function playerHUD() {
     if (Tone.Transport.state == 'started' && accuracy != undefined){
         accuracyDisplay(accuracy);
     }
+    if (advanceLevelOnNextLoop == true){
+        levelUpDisplay();
+    }
 
 }
 
@@ -84,6 +87,16 @@ function accuracyDisplay(_accuracy){
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
     text((_accuracy*100).toString()+'%', centerX, height-0.5*hudSize);
+}
+
+function levelUpDisplay(){
+    textFont(titleFont);
+    textSize(titleSize);
+    stroke(0);
+    strokeWeight(2);
+    textAlign(CENTER);
+    text('Level Up!', centerX, 20);
+
 }
 
 function pingDisplay(_myLatency){
@@ -147,7 +160,7 @@ function initializeButton() {
     initButton.position(centerX, height * 0.75);
     initButton.id('initButton');
     document.getElementById('initButton').addEventListener('click', function () { initializeMe() });
-    document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });
+    //document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });
 }
 
 function initializeMe() {

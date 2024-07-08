@@ -23,7 +23,7 @@ let touchArray = new Array(2); //only two touches on the screen at a time, pleas
 let canvas; //reference the created canvas for using JS without p5
 
 let level = -1; //the current level we're on! -1 is the initial level
-let victorylap = false; //if true, the current loop is a "victory lap" and the next loop will be the next level.
+let advanceLevelOnNextLoop = false; //if true, the current loop is a "victory lap" and the next loop will be the next level.
 
 let displayTime = true; //draw the transport position at the bottom of the screen for troubleshooting
 
@@ -50,6 +50,16 @@ let metronomeEnabled = true; //change to false to turn it off. Just here for dia
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
+
+//Eight Bar Timer - for synchronizing level changes
+
+const eightBarTimer = new Tone.Loop((time) => {
+    logPosition();
+    if (advanceLevelOnNextLoop == true){
+        setTransportPosition(level);
+        advanceLevelOnNextLoop = false;
+    }
+}, "8m");
 
 function preload() {
     bg = loadImage('assets/grass.jpeg');
@@ -122,7 +132,7 @@ function draw() {
     }
     playerHUD();
     sendAccuracy(Tone.Transport.progress);
-    pingDisplay(myLatency);
+    // pingDisplay(myLatency);
 
 
 }
@@ -172,7 +182,6 @@ function playMetronome(_status) {
     }
 }
 
-
 //LOOK: Listeners
 
 //Each player requests the status of the game upon joining (received via WebSocket in response to message)
@@ -193,8 +202,10 @@ socket.on('choosePlayer', function (msg) {
 
 socket.on('level', function (msg) {
     level = msg;
+    advanceLevelOnNextLoop = true;
     //Tone.Transport.schedule(setTransportPosition(level),Tone.Transport.loopEnd.value);TODO: get this 
-    setTransportPosition(level);
+    //Advance to next level at the end of this one. But keep the beat going!
+    //setTransportPosition(level);
     //TODO: players who have joined since the previous level started can now join
     // if (Tone.Transport.state !== 'started' && assignedTeam !== null) {
     //     setTransportState(1);
@@ -202,12 +213,16 @@ socket.on('level', function (msg) {
     taps = [];
 });
 
+
+
 socket.on('ping', function (msg) {
     let myPing = Date.now() - parseInt(msg);
     calculateMyAverageLatency(myPing);
 });
 
-
+//TODO: If transport is going after they rejoin, then ask for the original scheduled start time from Max...
+//make sure that you don't start until you're at an 8 bar multiple of the original scheduled time.
+//Need to echo the transport state to new joiners.
 function scheduleStart(targetTime) {
     const currentTime = Date.now();
     const delay = targetTime - currentTime;
@@ -248,12 +263,16 @@ function setTransportState(_state) {
     let _targetTime = parseInt(_state[1]);
     if (state == 1) {
         Tone.Transport.loop = true;
+        //the difference between the Max designated time and the browser's time, converted to seconds
         let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
         console.log(del);
         Tone.Transport.start(del);
+        eightBarTimer.start();
     }
     if (state == 0) {
         Tone.Transport.stop();
+        eightBarTimer.stop();
+        eightBarTimer.cancel();
         playhead.reset();
     }
 }
