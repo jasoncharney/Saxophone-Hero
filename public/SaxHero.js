@@ -223,6 +223,10 @@ socket.on('ping', function (msg) {
 //TODO: If transport is going after they rejoin, then ask for the original scheduled start time from Max...
 //make sure that you don't start until you're at an 8 bar multiple of the original scheduled time.
 //Need to echo the transport state to new joiners.
+//Function that checks if original start time is in the past
+//If it is, loop through multiples of 16 seconds (8 bar loop) offset to the original start time and check their future/past
+//When you hit one in the future, then schedule that multiple as the target time.
+//Then your own transport should be at the beginning of an 8-bar loop. Test this idea!!!
 function scheduleStart(targetTime) {
     const currentTime = Date.now();
     const delay = targetTime - currentTime;
