@@ -3,5 +3,6 @@
 	"expressPort": 3000,
 	"maxSendPort": 3339,
 	"maxListenPort": 3338,
-	"saxPlayerPort": 4994
+	"saxPlayerPort": 4994,
+	"projectorPort": 4997
 }

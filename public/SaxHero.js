@@ -45,6 +45,8 @@ let myLatency; //make a running calculation of my latency from last received val
 let myLatencySamples = 100; //how many recent latency values to average
 let myLatencyBuffer = [];
 
+let originalTransportStartTime; //if you join after it starts, you know when it started so you can rejoin at the beginning of the 8 bar loop.
+
 //Metronome for testing
 let metronomeEnabled = true; //change to false to turn it off. Just here for diagnostics.
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
@@ -55,7 +57,7 @@ metronomeSynth.release = 0.01;
 
 const eightBarTimer = new Tone.Loop((time) => {
     logPosition();
-    if (advanceLevelOnNextLoop == true){
+    if (advanceLevelOnNextLoop == true) {
         setTransportPosition(level);
         advanceLevelOnNextLoop = false;
     }
@@ -133,8 +135,6 @@ function draw() {
     playerHUD();
     sendAccuracy(Tone.Transport.progress);
     // pingDisplay(myLatency);
-
-
 }
 
 //Notes functions
@@ -149,10 +149,10 @@ function populateNotes(team) {
 function shoePlay(shoeSoundChoose) {
     //play the left shoe sound if the touch is to the left of the center, otherwise play right
     if (shoeSoundChoose < centerX) {
-        shoeSampler.triggerAttackRelease("C4", 0.2);
+        shoeSampler.triggerAttackRelease("C#4", 0.2);
     }
     if (shoeSoundChoose >= centerX) {
-        shoeSampler.triggerAttackRelease("C#4", 0.2);
+        shoeSampler.triggerAttackRelease("C4", 0.2);
     }
 }
 
@@ -199,10 +199,30 @@ socket.on('choosePlayer', function (msg) {
     }
 });
 
+socket.on('clearLocalStorage', function (msg) {
+    let isTeamStored = localStorage.getItem('storedTeam');
+    if (isTeamStored) {
+        localStorage.removeItem('storedTeam');
+        console.log('Stored Team Cleared!');
+    }
+});
+
+socket.on('originalTransportStartTime', function (msg) {
+    if (!originalTransportStartTime) {
+        originalTransportStartTime = msg;
+    }
+    console.log(originalTransportStartTime);
+});
+
 
 socket.on('level', function (msg) {
-    level = msg;
-    advanceLevelOnNextLoop = true;
+    //only do the advance reset if advancing on the next loop!
+    if (msg != level) {
+        level = msg;
+        advanceLevelOnNextLoop = true;
+        taps = [];
+    }
+
     //Tone.Transport.schedule(setTransportPosition(level),Tone.Transport.loopEnd.value);TODO: get this 
     //Advance to next level at the end of this one. But keep the beat going!
     //setTransportPosition(level);
@@ -210,7 +230,6 @@ socket.on('level', function (msg) {
     // if (Tone.Transport.state !== 'started' && assignedTeam !== null) {
     //     setTransportState(1);
     // }
-    taps = [];
 });
 
 

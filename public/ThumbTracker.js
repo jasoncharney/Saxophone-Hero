@@ -38,11 +38,11 @@ class Thumbline {
         if (duration >= 1) {
             this.duration = duration;
         }
-        if (note == 60) {
+        if (note == 61) {
             this.thumb = 0; //left thumb
             this.rectCenter = 0.25;
         }
-        if (note == 61) {
+        if (note == 60) {
             this.thumb = 1; //right thumb
             this.rectCenter = 0.75;
         }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+    <meta name="SaxHeroProjector" content="onlyWebPro" />
+    <title>Saxophone Hero</title>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/socket.io.min.js"></script>
+    <script src="libraries/Tone.js"></script>
+    <script src="libraries/qrcode.min.js"></script>
+    <script src="projector.js"></script>
+    <script>
+        //keep the page from scrolling around when you move your fingers around
+        document.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+        }, { passive: false });
+    </script>
+    <div id="title">
+        Saxophone Hero!
+    </div>
+    <div id="qrcode"></div>
+    <script type=""text/javascript">
+    </script>
+    <script>
+
+    </script>
+    <style type="text/css">
+        title {
+            font: bold;
+            font-size: large;
+        }
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            overflow-y: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        canvas:focus {
+            outline: 0;
+        }
+
+        button {
+            font-size: 10vh;
+            margin: 0px;
+            padding: 1px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .fs {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        #enter {
+            display: block;
+        }
+
+        #exit {
+            display: none;
+        }
+    </style>
+
+</head>
+
+</html>

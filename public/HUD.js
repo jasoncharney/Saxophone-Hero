@@ -31,81 +31,83 @@ function playerHUD() {
             text(orientationInstruction, centerX, centerY + textSize * 2);
         }
     }
-    if (initialized && assignedTeam){
+    if (initialized && assignedTeam) {
         teamDisplay(assignedTeam);
     }
     if (initialized == true && choosePlayerStatus == 1) {
-        if (displayTime){
+        if (displayTime) {
             timeDisplay(Tone.Transport.position);
         }
-             if (level !== -1){
+        if (level !== -1) {
             levelDisplay(level);
         }
     }
-    if (Tone.Transport.state == 'started' && accuracy != undefined){
+    if (Tone.Transport.state == 'started' && accuracy != undefined) {
         accuracyDisplay(accuracy);
     }
-    if (advanceLevelOnNextLoop == true){
-        levelUpDisplay();
+    if (advanceLevelOnNextLoop == true) {
+        if (frameCount % 2 == 0 || frameCount % 3 == 0) {
+            levelUpDisplay();
+        }
     }
 
 }
 
-function levelDisplay(_level){
+function levelDisplay(_level) {
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(RIGHT);
     let levelString = 'Level ' + _level;
-    text(levelString, width-10,height-0.5*hudSize);
+    text(levelString, width - 10, height - 0.5 * hudSize);
 }
 
-function teamDisplay(_assignedTeam){
+function teamDisplay(_assignedTeam) {
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(LEFT);
-    text('team '+ _assignedTeam,10,height-0.5*hudSize);
+    text('team ' + _assignedTeam, 10, height - 0.5 * hudSize);
 
 }
 
-function timeDisplay(_currentPosition){
+function timeDisplay(_currentPosition) {
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
-    text(_currentPosition,centerX,centerY);
+    text(_currentPosition, centerX, centerY);
 }
 
-function accuracyDisplay(_accuracy){
+function accuracyDisplay(_accuracy) {
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
-    text((_accuracy*100).toString()+'%', centerX, height-0.5*hudSize);
+    text((_accuracy * 100).toString() + '%', centerX, height - 0.5 * hudSize);
 }
 
-function levelUpDisplay(){
+function levelUpDisplay() {
     textFont(titleFont);
     textSize(titleSize);
     stroke(0);
     strokeWeight(2);
     textAlign(CENTER);
-    text('Level Up!', centerX, 20);
+    text('Level Up!', centerX, titleSize + 20);
 
 }
 
-function pingDisplay(_myLatency){
+function pingDisplay(_myLatency) {
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(RIGHT);
-    text('ping: '+round(_myLatency), width - 10, hudSize);
+    text('ping: ' + round(_myLatency), width - 10, hudSize);
 }
 
 //Set up the buttons to appear on screen when triggered.
@@ -140,7 +142,7 @@ function buttonSetup() {
 
 function teamAssignByTap(_team) {
     teamAssign(_team);
-    localStorage.setItem('storedTeam',assignedTeam);
+    localStorage.setItem('storedTeam', assignedTeam);
     //assign the teams and then remove all the buttons.
     document.getElementById('sopranoButton').remove();
     document.getElementById('altoButton').remove();
@@ -148,7 +150,7 @@ function teamAssignByTap(_team) {
     document.getElementById('bariButton').remove();
 }
 
-function teamAssign(_team){
+function teamAssign(_team) {
     assignedTeam = _team;
     populateNotes(assignedTeam);
     socket.emit('myTeam', assignedTeam);
@@ -177,13 +179,12 @@ function initializeMe() {
 function enterFullScreen() {
     const elem = document.documentElement;
     if (elem.requestFullscreen) {
-      elem.requestFullscreen();
+        elem.requestFullscreen();
     } else if (elem.mozRequestFullScreen) { // Firefox
-      elem.mozRequestFullScreen();
+        elem.mozRequestFullScreen();
     } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
-      elem.webkitRequestFullscreen();
+        elem.webkitRequestFullscreen();
     } else if (elem.msRequestFullscreen) { // IE/Edge
-      elem.msRequestFullscreen();
+        elem.msRequestFullscreen();
     }
-  }
-  
+}

@@ -1,42 +1,49 @@
 //Saxophone Hero Server - 2024//
 
 //import modules
-var fs = require('fs');
-var express = require('express');
-var osc = require('node-osc');
-var socket = require('socket.io');
+let fs = require('fs');
+let express = require('express');
+let osc = require('node-osc');
+let socket = require('socket.io');
 
 //initialize connection settings
-var connectSettings = JSON.parse(fs.readFileSync('connectSettings.json'));
+let connectSettings = JSON.parse(fs.readFileSync('connectSettings.json'));
 
-//set up server/ports. Separate for sax app and audience member app.
-var app = express();
+//set up server/ports. Separate for sax app, audience member app, and projector display app.
+let app = express();
 app.use(express.static('public'));
 
-var saxApp = express();
+let saxApp = express();
 saxApp.use(express.static('saxScores'));
 
+let projectorApp = express();
+projectorApp.use(express.static('projector'));
+
 //change the IP addresses/ports in the JSON file (Max also reads this file)
-var server = app.listen(connectSettings.expressPort);
-var saxPlayer = saxApp.listen(connectSettings.saxPlayerPort);
+let server = app.listen(connectSettings.expressPort);
+let saxPlayer = saxApp.listen(connectSettings.saxPlayerPort);
+let projectorScreen = projectorApp.listen(connectSettings.projectorPort);
 
 //set up WebSockets
-var io = socket(server);
-var client = io.of('/client');
+let io = socket(server);
+let client = io.of('/client');
 
-var saxio = socket(saxPlayer);
-var saxUser = saxio.of('/saxUser');
+let saxio = socket(saxPlayer);
+let saxUser = saxio.of('/saxUser');
 
-var serverStatus = 0; //initialize server
-var choosePlayerFlag = 0; //toggle this after the player choice has been initiated but before the game starts
+let projectio = socket(projectorScreen);
+let projector = projectio.of('/projector');
+
+let serverStatus = 0; //initialize server
+let choosePlayerFlag = 0; //toggle this after the player choice has been initiated but before the game starts
 
 //set up OSC channels
-var oscServer = new osc.Server(connectSettings.maxSendPort, connectSettings.hostIP);
-var oscClient = new osc.Client(connectSettings.hostIP, connectSettings.maxListenPort);
+let oscServer = new osc.Server(connectSettings.maxSendPort, connectSettings.hostIP);
+let oscClient = new osc.Client(connectSettings.hostIP, connectSettings.maxListenPort);
 
 //all audience players connected (regardless of group sorting)
-var userIDs = [];
-var numUsers;
+let userIDs = [];
+let numUsers;
 
 //empty arrays for each group of audience members
 
@@ -62,18 +69,22 @@ let teamAccuracies = {
 }
 
 //track the user ids for sax players who have joined and ID'd themselves.
-var saxIDs = {
+let saxIDs = {
     "soprano": 0,
     "alto": 0,
     "tenor": 0,
     "bari": 0
 }
 
+//Original timestamp of first startup. So rejoining players can reference.
+let originalTransportStartTime;
+
 LOOK: //run at startup:
 console.clear();
 serverStatus = 1;
 console.log('Sax Hero Server Running:' + '\n' + 'Audience URL: ' + connectSettings.hostIP + ':' + connectSettings.expressPort);
 console.log('Player URL: ' + connectSettings.hostIP + ':' + connectSettings.saxPlayerPort);
+console.log('Projector page: ' + connectSettings.hostIP + ':' + connectSettings.projectorPort);
 
 //Max should be started already. Tell Max the server is running - 200 ms after server starts.
 setTimeout(function () {
@@ -93,18 +104,18 @@ function closeServer() {
 
 //LOOK: OSC Listeners from Max - control the server from the Max app.
 
-function clientPing(serverTime) {
-    //pass the latency of the Max server to 
-    client.emit('ping', serverTime);
-}
+// function clientPing(serverTime) {
+//     //pass the latency of the Max server to 
+//     client.emit('ping', serverTime);
+// }
 
-oscServer.on('/ping', function (msg) {
-    let receivedTime = parseInt(msg[1]);
-    clientPing(receivedTime);
-});
+// oscServer.on('/ping', function (msg) {
+//     let receivedTime = parseInt(msg[1]);
+//     clientPing(receivedTime);
+// });
 
 oscServer.on('/choosePlayer', function (msg) {
-    choosePlayerFlag = 1; //new players joining will immediately get the choose player buttons
+    choosePlayerFlag = 1; //new players joining will immediately get the choose player buttons OR be previously reassigned.
     client.emit('choosePlayer', choosePlayerFlag);
 });
 
@@ -114,6 +125,13 @@ oscServer.on('/level', function (msg) {
     if (choosePlayerFlag == 1) { //only attempt to send messages if players have been told to join teams
         updateLevelsAndNotify(teamLevels);
     }
+});
+
+//tell all connected users to clear their local storage,
+// so they have to pick a new 
+oscServer.on('/clearLocalStorage', function (msg) {
+    console.log(msg);
+    client.emit('clearLocalStorage');
 });
 
 //send arrays of accuracies to Max
@@ -155,9 +173,13 @@ function sendLevelUpdateToTeam(team) {
 //LOOK: transport state change schedules in the future!
 oscServer.on('/transportState', function (msg) {
     let transportState = ([msg[1], msg[2]]);
+    //log that original transport time for rejoining users, baby!
+    if (!originalTransportStartTime) {
+        originalTransportStartTime = msg[2];
+    }
     saxUser.emit('transportState', transportState);
     client.emit('transportState', transportState);
-    //send the list of accuracies every 16 seconds
+    //send the list of accuracies to Max every 16 seconds
     if (transportState[0] == 1) {
         setTimeout(function () { setInterval(sendAccuracies, 16000) }, 16000);
     }
@@ -166,25 +188,21 @@ oscServer.on('/transportState', function (msg) {
     }
 });
 
-oscServer.on('/beat', function (msg) {
-    let barbeat = [msg[1], msg[2]];
-    saxUser.emit('beat', barbeat);
-    client.emit('beat', barbeat);
-});
-//from Max's transport, send out the loopreset when the loop goes around to 
-oscServer.on('/loopReset', function (msg) {
-    client.emit('loopReset');
-});
-
 oscServer.on('/testSchedule', function (msg) {
     let scheduleTime = parseInt(msg[1]);
     console.log(msg[1]);
     client.emit('test', scheduleTime);
 });
+
 //LOOK: Websocket Connections
 
 client.on('connection', onConnect);
 saxUser.on('connection', onSaxPlayerConnect);
+projector.on('connection', onProjectorConnect);
+
+function onProjectorConnect(socket){
+    projector.to(socket.id).emit('audienceURL', 'http://' + connectSettings.hostIP.toString() + ':' + connectSettings.expressPort.toString());
+}
 
 function onSaxPlayerConnect(socket) {
     socket.on('myVoice', function (msg) {
@@ -219,6 +237,9 @@ function onConnect(socket) {
         console.log('number of users: ' + numUsers);
         oscClient.send('/numUsers', numUsers);
         client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the choose players event already triggered, bring up selection screen right away
+        if (originalTransportStartTime) {
+            client.to(socket.id).emit('originalTransportStartTime', originalTransportStartTime);
+        }
     });
 
     socket.on('myTeam', function (msg) {
