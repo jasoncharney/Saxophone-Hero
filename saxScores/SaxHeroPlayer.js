@@ -3,10 +3,6 @@
 let socket = io('/saxUser');
 let latency;
 
-let sentTime = Date.now();
-socket.emit("sentTime",JSON.stringify({sentTime}));
-console.log(sentTime);
-
 let centerX, centerY;
 
 let playerChooser;
@@ -15,7 +11,9 @@ let playerAssigned = 0;
 
 let scorePages = [];
 
-let numLevels = 2;
+let scorePopulated = false; //change flag when score images are loaded.
+
+let numLevels = 6; //including intro
 
 let currentLevel;
 
@@ -24,9 +22,9 @@ metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
 
 function preload() {
-    for (let i = 0; i < numLevels; i++) {
-        scorePages[i] = loadImage('assets/' + i.toString() + '.png');
-    }
+    // for (let i = 0; i < numLevels; i++) {
+    //     scorePages[i] = loadImage('assets/' + i.toString() + '.png');
+    // }
 }
 
 function setup() {
@@ -36,9 +34,9 @@ function setup() {
     centerY = height / 2;
 
     //resize loaded images to the current display screen
-    for (let i = 0; i < scorePages.length; i++) {
-        scorePages[i].resize(width, height);//keep aspect ratio
-    }
+    // for (let i = 0; i < scorePages.length; i++) {
+    //     scorePages[i].resize(width, height);//keep aspect ratio
+    // }
 
     playerChooserDisplay();
 
@@ -46,7 +44,9 @@ function setup() {
 
 function draw() {
     background(255);
-    showScore(scorePages[currentLevel]);
+    if (scorePopulated == true) {
+        showScore(scorePages[1]);
+    }
     drawMetronome(convertBeat(Tone.Transport.position));
 }
 
@@ -62,9 +62,6 @@ function playMetronome(_status) {
 }
 
 //LOOK: Listeners
-socket.on('latency', function(msg){
-    latency = msg;
-});
 
 socket.on('level', function (msg) {
     console.log(msg);
@@ -73,8 +70,6 @@ socket.on('level', function (msg) {
 
 socket.on('transportState', function (msg) {
     if (msg == 1) {
-        let latencySeconds = latency * 0.001;
-        Tone.Transport.start("+"+JSON.stringify(latencySeconds));
         //playMetronome(msg);
     }
     if (msg == 0) {
@@ -84,17 +79,35 @@ socket.on('transportState', function (msg) {
 });
 
 function chooseSaxVoice() {
-
     playerAssigned = playerChooser.selected();
-
     if (playerAssigned != 0) {
         socket.emit('myVoice', playerAssigned);
-        //loop();
+        populateScore();
         removeElements();
         Tone.start();
     }
 
     console.log(playerAssigned);
+}
+
+function populateScore() {
+    let p = playerAssigned.slice(0, 1); //the first letter of the voice name
+    for (i = 0; i < numLevels; i++) {
+        let path = 'assets/' + p + i.toString() + '.png';
+        scorePages[i] = new Image(window.innerWidth,window.innerHeight);
+        scorePages[i].src = path;
+    }
+    scorePopulated = true;
+    console.log(scorePages);
+}
+//TODO: START HEREEEEE. async function
+function loadScore(url) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => reject(`Failed to load image: ${url}`);
+        img.src = url;
+    });
 }
 
 function showScore(_page) {
@@ -137,8 +150,4 @@ function drawMetronome(_beat) {
 function convertBeat(_bbs) {
     const parts = _bbs.split(':');
     return parseInt(parts[1], 10);
-}
-
-function calculateLatency(){
-
 }

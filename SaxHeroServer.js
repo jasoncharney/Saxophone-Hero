@@ -210,14 +210,6 @@ function onSaxPlayerConnect(socket) {
         oscClient.send('/saxIDs', JSON.stringify(saxIDs));
     });
 
-    socket.on('sentTime', function (msg) {
-        const serverTime = Date.now();
-        const { sentTime } = JSON.parse(msg);
-        const latency = serverTime - sentTime;
-        console.log(latency);
-        saxUser.to(socket.id).emit('latency', latency);
-    });
-
     socket.on('disconnect', function () {
         for (let key in saxIDs) {
             ;
