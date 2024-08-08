@@ -6,72 +6,60 @@
     <meta name="viewport"
         content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
     <meta name="SaxHeroProjector" content="onlyWebPro" />
-    <title>Saxophone Hero</title>
+    <title>Saxophone Hero: Projector</title>
     <script src="libraries/p5.js"></script>
     <script src="libraries/socket.io.min.js"></script>
     <script src="libraries/Tone.js"></script>
     <script src="libraries/qrcode.min.js"></script>
     <script src="projector.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <script>
         //keep the page from scrolling around when you move your fingers around
         document.addEventListener('touchmove', function (event) {
             event.preventDefault();
         }, { passive: false });
     </script>
-    <div id="title">
-        Saxophone Hero!
-    </div>
-    <div id="qrcode"></div>
-    <script type=""text/javascript">
-    </script>
-    <script>
-
-    </script>
-    <style type="text/css">
-        title {
-            font: bold;
-            font-size: large;
-        }
-        body {
-            margin: 0 !important;
-            padding: 0 !important;
-            width: 100%;
-            height: 100%;
-            background-color: green;
-            overflow-y: hidden;
-        }
-
-        canvas {
-            display: block;
-        }
-
-        canvas:focus {
-            outline: 0;
-        }
-
-        button {
-            font-size: 10vh;
-            margin: 0px;
-            padding: 1px;
-            text-align: center;
-            align-items: center;
-        }
-
-        .fs {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-
-        #enter {
-            display: block;
-        }
-
-        #exit {
-            display: none;
-        }
-    </style>
-
 </head>
+
+<body>
+    <div id="header">
+        <div id="saxtitle">
+            Saxophone Hero!
+        </div>
+        <div id="credits">
+            music by Sky Macklay<br>
+            game by Jason Charney
+        </div>
+    </div>
+    <div id="gamecontent">
+        <div id="siderail">
+            <div id="qrcodeGameInstructions">
+                Scan to join the game:<br>
+            </div>
+            <div id="qrcodeGame">
+            </div>
+            <div id="linkGame">
+            </div>
+            <div id="status">
+                Choose your team!
+            </div>
+        </div>
+        <div id="gameStatsContainer">
+
+        </div>
+    </div>
+    <script>
+        // window.addEventListener('resize', resizeCanvas);
+        // function resizeCanvas() {
+        //     const canvas = document.getElementById('gameStats');
+        //     canvas.width = canvas.parentElement.clientWidth;
+        //     canvas.height = canvas.parentElement.clientHeight;
+        // }
+
+        // window.onload = resizeCanvas; 
+    </script>
+    <script src="gameStats.js"></script>
+</body>
+
 
 </html>

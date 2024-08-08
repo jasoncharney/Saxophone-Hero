@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 2,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,31 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 713.0, 149.5, 100.0, 22.0 ],
+					"text" : "t b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-25",
+					"index" : 5,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 713.0, 93.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-13",
@@ -242,7 +267,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 718.0, 25.0, 100.0, 20.0 ],
+					"patching_rect" : [ 732.0, 19.0, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 237.0, 3.0, 100.0, 20.0 ],
 					"text" : "All to Level -1"
@@ -296,7 +321,8 @@
 					"patching_rect" : [ 11.0, 198.0, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 237.0, 46.0, 100.0, 20.0 ],
-					"text" : "send levels"
+					"text" : "send levels",
+					"varname" : "textbutton"
 				}
 
 			}
@@ -734,6 +760,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}

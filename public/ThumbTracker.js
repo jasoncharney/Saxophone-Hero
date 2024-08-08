@@ -31,6 +31,7 @@ class Thumbline {
         this.timing = timing;
         this.position = this.zeroPoint - (this.pixelsPerSecond * timing); //offset initial position with crossmark as the top of the score
         this.ypos = this.position;
+        this.fill = [255,255,255];
 
         if (duration < 1) {
             this.duration = -1; //placeholder value. Anything shorter than a half note will display as the same height rectangle
@@ -62,7 +63,7 @@ class Thumbline {
     }
 
     draw(_hashWidth) {
-        fill(255);
+        fill(this.fill[0],this.fill[1],this.fill[2]);
         rectMode(CENTER);
         setLineDash([]); //TODO: as score gets long, will it be more efficient to only render hashes on screen? Or does it not matter?
         rect(this.rectCenter*width, this.ypos, _hashWidth, this.rectHeight);

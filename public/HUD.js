@@ -8,7 +8,7 @@ var hudSize = 0.02;
 
 function playerHUD() {
     if (initialized == false) {
-        titleSize = height * 0.1;
+        titleSize = height * 0.2;
         textFont(titleFont);
         textSize(titleSize);
         fill(255);
@@ -79,7 +79,7 @@ function timeDisplay(_currentPosition) {
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
-    text(_currentPosition, centerX, centerY);
+    //text(_currentPosition, centerX, centerY);
 }
 
 function accuracyDisplay(_accuracy) {
@@ -158,11 +158,11 @@ function teamAssign(_team) {
 
 function initializeButton() {
     initButton = createButton('Tap to start!', 'init');
-    //initButton.size(width, height * 0.25);
+    initButton.size(width*0.25, height * 0.25);
     initButton.position(centerX, height * 0.75);
     initButton.id('initButton');
     document.getElementById('initButton').addEventListener('click', function () { initializeMe() });
-    //document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });
+    // document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });
 }
 
 function initializeMe() {

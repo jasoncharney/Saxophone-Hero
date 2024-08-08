@@ -1,0 +1,138 @@
+@font-face {
+    font-family: varsity;
+    src: url(assets/VarsityTeam-Bold.otf);
+}
+
+@font-face {
+    font-family: creato;
+    src: url(assets/CreatoDisplay-Regular.otf);
+}
+
+/* #header {
+    display: inline-block;
+} */
+
+#saxtitle {
+    font: bold;
+    font-family: varsity;
+    font-size: 64px;
+    text-align: left;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-shadow: 5px 5px black;
+    display: inline-block;
+}
+
+#credits {
+    color: white;
+    font-family: creato;
+    font-size: 24px;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-shadow: 2px 2px black;
+    display: inline-block;
+
+}
+
+#gamecontent {
+    display: flex;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#siderail {
+    width: 320px;
+    font-family: creato;
+    border: 5px dashed white;
+    border-color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+    color: white;
+    text-shadow: 2px 2px black;
+    flex-shrink: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+#qrcodeGame {
+    align-items: center;
+    padding: 10px;
+}
+#linkGame{
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+#status {
+    width: 320px;
+    font-family: varsity;
+    border-top: 5px dashed white;
+    border-color: white;
+    align-self: middle;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 8dvh;
+    padding-top: 20px;
+    color: gold;
+    text-shadow: 2px 2px black;
+    flex: 1;
+}
+
+#gameStatsContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+
+body {
+    margin: 5;
+    /* padding: 0 !important; */
+    height: 100vh;
+    background-color: green;
+    background-image: url(assets/grass.jpeg);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+canvas {
+    font-family: varsity;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left:10px;
+    margin-left:10px;
+    margin-right:10px;
+    text-shadow: 2px 2px black;
+    border: 5px dashed white;
+}
+
+button {
+    font-size: 10vh;
+    margin: 0px;
+    padding: 1px;
+    text-align: center;
+    align-items: center;
+}
+
+/* .fs {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#enter {
+    display: block;
+}
+
+#exit {
+    display: none;
+} */

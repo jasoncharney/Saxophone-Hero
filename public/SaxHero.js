@@ -48,7 +48,7 @@ let myLatencyBuffer = [];
 let originalTransportStartTime; //if you join after it starts, you know when it started so you can rejoin at the beginning of the 8 bar loop.
 
 //Metronome for testing
-let metronomeEnabled = true; //change to false to turn it off. Just here for diagnostics.
+let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
@@ -56,7 +56,7 @@ metronomeSynth.release = 0.01;
 //Eight Bar Timer - for synchronizing level changes
 
 const eightBarTimer = new Tone.Loop((time) => {
-    logPosition();
+    //logPosition();
     if (advanceLevelOnNextLoop == true) {
         setTransportPosition(level);
         advanceLevelOnNextLoop = false;
@@ -187,6 +187,7 @@ function playMetronome(_status) {
 //Each player requests the status of the game upon joining (received via WebSocket in response to message)
 //Using LocalStorage to see if they've joined before.
 socket.on('choosePlayer', function (msg) {
+    console.log(msg);
     choosePlayerStatus = msg;
     if (choosePlayerStatus == 1) {
         let isTeamStored = localStorage.getItem('storedTeam');
@@ -223,55 +224,7 @@ socket.on('level', function (msg) {
         taps = [];
     }
 
-    //Tone.Transport.schedule(setTransportPosition(level),Tone.Transport.loopEnd.value);TODO: get this 
-    //Advance to next level at the end of this one. But keep the beat going!
-    //setTransportPosition(level);
-    //TODO: players who have joined since the previous level started can now join
-    // if (Tone.Transport.state !== 'started' && assignedTeam !== null) {
-    //     setTransportState(1);
-    // }
 });
-
-
-
-socket.on('ping', function (msg) {
-    let myPing = Date.now() - parseInt(msg);
-    calculateMyAverageLatency(myPing);
-});
-
-//TODO: If transport is going after they rejoin, then ask for the original scheduled start time from Max...
-//make sure that you don't start until you're at an 8 bar multiple of the original scheduled time.
-//Need to echo the transport state to new joiners.
-//Function that checks if original start time is in the past
-//If it is, loop through multiples of 16 seconds (8 bar loop) offset to the original start time and check their future/past
-//When you hit one in the future, then schedule that multiple as the target time.
-//Then your own transport should be at the beginning of an 8-bar loop. Test this idea!!!
-function scheduleStart(targetTime) {
-    const currentTime = Date.now();
-    const delay = targetTime - currentTime;
-
-    if (delay > 0) {
-        return delay;
-    }
-}
-
-function calculateMyAverageLatency(pingTime) {
-    //latency is an average of a stream of incoming pings.
-    myLatencyBuffer.push(pingTime);
-    if (myLatencyBuffer.length > myLatencySamples) {
-        myLatencyBuffer.shift();
-    }
-    myLatency = myLatencyBuffer.reduce((a, b) => a + b) / myLatencyBuffer.length;
-}
-
-function setTransportPosition(_level) {
-    //set the transport position to a multiple of 8 (for which page we're on). TODO: get the victorylap logic in here though
-    let newStartBar = _level * 8;
-    let newStart = newStartBar.toString() + ":0:0";
-    let newEnd = (newStartBar + 8).toString() + ":0:0";
-    Tone.Transport.position = newStart;
-    Tone.Transport.setLoopPoints(newStart, newEnd);
-}
 
 socket.on('transportState', function (msg) {
     if (metronomeEnabled) {
@@ -281,24 +234,14 @@ socket.on('transportState', function (msg) {
     setTransportState(msg);
 });
 
-function setTransportState(_state) {
-    let state = _state[0];
-    let _targetTime = parseInt(_state[1]);
-    if (state == 1) {
-        Tone.Transport.loop = true;
-        //the difference between the Max designated time and the browser's time, converted to seconds
-        let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
-        console.log(del);
-        Tone.Transport.start(del);
-        eightBarTimer.start();
-    }
-    if (state == 0) {
-        Tone.Transport.stop();
-        eightBarTimer.stop();
-        eightBarTimer.cancel();
-        playhead.reset();
-    }
-}
+
+//TODO: If transport is going after they rejoin, then ask for the original scheduled start time from Max...
+//make sure that you don't start until you're at an 8 bar multiple of the original scheduled time.
+//Need to echo the transport state to new joiners.
+//Function that checks if original start time is in the past
+//If it is, loop through multiples of 16 seconds (8 bar loop) offset to the original start time and check their future/past
+//When you hit one in the future, then schedule that multiple as the target time.
+//Then your own transport should be at the beginning of an 8-bar loop. Test this idea!!!
 
 addEventListener('touchstart', function (event) {
     let touch = event.touches[event.touches.length - 1];
@@ -327,13 +270,20 @@ function judgeTap(tapTime) {
     //Also, a little secret here...it doesn't matter which thumb goes where!
 
     let timingMargin = 0.125; //seconds by which the tap can deviate and still count
-    for (let noteTiming of noteTimings) {
+    let matchedIndex = -1;
+
+    noteTimings.forEach((noteTiming, index) => {
         if (Math.abs(tapTime - noteTiming) <= timingMargin) {
             taps.push(1);
+            matchedIndex = index;
             return;
         }
-    }
+    });
     taps.push(0);
+    if (matchedIndex !== -1) {
+        console.log(matchedIndex);
+        thumblines[matchedIndex].fill = [0, 255, 0];
+    }
 }
 
 function calculateAccuracy() {
@@ -351,6 +301,10 @@ function sendAccuracy(_progress) {
     if (_progress >= 0.99 && sendAccuracyFlag == 0) {
         socket.emit('accuracy', [assignedTeam, accuracy]);
         sendAccuracyFlag = 1;
+        //reset colors
+        for (let i = 0; i < thumblines.length; i++) {
+            thumblines[i].fill = [255, 255, 255];
+        }
     }
     if (_progress < 0.99 && sendAccuracyFlag == 1) {
         sendAccuracyFlag = 0;

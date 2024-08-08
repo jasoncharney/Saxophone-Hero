@@ -85,6 +85,7 @@ serverStatus = 1;
 console.log('Sax Hero Server Running:' + '\n' + 'Audience URL: ' + connectSettings.hostIP + ':' + connectSettings.expressPort);
 console.log('Player URL: ' + connectSettings.hostIP + ':' + connectSettings.saxPlayerPort);
 console.log('Projector page: ' + connectSettings.hostIP + ':' + connectSettings.projectorPort);
+client.emit('clearLocalStorage'); //clear local storage if anyone's connected
 
 //Max should be started already. Tell Max the server is running - 200 ms after server starts.
 setTimeout(function () {
@@ -104,24 +105,16 @@ function closeServer() {
 
 //LOOK: OSC Listeners from Max - control the server from the Max app.
 
-// function clientPing(serverTime) {
-//     //pass the latency of the Max server to 
-//     client.emit('ping', serverTime);
-// }
-
-// oscServer.on('/ping', function (msg) {
-//     let receivedTime = parseInt(msg[1]);
-//     clientPing(receivedTime);
-// });
-
 oscServer.on('/choosePlayer', function (msg) {
     choosePlayerFlag = 1; //new players joining will immediately get the choose player buttons OR be previously reassigned.
+    console.log('Players to be chosen');
     client.emit('choosePlayer', choosePlayerFlag);
 });
 
 
 oscServer.on('/level', function (msg) {
     let teamLevels = JSON.parse(msg[1]); //turn the levels into a JSON object
+    projector.emit('levels', teamLevels);
     if (choosePlayerFlag == 1) { //only attempt to send messages if players have been told to join teams
         updateLevelsAndNotify(teamLevels);
     }
@@ -130,7 +123,6 @@ oscServer.on('/level', function (msg) {
 //tell all connected users to clear their local storage,
 // so they have to pick a new 
 oscServer.on('/clearLocalStorage', function (msg) {
-    console.log(msg);
     client.emit('clearLocalStorage');
 });
 
@@ -200,7 +192,7 @@ client.on('connection', onConnect);
 saxUser.on('connection', onSaxPlayerConnect);
 projector.on('connection', onProjectorConnect);
 
-function onProjectorConnect(socket){
+function onProjectorConnect(socket) {
     projector.to(socket.id).emit('audienceURL', 'http://' + connectSettings.hostIP.toString() + ':' + connectSettings.expressPort.toString());
 }
 
@@ -237,6 +229,7 @@ function onConnect(socket) {
     socket.on('myTeam', function (msg) {
         let team = msg;
         teamIDs[team].push(socket.id);
+        projector.emit('numPlayers', countPlayersInTeams(teamIDs));
         oscClient.send('/teamIDs', JSON.stringify(teamIDs));
         client.to(socket.id).emit('level', teamLevels[team]); //send the current level of that team to them
     });
@@ -253,6 +246,7 @@ function onConnect(socket) {
         }
         numUsers = userIDs.length;
         removePlayer(socket.id);
+        projector.emit('numPlayers', countPlayersInTeams(teamIDs));
         oscClient.send('/teamIDs', JSON.stringify(teamIDs));
         console.log('number of users: ' + numUsers);
         oscClient.send('/numberofUsers', numUsers);
@@ -277,5 +271,21 @@ function removePlayer(id) {
             return;
         }
     }
+
+}
+
+function countPlayersInTeams(_teams) {
+    let playerCounts = {};
+
+    for (let team in _teams) {
+        if (Object.keys(_teams[team]).length) {
+            playerCounts[team] = Object.keys(_teams[team]).length;
+        }
+        else {
+            playerCounts[team] = 0;
+        }
+    }
+
+    return playerCounts;
 
 }
