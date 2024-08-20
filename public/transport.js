@@ -19,8 +19,8 @@ function setTransportPosition(_level) {
 }
 
 
-
 function setTransportState(_state) {
+    //TODO: maybe display, get ready!
     let state = _state[0];
     let _targetTime = parseInt(_state[1]);
     if (state == 1) {
@@ -28,7 +28,7 @@ function setTransportState(_state) {
         //the difference between the Max designated time and the browser's time, converted to seconds
         let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
         Tone.Transport.start(del);
-        eightBarTimer.start();
+        eightBarTimer.start(); //TODO: Is this blocking?
     }
     if (state == 0) {
         Tone.Transport.stop();

@@ -73,13 +73,13 @@
 }
 #status {
     width: 320px;
-    font-family: varsity;
+    font-family: creato;
     border-top: 5px dashed white;
     border-color: white;
     align-self: middle;
     vertical-align: middle;
     text-align: center;
-    font-size: 8dvh;
+    font-size: 6dvh;
     padding-top: 20px;
     color: gold;
     text-shadow: 2px 2px black;

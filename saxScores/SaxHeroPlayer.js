@@ -17,9 +17,13 @@ let numLevels = 6; //including intro
 
 let currentLevel;
 
+let imageLocations = [0,0]; // top left X location of the current score page/next score page
+
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
+
+//TODO: For now I'll just load ALL the images into memory before they choose their player. I can figure out the async loading later...
 
 function preload() {
     // for (let i = 0; i < numLevels; i++) {
@@ -32,6 +36,7 @@ function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     centerX = width / 2;
     centerY = height / 2;
+    imageLocations[1] = centerY;
 
     //resize loaded images to the current display screen
     // for (let i = 0; i < scorePages.length; i++) {
@@ -45,21 +50,13 @@ function setup() {
 function draw() {
     background(255);
     if (scorePopulated == true) {
-        showScore(scorePages[1]);
+        showScore(scorePages[currentLevel], imageLocations[0]);
+        showScore(scorePages[currentLevel+1], imageLocations[1]);
     }
-    drawMetronome(convertBeat(Tone.Transport.position));
+    //drawMetronome(convertBeat(Tone.Transport.position));
 }
 
-function playMetronome(_status) {
-    if (_status == 1) {
-        Tone.Transport.scheduleRepeat((time) => {
-            metronomeSynth.triggerAttackRelease("A4", "8n", time);
-        }, "4n"); // "4n" is a quarter note, adjust as needed for different beat intervals
-    }
-    if (_status == 0) {
-        Tone.Transport.cancel();
-    }
-}
+
 
 //LOOK: Listeners
 
@@ -82,7 +79,7 @@ function chooseSaxVoice() {
     playerAssigned = playerChooser.selected();
     if (playerAssigned != 0) {
         socket.emit('myVoice', playerAssigned);
-        populateScore();
+        loadScore();
         removeElements();
         Tone.start();
     }
@@ -90,42 +87,44 @@ function chooseSaxVoice() {
     console.log(playerAssigned);
 }
 
-function populateScore() {
-    let p = playerAssigned.slice(0, 1); //the first letter of the voice name
-    for (i = 0; i < numLevels; i++) {
-        let path = 'assets/' + p + i.toString() + '.png';
-        scorePages[i] = new Image(window.innerWidth,window.innerHeight);
-        scorePages[i].src = path;
-    }
-    scorePopulated = true;
-    console.log(scorePages);
-}
-//TODO: START HEREEEEE. async function
-function loadScore(url) {
+function loadScore() {
     return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve(img);
-        img.onerror = () => reject(`Failed to load image: ${url}`);
-        img.src = url;
+        let p = playerAssigned.slice(0, 1); //the first letter of the voice name
+        for (i = 0; i < numLevels; i++) {
+            let path = 'assets/' + p + i.toString() + '.png';
+            scorePages[i] = loadImage(path); //load the image
+            scorePages[i].resize(width,height/2); //resize the image
+        }
+        scorePopulated = true;
     });
 }
 
-function showScore(_page) {
+function showScore(_page, imgLocation) {
     if (playerAssigned !== 0 && currentLevel !== undefined) {
-        image(_page, 0, 0);
+        image(_page, 0, imgLocation,width,height/2);
     }
 }
 
 function playerChooserDisplay() {
     playerChooser = createSelect();
     playerChooser.position(0, centerY);
-    //playerChooser.size(120);
     playerChooser.option('Select saxophone:')
     playerChooser.option('soprano');
     playerChooser.option('alto');
     playerChooser.option('tenor');
     playerChooser.option('bari');
     playerChooser.changed(chooseSaxVoice);
+}
+
+function playMetronome(_status) {
+    if (_status == 1) {
+        Tone.Transport.scheduleRepeat((time) => {
+            metronomeSynth.triggerAttackRelease("A4", "8n", time);
+        }, "4n"); // "4n" is a quarter note, adjust as needed for different beat intervals
+    }
+    if (_status == 0) {
+        Tone.Transport.cancel();
+    }
 }
 
 function drawMetronome(_beat) {

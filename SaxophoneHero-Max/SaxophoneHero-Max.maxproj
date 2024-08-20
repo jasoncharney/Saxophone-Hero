@@ -2,7 +2,7 @@
 	"name" : "SaxophoneHero-Max",
 	"version" : 1,
 	"creationdate" : 3799075969,
-	"modificationdate" : 3803311176,
+	"modificationdate" : 3806437062,
 	"viewrect" : [ 0.0, 115.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -40,6 +40,29 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"MIDIJSONEditor.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"shell.maxhelp" : 			{
+				"kind" : "helpfile",
+				"local" : 1
+			}
+
+		}
+,
+		"media" : 		{
+			"downbeat.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"upbeat.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
 
 		}
 ,
@@ -69,12 +92,15 @@
 ,
 			"connectSettings.json" : 			{
 				"kind" : "json",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero",
-					"projectrelativepath" : ".."
-				}
+				"local" : 1
+			}
 
+		}
+,
+		"externals" : 		{
+			"shell.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
 			}
 
 		}

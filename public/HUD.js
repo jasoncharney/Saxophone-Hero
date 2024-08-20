@@ -8,7 +8,7 @@ var hudSize = 0.02;
 
 function playerHUD() {
     if (initialized == false) {
-        titleSize = height * 0.2;
+        titleSize = height * 0.1;
         textFont(titleFont);
         textSize(titleSize);
         fill(255);
@@ -45,10 +45,16 @@ function playerHUD() {
     if (Tone.Transport.state == 'started' && accuracy != undefined) {
         accuracyDisplay(accuracy);
     }
-    if (advanceLevelOnNextLoop == true) {
-        if (frameCount % 2 == 0 || frameCount % 3 == 0) {
-            levelUpDisplay();
-        }
+    if (victoryLap == true && advanceLevelOnNextLoop == false && level > 0) {
+        //if (frameCount % 5 < 3) {
+            levelUpDisplay('Level up!');
+        //}
+    }
+
+    if (advanceLevelOnNextLoop == true && level > 0) {
+        //if (frameCount % 5 < 3) {
+            levelUpDisplay('Victory lap!');
+        //}
     }
 
 }
@@ -79,7 +85,7 @@ function timeDisplay(_currentPosition) {
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
-    //text(_currentPosition, centerX, centerY);
+    text(_currentPosition, centerX, centerY);
 }
 
 function accuracyDisplay(_accuracy) {
@@ -91,14 +97,13 @@ function accuracyDisplay(_accuracy) {
     text((_accuracy * 100).toString() + '%', centerX, height - 0.5 * hudSize);
 }
 
-function levelUpDisplay() {
+function levelUpDisplay(disp) {
     textFont(titleFont);
     textSize(titleSize);
     stroke(0);
     strokeWeight(2);
     textAlign(CENTER);
-    text('Level Up!', centerX, titleSize + 20);
-
+    text(disp, centerX, titleSize + 20);
 }
 
 function pingDisplay(_myLatency) {
@@ -142,7 +147,7 @@ function buttonSetup() {
 
 function teamAssignByTap(_team) {
     teamAssign(_team);
-    localStorage.setItem('storedTeam', assignedTeam);
+    localStorage.setItem('storedTeam', assignedTeam); //TODO: maybe remove this.
     //assign the teams and then remove all the buttons.
     document.getElementById('sopranoButton').remove();
     document.getElementById('altoButton').remove();
@@ -150,6 +155,7 @@ function teamAssignByTap(_team) {
     document.getElementById('bariButton').remove();
 }
 
+//when you assign the team, populate notes with the assigned team's score and let the server know
 function teamAssign(_team) {
     assignedTeam = _team;
     populateNotes(assignedTeam);
@@ -159,7 +165,7 @@ function teamAssign(_team) {
 function initializeButton() {
     initButton = createButton('Tap to start!', 'init');
     initButton.size(width*0.25, height * 0.25);
-    initButton.position(centerX, height * 0.75);
+    initButton.position(centerX-width*0.125, height * 0.625);
     initButton.id('initButton');
     document.getElementById('initButton').addEventListener('click', function () { initializeMe() });
     // document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });

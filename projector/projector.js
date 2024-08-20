@@ -15,6 +15,12 @@ let playerNumbers = {
     "bari": 0
 }
 
+//reload the page when it's resized
+window.addEventListener('resize', function() {
+    location.reload();
+});
+
+
 socket.on('audienceURL', function (msg) {
     new QRCode(document.getElementById("qrcodeGame"), {
         text: msg,
@@ -37,4 +43,9 @@ socket.on('numPlayers', function (msg) {
         playerNumbers[player] = msg[player];
     }
     console.log(playerNumbers);
+});
+
+socket.on('notification', function (msg) {
+    console.log(msg);
+    document.getElementById("status").innerHTML = msg;
 });

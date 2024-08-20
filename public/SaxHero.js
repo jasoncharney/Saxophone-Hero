@@ -8,22 +8,25 @@ var audioContextStarted = false; //audio context for Tone - need to start with t
 
 let initialized = false; //user must tap "I'm ready!" event to allow sound/device orientation access.
 let choosePlayerStatus = 0; //brings up the buttons to select which team they're on
+let storeLocalTeamFlag = false; //don't store the previously chosen team when page reloads. //LOOK: Turn this on before actual game. 
 
 let shoeLimg, shoeRimg; //images for shoe taps
 
 let assignedTeam; //string holding the team name
 
 let shoeSampler;//object for holding shoe samples
+let shoeVolume = 0;
 let shoeSize = 0.1; //the size of the shoe graphic
 
-let crossMark = window.innerHeight * 0.66; //the point at which the lines cross the playhead, where you tap each thumb
+let crossMark = window.innerHeight * 0.66; //the point at which the lines cross the playhead, where you tap each thumb. 2/3 of the way down the screen
 
-let touchArray = new Array(2); //only two touches on the screen at a time, please!
+let touchArray = new Array(2); //LOOK: only two touches on the screen at a time, please! this might be a problem, actually
 
 let canvas; //reference the created canvas for using JS without p5
 
 let level = -1; //the current level we're on! -1 is the initial level
 let advanceLevelOnNextLoop = false; //if true, the current loop is a "victory lap" and the next loop will be the next level.
+let victoryLap = false; //this current loop is a victory lap. We will do the loop one more time. Toggled in the level listener function.
 
 let displayTime = true; //draw the transport position at the bottom of the screen for troubleshooting
 
@@ -33,19 +36,16 @@ let taps = []; //array that stores all the taps for a level (hits and misses)
 let accuracy; //accuracy percentage for current level
 let sendAccuracyFlag = 0; //flip to 1 once a loop to send the accuracy to the server just once.
 
-let thumblines = [];
-let playhead;
-let hashWidth;
+let thumblines = []; //notes as hash marks
+let playhead; //the invisible line that moves all hashmarks
+let hashWidth; //calculated width of each hashmark based on the screen
 
 let secondsPerWindow = 4; //seconds of time displayed vertically
-let pixelsPerSecond;
+let pixelsPerSecond; //how fast to scroll
 let zeroPoint;
 
-let myLatency; //make a running calculation of my latency from last received values.
-let myLatencySamples = 100; //how many recent latency values to average
-let myLatencyBuffer = [];
-
-let originalTransportStartTime; //if you join after it starts, you know when it started so you can rejoin at the beginning of the 8 bar loop.
+let originalTransportStartTime; //if you join after it starts, you know when it started so you can rejoin at the beginning of the 8 bar loop. //TODO: revisit this
+//TODO: get an actual loop start time from the server. Every 8 bars?
 
 //Metronome for testing
 let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
@@ -56,10 +56,14 @@ metronomeSynth.release = 0.01;
 //Eight Bar Timer - for synchronizing level changes
 
 const eightBarTimer = new Tone.Loop((time) => {
-    //logPosition();
     if (advanceLevelOnNextLoop == true) {
         setTransportPosition(level);
         advanceLevelOnNextLoop = false;
+        victoryLap = false;
+    }
+    if (victoryLap == true){
+        advanceLevelOnNextLoop = true;
+        console.log('nextlooop');
     }
 }, "8m");
 
@@ -75,6 +79,7 @@ function preload() {
             "C#4": 'assets/rightStep.wav'
         }
     }).toDestination();
+    shoeSampler.volume.value = shoeVolume;
 }
 //LOOK: P5 Setup Function.
 
@@ -100,7 +105,7 @@ function setup() {
 
     initializeButton();
 
-    //set the static fields for the playhead and thumbline classes
+    //set the static fields for the Playhead and Thumbline classes
 
     pixelsPerSecond = height / secondsPerWindow;
     zeroPoint = crossMark;
@@ -134,7 +139,6 @@ function draw() {
     }
     playerHUD();
     sendAccuracy(Tone.Transport.progress);
-    // pingDisplay(myLatency);
 }
 
 //Notes functions
@@ -148,6 +152,7 @@ function populateNotes(team) {
 //Shoe draw and sound functions.
 function shoePlay(shoeSoundChoose) {
     //play the left shoe sound if the touch is to the left of the center, otherwise play right
+    //TODO: Fade out sound over a 3 levels.
     if (shoeSoundChoose < centerX) {
         shoeSampler.triggerAttackRelease("C#4", 0.2);
     }
@@ -158,7 +163,7 @@ function shoePlay(shoeSoundChoose) {
 
 function drawShoes() {
     //draw shoes for only the first two touches
-    let firstTwoTouches = touches.slice(0, 2);
+    let firstTwoTouches = touches;
     for (let touch of firstTwoTouches) {
         if (touch.x < centerX) {
             imageMode(CENTER);
@@ -170,6 +175,7 @@ function drawShoes() {
         }
     }
 }
+
 function playMetronome(_status) {
     if (_status == 1) {
         let freq = random(220, 440);
@@ -187,19 +193,23 @@ function playMetronome(_status) {
 //Each player requests the status of the game upon joining (received via WebSocket in response to message)
 //Using LocalStorage to see if they've joined before.
 socket.on('choosePlayer', function (msg) {
-    console.log(msg);
     choosePlayerStatus = msg;
     if (choosePlayerStatus == 1) {
-        let isTeamStored = localStorage.getItem('storedTeam');
-        if (isTeamStored) {
-            teamAssign(isTeamStored);
+        if (storeLocalTeamFlag) {
+            let isTeamStored = localStorage.getItem('storedTeam');
+            if (isTeamStored) {
+                teamAssign(isTeamStored);
+            }
         }
         else {
-            buttonSetup();
+            if (!assignedTeam) {
+                buttonSetup();
+            }
         }
     }
 });
 
+//TODO: toggle for saving local storage or not
 socket.on('clearLocalStorage', function (msg) {
     let isTeamStored = localStorage.getItem('storedTeam');
     if (isTeamStored) {
@@ -220,17 +230,28 @@ socket.on('level', function (msg) {
     //only do the advance reset if advancing on the next loop!
     if (msg != level) {
         level = msg;
-        advanceLevelOnNextLoop = true;
+        advanceLevelOnNextLoop = false; //probably redundant
+        victoryLap = true; //
         taps = [];
+        //decrease the volume of the shoes as levels go on
+        dimShoeVolume();
     }
-
 });
+
+function dimShoeVolume(){
+    if (level <= 1) {
+        shoeVolume = 0;
+    }
+    else {
+        shoeVolume -= 12;
+    }
+    shoeSampler.volume.value = shoeVolume;
+}
 
 socket.on('transportState', function (msg) {
     if (metronomeEnabled) {
         playMetronome(msg[0]);
     }
-    console.log(msg);
     setTransportState(msg);
 });
 
@@ -246,7 +267,7 @@ socket.on('transportState', function (msg) {
 addEventListener('touchstart', function (event) {
     let touch = event.touches[event.touches.length - 1];
     if (initialized) {
-        shoePlay(touch.clientX);
+        shoePlay(touch.clientX); //TODO: why is this sluggish on mobile? Is it because of the draw frame lineup? Use Tone to draw the frames?
     }
     if (assignedTeam != undefined && Tone.Transport.state == 'started') {
         judgeTap(Tone.Transport.seconds);
@@ -281,7 +302,6 @@ function judgeTap(tapTime) {
     });
     taps.push(0);
     if (matchedIndex !== -1) {
-        console.log(matchedIndex);
         thumblines[matchedIndex].fill = [0, 255, 0];
     }
 }

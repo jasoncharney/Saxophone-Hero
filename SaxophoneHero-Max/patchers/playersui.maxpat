@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 2,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 192.0, 200.0, 1116.0, 812.0 ],
+		"rect" : [ -1480.0, 164.0, 1116.0, 812.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,20 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 414.0, 137.0, 150.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 96.0, 3.0, 386.0, 20.0 ],
+					"text" : "make the let's go button only show when all sax players are connected!"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-62",
 					"maxclass" : "newobj",
@@ -71,24 +85,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 12.0, 6.0, 90.0, 20.0 ],
 					"text" : "SAX PLAYERS"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"angle" : 270.0,
-					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
-					"border" : 1,
-					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"id" : "obj-4",
-					"maxclass" : "panel",
-					"mode" : 0,
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 678.0, 383.0, 128.0, 128.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 3.0, 582.0, 52.0 ],
-					"proportion" : 0.5
 				}
 
 			}
@@ -134,7 +130,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 299.0, 557.0, 109.0, 22.0 ],
+					"patching_rect" : [ 295.5, 537.0, 109.0, 22.0 ],
 					"text" : "loadmess hidden 1"
 				}
 
@@ -180,7 +176,6 @@
 					"bgcolor" : [ 1.0, 0.490196078431373, 0.262745098039216, 1.0 ],
 					"fontlink" : 1,
 					"fontsize" : 20.0,
-					"hidden" : 1,
 					"id" : "obj-46",
 					"ignoreclick" : 1,
 					"maxclass" : "textbutton",
@@ -188,9 +183,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 325.0, 581.0, 90.98046875, 30.34375 ],
+					"patching_rect" : [ 318.0, 586.171875, 63.792964935302734, 30.34375 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 484.0, 13.828125, 90.98046875, 30.34375 ],
+					"presentation_rect" : [ 484.0, 13.828125, 63.792964935302734, 30.34375 ],
 					"saved_attribute_attributes" : 					{
 						"bgcolor" : 						{
 							"expression" : "themecolor.live_alert"
@@ -202,7 +197,7 @@
 
 					}
 ,
-					"text" : "Let's go!",
+					"text" : "Start!",
 					"texton" : "Bari",
 					"textoncolor" : [ 0.0, 0.980392156862745, 0.63921568627451, 1.0 ]
 				}
@@ -552,6 +547,24 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
+					"border" : 1,
+					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"id" : "obj-4",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 678.0, 383.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.0, 3.0, 582.0, 52.0 ],
+					"proportion" : 0.5
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -808,6 +821,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-46", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-70", 0 ]
 				}
 

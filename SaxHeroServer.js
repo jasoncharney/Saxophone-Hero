@@ -1,4 +1,5 @@
 //Saxophone Hero Server - 2024//
+//TODO: How to turn this into an application you can run from the Max folders?
 
 //import modules
 let fs = require('fs');
@@ -76,8 +77,11 @@ let saxIDs = {
     "bari": 0
 }
 
+//current notification on the projector screen
+let notification;
+
 //Original timestamp of first startup. So rejoining players can reference.
-let originalTransportStartTime;
+let originalTransportStartTime; //TODO: they start on the next level.
 
 LOOK: //run at startup:
 console.clear();
@@ -106,7 +110,7 @@ function closeServer() {
 //LOOK: OSC Listeners from Max - control the server from the Max app.
 
 oscServer.on('/choosePlayer', function (msg) {
-    choosePlayerFlag = 1; //new players joining will immediately get the choose player buttons OR be previously reassigned.
+    choosePlayerFlag = msg[1]; //new players joining will immediately get the choose player buttons OR be previously reassigned.
     console.log('Players to be chosen');
     client.emit('choosePlayer', choosePlayerFlag);
 });
@@ -119,26 +123,6 @@ oscServer.on('/level', function (msg) {
         updateLevelsAndNotify(teamLevels);
     }
 });
-
-//tell all connected users to clear their local storage,
-// so they have to pick a new 
-oscServer.on('/clearLocalStorage', function (msg) {
-    client.emit('clearLocalStorage');
-});
-
-//send arrays of accuracies to Max
-
-function updateAccuracies(team, id, newAccuracy) {
-    if (teamAccuracies[team]) {
-        teamAccuracies[team][id] = newAccuracy;
-    }
-}
-
-function sendAccuracies() {
-    //console.log(teamAccuracies);
-    //console.log(calculateAverageAccuracies()); TODO: figure this out so it's calculated in the server and not in Max
-    oscClient.send('/accuracies', JSON.stringify(teamAccuracies));
-}
 
 function updateLevelsAndNotify(newLevels) {
     for (let team in newLevels) {
@@ -162,6 +146,28 @@ function sendLevelUpdateToTeam(team) {
     }
 }
 
+
+//tell all connected users to clear their local storage,
+// so they have to pick a new 
+oscServer.on('/clearLocalStorage', function (msg) {
+    client.emit('clearLocalStorage');
+});
+
+//send arrays of accuracies to Max
+
+function updateAccuracies(team, id, newAccuracy) {
+    if (teamAccuracies[team]) {
+        teamAccuracies[team][id] = newAccuracy;
+    }
+}
+
+function sendAccuracies() {
+    //console.log(teamAccuracies);
+    //console.log(calculateAverageAccuracies()); TODO: maybe figure this out so it's calculated in the server and not in Max
+    oscClient.send('/accuracies', JSON.stringify(teamAccuracies));
+}
+
+
 //LOOK: transport state change schedules in the future!
 oscServer.on('/transportState', function (msg) {
     let transportState = ([msg[1], msg[2]]);
@@ -171,7 +177,7 @@ oscServer.on('/transportState', function (msg) {
     }
     saxUser.emit('transportState', transportState);
     client.emit('transportState', transportState);
-    //send the list of accuracies to Max every 16 seconds
+    //send the list of tap accuracies to Max every 16 seconds
     if (transportState[0] == 1) {
         setTimeout(function () { setInterval(sendAccuracies, 16000) }, 16000);
     }
@@ -180,20 +186,22 @@ oscServer.on('/transportState', function (msg) {
     }
 });
 
-oscServer.on('/testSchedule', function (msg) {
-    let scheduleTime = parseInt(msg[1]);
-    console.log(msg[1]);
-    client.emit('test', scheduleTime);
+oscServer.on('/projectorNotify', function (msg){
+    notification = msg[1];
+    projector.emit('notification', notification);
 });
 
 //LOOK: Websocket Connections
 
-client.on('connection', onConnect);
+client.on('connection', onAudienceConnect);
 saxUser.on('connection', onSaxPlayerConnect);
 projector.on('connection', onProjectorConnect);
 
 function onProjectorConnect(socket) {
     projector.to(socket.id).emit('audienceURL', 'http://' + connectSettings.hostIP.toString() + ':' + connectSettings.expressPort.toString());
+    if (notification){
+        projector.to(socket.id).emit('notification', notification);
+    }
 }
 
 function onSaxPlayerConnect(socket) {
@@ -213,16 +221,18 @@ function onSaxPlayerConnect(socket) {
     });
 }
 
-function onConnect(socket) {
+function onAudienceConnect(socket) {
     //user must be initialized through pressing the button on their startup screen.
     socket.on('initializeMe', function (msg) {
         userIDs.push(socket.id);
         numUsers = userIDs.length;
-        console.log('number of users: ' + numUsers);
+        //console.log('number of users: ' + numUsers);
         oscClient.send('/numUsers', numUsers);
-        client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the choose players event already triggered, bring up selection screen right away
+        client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the "choose players" event already triggered, bring up selection screen right away
+        
+        //TODO: When a player joins, request the current time from the server.
         if (originalTransportStartTime) {
-            client.to(socket.id).emit('originalTransportStartTime', originalTransportStartTime);
+            client.to(socket.id).emit('originalTransportStartTime', originalTransportStartTime); //send them the original transport start time
         }
     });
 
