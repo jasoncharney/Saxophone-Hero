@@ -24,7 +24,8 @@ let touchArray = new Array(2); //LOOK: only two touches on the screen at a time,
 
 let canvas; //reference the created canvas for using JS without p5
 
-let level = -1; //the current level we're on! -1 is the initial level
+let level = 0; //the current level we're on! -1 is the initial level
+let introMode = 0; //if true, then we advance from level 0 to level 1 automatically, bypassing other logic.
 let advanceLevelOnNextLoop = false; //if true, the current loop is a "victory lap" and the next loop will be the next level.
 let victoryLap = false; //this current loop is a victory lap. We will do the loop one more time. Toggled in the level listener function.
 
@@ -34,6 +35,7 @@ let notesObject; //reassign this from the single score file at team assignment t
 let noteTimings = []; //single array that only contains the "seconds" of note events from the assigned voice.
 let taps = []; //array that stores all the taps for a level (hits and misses)
 let accuracy; //accuracy percentage for current level
+let numberOfLoops = 0; //the number of times we've been through a level.
 let sendAccuracyFlag = 0; //flip to 1 once a loop to send the accuracy to the server just once.
 
 let thumblines = []; //notes as hash marks
@@ -49,21 +51,25 @@ let originalTransportStartTime; //if you join after it starts, you know when it 
 
 //Metronome for testing
 let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
-const metronomeSynth = new Tone.MembraneSynth().toDestination();
-metronomeSynth.pitchDecay = 0;
-metronomeSynth.release = 0.01;
+
 
 //Eight Bar Timer - for synchronizing level changes
 
 const eightBarTimer = new Tone.Loop((time) => {
+    if (level != 0){
+        Tone.Transport.loop = true; //start looping after level 0.
+        numberOfLoops++;//increase the number of loops by one
+        console.log('Level' + level + ': ' + numberOfLoops);
+    }
     if (advanceLevelOnNextLoop == true) {
+        numberOfLoops = 0;
         setTransportPosition(level);
+        levelUpOpacity = 255;
         advanceLevelOnNextLoop = false;
         victoryLap = false;
     }
     if (victoryLap == true){
         advanceLevelOnNextLoop = true;
-        console.log('nextlooop');
     }
 }, "8m");
 
@@ -150,16 +156,7 @@ function populateNotes(team) {
     }
 }
 //Shoe draw and sound functions.
-function shoePlay(shoeSoundChoose) {
-    //play the left shoe sound if the touch is to the left of the center, otherwise play right
-    //TODO: Fade out sound over a 3 levels.
-    if (shoeSoundChoose < centerX) {
-        shoeSampler.triggerAttackRelease("C#4", 0.2);
-    }
-    if (shoeSoundChoose >= centerX) {
-        shoeSampler.triggerAttackRelease("C4", 0.2);
-    }
-}
+
 
 function drawShoes() {
     //draw shoes for only the first two touches
@@ -176,17 +173,6 @@ function drawShoes() {
     }
 }
 
-function playMetronome(_status) {
-    if (_status == 1) {
-        let freq = random(220, 440);
-        Tone.Transport.scheduleRepeat((time) => {
-            metronomeSynth.triggerAttackRelease(freq, "8n", time);
-        }, "4n"); // "4n" is a quarter note, adjust as needed for different beat intervals
-    }
-    if (_status == 0) {
-        Tone.Transport.cancel();
-    }
-}
 
 //LOOK: Listeners
 
@@ -225,28 +211,22 @@ socket.on('originalTransportStartTime', function (msg) {
     console.log(originalTransportStartTime);
 });
 
+//LOOK: Level advancing
 
 socket.on('level', function (msg) {
-    //only do the advance reset if advancing on the next loop!
     if (msg != level) {
         level = msg;
+        console.log('Advance to level ' + level + '!');
+        levelUpOpacity = 255;
         advanceLevelOnNextLoop = false; //probably redundant
         victoryLap = true; //
-        taps = [];
+        taps = []; //clear the taps buffer and then calculate accuracy!
+        accuracy = calculateAccuracy(); //should be zero, now.
         //decrease the volume of the shoes as levels go on
-        dimShoeVolume();
+        dimShoeVolume();//TODO: move this
     }
 });
 
-function dimShoeVolume(){
-    if (level <= 1) {
-        shoeVolume = 0;
-    }
-    else {
-        shoeVolume -= 12;
-    }
-    shoeSampler.volume.value = shoeVolume;
-}
 
 socket.on('transportState', function (msg) {
     if (metronomeEnabled) {
@@ -287,7 +267,7 @@ function judgeTap(tapTime) {
     // then it's deemed accurate. Otherwise: not accurate.
     // Extra taps decrease the accuracy.
 
-    //LOOK: If you don't tap, your accuracy does not diminish. So you can join a team and just watch without playing.
+    //If you don't tap, your accuracy does not diminish. So you can join a team and just watch without playing.
     //Also, a little secret here...it doesn't matter which thumb goes where!
 
     let timingMargin = 0.125; //seconds by which the tap can deviate and still count
@@ -300,7 +280,7 @@ function judgeTap(tapTime) {
             return;
         }
     });
-    taps.push(0);
+    //taps.push(0); //LOOK: why did i have this "taps.push" thing here anyway
     if (matchedIndex !== -1) {
         thumblines[matchedIndex].fill = [0, 255, 0];
     }
@@ -318,7 +298,7 @@ function calculateAccuracy() {
 //send my current accuracy value to the sever only once per 8 bars, at the end of each loop.
 //Reset the flag to 0 after the loop resets.
 function sendAccuracy(_progress) {
-    if (_progress >= 0.99 && sendAccuracyFlag == 0) {
+    if (_progress >= 0.99 && sendAccuracyFlag == 0 && numberOfLoops > 1) {
         socket.emit('accuracy', [assignedTeam, accuracy]);
         sendAccuracyFlag = 1;
         //reset colors

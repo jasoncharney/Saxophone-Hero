@@ -1,8 +1,8 @@
 ------------------------ 0;
-0 0 allAudienceLevels -1;
+0 0 allAudienceLevels 0;
 0 0 transportStatus 0;
 ------------------------ 1;
-0 1 instructions "Make sure that server is booted. Click 'next' when server is running.";
+0 1 instructions "Make sure that Node server is booted and audio in Max is on. Click 'next' when server is running.";
 projectorInstructions "Make sure your device is turned sideways!";
 transportStatus 0;
 choosePlayer 0;
@@ -18,7 +18,9 @@ projectorInstructions "Choose your team!";
 choosePlayer 1;
 ------------------------ 5;
 0 5 allAudienceLevels 0;
+instructions "Game has started.";
 projectorInstructions "Let's go!";
 transportStatus 1;
+16000 allAudienceLevels 1;
 10 clearMessageQueue bang;
 

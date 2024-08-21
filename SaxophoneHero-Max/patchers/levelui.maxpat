@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 204.0, 249.0, 100.0, 22.0 ],
+					"text" : "t b l"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-27",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 851.0, 93.0, 100.0, 22.0 ],
+					"patching_rect" : [ 836.0, 58.0, 100.0, 22.0 ],
 					"text" : "t b i"
 				}
 
@@ -57,7 +69,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 867.0, 58.0, 113.0, 22.0 ],
+					"patching_rect" : [ 852.0, 23.0, 113.0, 22.0 ],
 					"text" : "r allAudienceLevels"
 				}
 
@@ -376,7 +388,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 127.0, 417.0, 100.0, 22.0 ],
+					"patching_rect" : [ 127.0, 465.0, 100.0, 22.0 ],
 					"text" : "s level"
 				}
 
@@ -401,7 +413,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 11.0, 198.0, 100.0, 20.0 ],
+					"patching_rect" : [ 75.0, 250.0, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 237.0, 46.0, 100.0, 20.0 ],
 					"text" : "send levels",
@@ -416,7 +428,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 123.0, 246.0, 100.0, 22.0 ],
+					"patching_rect" : [ 123.0, 294.0, 100.0, 22.0 ],
 					"text" : "zl reg"
 				}
 
@@ -455,7 +467,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 127.0, 283.0, 100.0, 22.0 ],
+					"patching_rect" : [ 127.0, 331.0, 100.0, 22.0 ],
 					"text" : "t b l"
 				}
 
@@ -467,7 +479,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 125.5, 207.0, 107.0, 22.0 ],
+					"patching_rect" : [ 204.0, 204.0, 107.0, 22.0 ],
 					"text" : "join 4 @triggers -1"
 				}
 
@@ -479,7 +491,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 127.0, 359.0, 155.0, 22.0 ],
+					"patching_rect" : [ 127.0, 407.0, 155.0, 22.0 ],
 					"text" : "dict.serialize @mode json"
 				}
 
@@ -539,7 +551,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 127.0, 329.0, 100.0, 22.0 ],
+					"patching_rect" : [ 127.0, 377.0, 100.0, 22.0 ],
 					"text" : "dict.group"
 				}
 
@@ -807,7 +819,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
+					"destination" : [ "obj-33", 0 ],
 					"source" : [ "obj-185", 0 ]
 				}
 
@@ -971,6 +983,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 1 ],
+					"source" : [ "obj-33", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-33", 0 ]
 				}
 
 			}

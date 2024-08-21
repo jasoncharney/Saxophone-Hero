@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1480.0, 164.0, 1116.0, 812.0 ],
+		"rect" : [ -1406.0, 164.0, 1116.0, 812.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,20 +39,6 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 414.0, 137.0, 150.0, 47.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 96.0, 3.0, 386.0, 20.0 ],
-					"text" : "make the let's go button only show when all sax players are connected!"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-62",
 					"maxclass" : "newobj",
@@ -83,8 +69,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 472.0, 94.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 12.0, 6.0, 90.0, 20.0 ],
-					"text" : "SAX PLAYERS"
+					"presentation_rect" : [ 12.0, 6.0, 143.0, 20.0 ],
+					"text" : "Sax Players Connections"
 				}
 
 			}
@@ -95,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 235.0, 520.0, 22.0, 22.0 ],
+					"patching_rect" : [ 393.0, 436.0, 22.0, 22.0 ],
 					"text" : "t b"
 				}
 
@@ -184,8 +170,6 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 318.0, 586.171875, 63.792964935302734, 30.34375 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 484.0, 13.828125, 63.792964935302734, 30.34375 ],
 					"saved_attribute_attributes" : 					{
 						"bgcolor" : 						{
 							"expression" : "themecolor.live_alert"
@@ -210,7 +194,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 196.0, 311.0, 100.0, 22.0 ],
+					"patching_rect" : [ 195.0, 318.0, 100.0, 22.0 ],
 					"text" : "zl sum"
 				}
 
@@ -560,7 +544,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 678.0, 383.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 3.0, 582.0, 52.0 ],
+					"presentation_rect" : [ 6.0, 3.0, 471.0, 52.0 ],
 					"proportion" : 0.5
 				}
 
@@ -730,6 +714,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-40", 0 ]
 				}
 

@@ -5,6 +5,7 @@ var displayInstruction = 'Wait for instructions.';
 var orientationInstruction = 'Turn to landscape mode!';
 var hudStrokeWeight = 2;
 var hudSize = 0.02;
+var levelUpOpacity = 0; //decrease over some frames
 
 function playerHUD() {
     if (initialized == false) {
@@ -38,23 +39,24 @@ function playerHUD() {
         if (displayTime) {
             timeDisplay(Tone.Transport.position);
         }
-        if (level !== -1) {
+        if (level !== 0) {
             levelDisplay(level);
         }
     }
     if (Tone.Transport.state == 'started' && accuracy != undefined) {
         accuracyDisplay(accuracy);
     }
-    if (victoryLap == true && advanceLevelOnNextLoop == false && level > 0) {
-        //if (frameCount % 5 < 3) {
-            levelUpDisplay('Level up!');
-        //}
+    if (level == 0) {
+        levelUpDisplay('Get ready!');
     }
+    if (level > 0) {
+        if (victoryLap == true && advanceLevelOnNextLoop == false) {
+            levelUpDisplay('Level up!');
+        }
 
-    if (advanceLevelOnNextLoop == true && level > 0) {
-        //if (frameCount % 5 < 3) {
+        if (advanceLevelOnNextLoop == true && level >= 1) {
             levelUpDisplay('Victory lap!');
-        //}
+        }
     }
 
 }
@@ -70,6 +72,7 @@ function levelDisplay(_level) {
 }
 
 function teamDisplay(_assignedTeam) {
+    fill(255);
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
@@ -80,6 +83,7 @@ function teamDisplay(_assignedTeam) {
 }
 
 function timeDisplay(_currentPosition) {
+    fill(255);
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
@@ -89,18 +93,27 @@ function timeDisplay(_currentPosition) {
 }
 
 function accuracyDisplay(_accuracy) {
+    fill(255);
     textFont(hudFont);
     textSize(hudSize);
     stroke(0);
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
-    text((_accuracy * 100).toString() + '%', centerX, height - 0.5 * hudSize);
+    let acc = _accuracy;
+    if (acc == 'NaN'){
+        acc = 0;
+    }
+    text((acc * 100).toString() + '%', centerX, height - 0.5 * hudSize);
 }
 
 function levelUpDisplay(disp) {
+    if (levelUpOpacity > 0. && advanceLevelOnNextLoop == true || victoryLap == true) {
+        levelUpOpacity -= 1;
+    }
+    fill(255, levelUpOpacity);
     textFont(titleFont);
     textSize(titleSize);
-    stroke(0);
+    stroke(0, levelUpOpacity);
     strokeWeight(2);
     textAlign(CENTER);
     text(disp, centerX, titleSize + 20);
@@ -164,8 +177,8 @@ function teamAssign(_team) {
 
 function initializeButton() {
     initButton = createButton('Tap to start!', 'init');
-    initButton.size(width*0.25, height * 0.25);
-    initButton.position(centerX-width*0.125, height * 0.625);
+    initButton.size(width * 0.25, height * 0.25);
+    initButton.position(centerX - width * 0.125, height * 0.625);
     initButton.id('initButton');
     document.getElementById('initButton').addEventListener('click', function () { initializeMe() });
     // document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });

@@ -37,6 +37,7 @@ let projector = projectio.of('/projector');
 
 let serverStatus = 0; //initialize server
 let choosePlayerFlag = 0; //toggle this after the player choice has been initiated but before the game starts
+let introMode = 0; //when on, then we turn off the looping and go from level 0 to level 1 for everyone
 
 //set up OSC channels
 let oscServer = new osc.Server(connectSettings.maxSendPort, connectSettings.hostIP);
@@ -56,10 +57,10 @@ let teamIDs = {
 }
 
 let teamLevels = {
-    "soprano": -1,
-    "alto": -1,
-    "tenor": -1,
-    "bari": -1
+    "soprano": 0,
+    "alto": 0,
+    "tenor": 0,
+    "bari": 0
 }
 
 let teamAccuracies = {
@@ -111,7 +112,9 @@ function closeServer() {
 
 oscServer.on('/choosePlayer', function (msg) {
     choosePlayerFlag = msg[1]; //new players joining will immediately get the choose player buttons OR be previously reassigned.
-    console.log('Players to be chosen');
+    if (choosePlayerFlag = 1){
+        console.log('Audience can choose players.');
+    }
     client.emit('choosePlayer', choosePlayerFlag);
 });
 
@@ -169,6 +172,7 @@ function sendAccuracies() {
 
 
 //LOOK: transport state change schedules in the future!
+
 oscServer.on('/transportState', function (msg) {
     let transportState = ([msg[1], msg[2]]);
     //log that original transport time for rejoining users, baby!
@@ -184,6 +188,12 @@ oscServer.on('/transportState', function (msg) {
     if (transportState[0] == 0) {
         clearInterval(sendAccuracies);
     }
+});
+
+oscServer.on('/introMode', function (msg){
+    introMode = msg[1];
+    saxUser.emit('introMode', introMode);
+    client.emit('introMode', introMode);
 });
 
 oscServer.on('/projectorNotify', function (msg){
