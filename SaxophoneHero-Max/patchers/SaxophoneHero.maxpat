@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1406.0, -72.0, 1372.0, 1565.0 ],
+		"rect" : [ 134.0, 87.0, 1372.0, 1319.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,20 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.576470588235294, 0.0, 1.0 ],
+					"id" : "obj-64",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patching_rect" : [ 92.0, 923.0, 100.0, 22.0 ],
+					"text" : "audio-engine",
+					"varname" : "audio-engine"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-137",
 					"maxclass" : "newobj",
@@ -496,7 +510,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 113.0, 161.0, 142.0, 22.0 ],
-									"text" : "http://192.168.0.76:4997"
+									"text" : "http://192.168.0.77:4997"
 								}
 
 							}
@@ -612,8 +626,6 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1352.0, 1102.0, 160.0, 25.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1352.0, 1102.0, 160.0, 25.0 ],
 					"text" : "Open Projector page"
 				}
 
@@ -641,7 +653,7 @@
 					"patching_rect" : [ 1176.5, 1153.0, 123.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 142.0, 78.0, 123.0, 20.0 ],
-					"text" : "192.168.0.76:4994"
+					"text" : "192.168.0.77:4997"
 				}
 
 			}
@@ -717,7 +729,7 @@
 					"patching_rect" : [ 1272.875, 877.0, 192.0, 27.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 846.0, 424.0, 291.0, 27.0 ],
-					"text" : "Game has started."
+					"text" : " "
 				}
 
 			}
@@ -3462,7 +3474,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-24",
@@ -6165,7 +6176,7 @@
 					"patching_rect" : [ 704.0, 96.0, 123.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 142.0, 56.0, 123.0, 20.0 ],
-					"text" : "192.168.0.76:4994"
+					"text" : "192.168.0.77:4994"
 				}
 
 			}
@@ -6272,7 +6283,7 @@
 					"patching_rect" : [ 39.0, 124.0, 86.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 142.0, 34.0, 123.0, 20.0 ],
-					"text" : "192.168.0.76:3000"
+					"text" : "192.168.0.77:3000"
 				}
 
 			}
@@ -7407,6 +7418,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-143", 1 ],
+					"source" : [ "obj-64", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-143", 0 ],
+					"source" : [ "obj-64", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-79", 0 ],
 					"source" : [ "obj-65", 0 ]
 				}
@@ -7598,11 +7623,30 @@
  ],
 		"parameters" : 		{
 			"obj-22" : [ "button", "button", 0 ],
+			"obj-64::obj-4::obj-102" : [ "Output", "Output", 0 ],
+			"obj-64::obj-5::obj-102" : [ "Output[1]", "Output", 0 ],
+			"obj-64::obj-6::obj-102" : [ "Output[2]", "Output", 0 ],
+			"obj-64::obj-7::obj-102" : [ "Output[3]", "Output", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
 					"name" : "",
 					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"parameter_overrides" : 			{
+				"obj-64::obj-5::obj-102" : 				{
+					"parameter_longname" : "Output[1]"
+				}
+,
+				"obj-64::obj-6::obj-102" : 				{
+					"parameter_longname" : "Output[2]"
+				}
+,
+				"obj-64::obj-7::obj-102" : 				{
+					"parameter_longname" : "Output[3]"
 				}
 
 			}
@@ -7624,10 +7668,38 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "audio-engine.maxpat",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "datenow.js",
 				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "fx.txt",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/data",
+				"patcherrelativepath" : "../data",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "gizmo_loadme.maxpat",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "jc.crossfade.maxpat",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -7638,7 +7710,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "pan2S.maxpat",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "playersui.maxpat",
+				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "saxDSP.maxpat",
 				"bootpath" : "~/Dropbox/Saxophone Hero - 2024/Saxophone-Hero/Saxophone-Hero/SaxophoneHero-Max/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

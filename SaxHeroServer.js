@@ -111,8 +111,9 @@ function closeServer() {
 //LOOK: OSC Listeners from Max - control the server from the Max app.
 
 oscServer.on('/choosePlayer', function (msg) {
+    console.log(msg);
     choosePlayerFlag = msg[1]; //new players joining will immediately get the choose player buttons OR be previously reassigned.
-    if (choosePlayerFlag = 1){
+    if (choosePlayerFlag == 1) {
         console.log('Audience can choose players.');
     }
     client.emit('choosePlayer', choosePlayerFlag);
@@ -190,13 +191,13 @@ oscServer.on('/transportState', function (msg) {
     }
 });
 
-oscServer.on('/introMode', function (msg){
+oscServer.on('/introMode', function (msg) {
     introMode = msg[1];
     saxUser.emit('introMode', introMode);
     client.emit('introMode', introMode);
 });
 
-oscServer.on('/projectorNotify', function (msg){
+oscServer.on('/projectorNotify', function (msg) {
     notification = msg[1];
     projector.emit('notification', notification);
 });
@@ -209,7 +210,7 @@ projector.on('connection', onProjectorConnect);
 
 function onProjectorConnect(socket) {
     projector.to(socket.id).emit('audienceURL', 'http://' + connectSettings.hostIP.toString() + ':' + connectSettings.expressPort.toString());
-    if (notification){
+    if (notification) {
         projector.to(socket.id).emit('notification', notification);
     }
 }
@@ -239,7 +240,7 @@ function onAudienceConnect(socket) {
         //console.log('number of users: ' + numUsers);
         oscClient.send('/numUsers', numUsers);
         client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the "choose players" event already triggered, bring up selection screen right away
-        
+
         //TODO: When a player joins, request the current time from the server.
         if (originalTransportStartTime) {
             client.to(socket.id).emit('originalTransportStartTime', originalTransportStartTime); //send them the original transport start time
