@@ -39,22 +39,22 @@ function playerHUD() {
         if (displayTime) {
             timeDisplay(Tone.Transport.position);
         }
-        if (level !== 0) {
-            levelDisplay(level);
+        if (currentLevel !== 0) {
+            levelDisplay(currentLevel);
         }
     }
     if (Tone.Transport.state == 'started' && accuracy != undefined) {
         accuracyDisplay(accuracy);
     }
-    if (level == 0) {
+    if (currentLevel == 0) {
         levelUpDisplay('Get ready!');
     }
-    if (level > 0) {
+    if (currentLevel > 0) {
         if (victoryLap == true && advanceLevelOnNextLoop == false) {
             levelUpDisplay('Level up!');
         }
 
-        if (advanceLevelOnNextLoop == true && level >= 1) {
+        if (advanceLevelOnNextLoop == true && currentLevel >= 1) {
             levelUpDisplay('Victory lap!');
         }
     }

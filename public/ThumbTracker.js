@@ -48,7 +48,7 @@ class Thumbline {
             this.rectCenter = 0.75;
         }
         if (this.duration == -1) {
-            this.rectHeight = shoeSize * 0.5;
+            this.rectHeight = shoeSize * 0.25;
         }
         else {
             this.rectHeight = shoeSize; // TODO: fix it so it's the whole length for a hold, need to calculate
@@ -65,6 +65,7 @@ class Thumbline {
     draw(_hashWidth) {
         fill(this.fill[0],this.fill[1],this.fill[2]);
         rectMode(CENTER);
+        noStroke();
         setLineDash([]); //TODO: as score gets long, will it be more efficient to only render hashes on screen? Or does it not matter?
         rect(this.rectCenter*width, this.ypos, _hashWidth, this.rectHeight);
     }

@@ -47,6 +47,8 @@ let oscClient = new osc.Client(connectSettings.hostIP, connectSettings.maxListen
 let userIDs = [];
 let numUsers;
 
+let winner;
+
 //empty arrays for each group of audience members
 
 let teamIDs = {
@@ -111,7 +113,6 @@ function closeServer() {
 //LOOK: OSC Listeners from Max - control the server from the Max app.
 
 oscServer.on('/choosePlayer', function (msg) {
-    console.log(msg);
     choosePlayerFlag = msg[1]; //new players joining will immediately get the choose player buttons OR be previously reassigned.
     if (choosePlayerFlag == 1) {
         console.log('Audience can choose players.');
@@ -119,7 +120,19 @@ oscServer.on('/choosePlayer', function (msg) {
     client.emit('choosePlayer', choosePlayerFlag);
 });
 
+oscServer.on('/stopreset', function (msg){
+    console.log('Game stopped and reset.');
+    choosePlayerFlag = 0; //toggle player flag to 0
+});
 
+oscServer.on('/winner', function (msg){
+    winner = msg[1];
+    client.emit('winner', winner);
+    saxUser.emit('winner', winner);
+});
+
+
+//LOOK: level-sending logic
 oscServer.on('/level', function (msg) {
     let teamLevels = JSON.parse(msg[1]); //turn the levels into a JSON object
     projector.emit('levels', teamLevels);
@@ -152,7 +165,7 @@ function sendLevelUpdateToTeam(team) {
 
 
 //tell all connected users to clear their local storage,
-// so they have to pick a new 
+// so they have to pick a new voice
 oscServer.on('/clearLocalStorage', function (msg) {
     client.emit('clearLocalStorage');
 });
@@ -184,7 +197,7 @@ oscServer.on('/transportState', function (msg) {
     client.emit('transportState', transportState);
     //send the list of tap accuracies to Max every 16 seconds
     if (transportState[0] == 1) {
-        setTimeout(function () { setInterval(sendAccuracies, 16000) }, 16000);
+        setTimeout(function () { setInterval(sendAccuracies, 16000) }, 16000); //TODO: maybe should not be aligned with the accuracy sends
     }
     if (transportState[0] == 0) {
         clearInterval(sendAccuracies);
@@ -237,7 +250,6 @@ function onAudienceConnect(socket) {
     socket.on('initializeMe', function (msg) {
         userIDs.push(socket.id);
         numUsers = userIDs.length;
-        //console.log('number of users: ' + numUsers);
         oscClient.send('/numUsers', numUsers);
         client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the "choose players" event already triggered, bring up selection screen right away
 
@@ -269,7 +281,6 @@ function onAudienceConnect(socket) {
         removePlayer(socket.id);
         projector.emit('numPlayers', countPlayersInTeams(teamIDs));
         oscClient.send('/teamIDs', JSON.stringify(teamIDs));
-        console.log('number of users: ' + numUsers);
         oscClient.send('/numberofUsers', numUsers);
     });
     //TODO: If people disconnect intentionally or not, are they "out of the game"? How does the system compensate?

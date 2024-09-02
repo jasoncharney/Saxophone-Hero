@@ -1,5 +1,30 @@
 //Functions for controlling the transport. And other audio playback functions.
 
+//Eight Bar Timer - for synchronizing level changes
+
+const eightBarTimer = new Tone.Loop((time) => {
+    if (currentLevel != 0) {
+        Tone.Transport.loop = true; //start looping after level 0.
+        numberOfLoops++;//increase the number of loops by one
+        console.log('Level' + currentLevel + ': ' + numberOfLoops);
+    }
+    if (advanceLevelOnNextLoop == true) {
+        numberOfLoops = 0;
+        setTransportPosition(nextLevel);
+        levelUpOpacity = 255;
+        advanceLevelOnNextLoop = false;
+        victoryLap = false;
+        currentLevel = nextLevel;
+    }
+    if (victoryLap == true) {
+        levelUpOpacity = 255;
+        advanceLevelOnNextLoop = true;
+    }
+    for (let i = 0; i < thumblines.length; i++){
+        thumblines[i].fill = [255,255,255]; //TODO: if on the first part of the beat, how to get around?
+    }
+}, "8m");
+
 function scheduleStart(targetTime) {
     const currentTime = Date.now();
     const delay = targetTime - currentTime;
@@ -23,6 +48,7 @@ function setTransportState(_state) {
     let state = _state[0];
     let _targetTime = parseInt(_state[1]);
     if (state == 1) {
+        taps = []; //to keep any taps out of the calculation that occured before the timer started
         levelUpOpacity = 255;
         //the difference between the Max designated time and the browser's time, converted to seconds
         let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
@@ -50,11 +76,11 @@ function shoePlay(shoeSoundChoose) {
 }
 
 function dimShoeVolume() {
-    if (level <= 1) {
+    if (currentLevel <= 1) {
         shoeVolume = 0;
     }
     else {
-        shoeVolume -= 12;
+        shoeVolume -= 12; //decrease every level up
     }
     shoeSampler.volume.value = shoeVolume;
 }

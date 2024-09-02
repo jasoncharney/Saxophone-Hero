@@ -2,7 +2,7 @@
 
 let socket = io('/saxUser');
 let latency;
-let displayTime = true; //draw transport location for debugging
+let displayTime = false; //draw transport location for debugging
 
 let centerX, centerY;
 
@@ -14,14 +14,20 @@ let scorePages = [];
 
 let scorePopulated = false; //change flag when score images are loaded.
 
-let numLevels = 6; //including intro
+let numLevels = 18; //including intro and coda
 
-let level;
+let currentLevel;
+let nextLevel; //"on deck" for when the victory lap ends
 
-let advanceLevelOnNextLoop = false; //if true, the current loop is a "victory lap" and the next loop will be the next level.
-let victoryLap = false; //this current loop is a victory lap. We will do the loop one more time. Toggled in the level listener function.
+let connectedDisplayFlag = false; //only display "connected" if this is  true. When reloading page, need to get this triggered from the server
+let progressDisplayFlag = false; //only display the progress bar if the transport is running
+let advanceLevelOnNextLoop = false; //if true, the current loop is a "victory lap" and the next loop will be the next currentLevel.
+let victoryLap = false; //this current loop is a victory lap. We will do the loop one more time. Toggled in the currentLevel listener function.
 
-let imageLocations = [0,0]; // top left X location of the current score page/next score page
+let imageLocations = [0, 0]; // top left X location of the current score page/next score page
+
+let centerText; //shows notifications in the middle of the progress bar (connected, audience choosing teams, start, level up, victory lap!, '')
+let winner; //the name of the winning voice. NULL until received from server (TODO: cleared on reset)
 
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
@@ -37,10 +43,6 @@ function setup() {
     centerY = height / 2;
     imageLocations[1] = centerY;
 
-    //resize loaded images to the current display screen
-    // for (let i = 0; i < scorePages.length; i++) {
-    //     scorePages[i].resize(width, height);//keep aspect ratio
-    // }
 
     playerChooserDisplay();
 
@@ -51,14 +53,21 @@ function setup() {
 function draw() {
     background(255);
     if (scorePopulated == true) {
-        showScore(scorePages[level], imageLocations[0]);
-        showScore(scorePages[level+1], imageLocations[1]);
+        showScore(scorePages[currentLevel], imageLocations[0]);
+        if (currentLevel < 17) { //don't display on coda level
+            showScore(scorePages[currentLevel + 1], imageLocations[1]);
+        }
     }
-    if (displayTime){
-        timeDisplay(Tone.Transport.position);
+
+    centerTextDisplay(centerText);
+
+    // if (displayTime) {
+    //     timeDisplay(Tone.Transport.position);
+    // }
+
+    if (progressDisplayFlag) {
+        progressDisplay(progressTimer.progress);
     }
-    progressDisplay(Tone.Transport.progress);
-    //drawMetronome(convertBeat(Tone.Transport.position));
 }
 
 
@@ -66,8 +75,24 @@ function draw() {
 //LOOK: Listeners
 
 socket.on('level', function (msg) {
-    console.log(msg);
-    level = msg;
+    console.log('next level: ' + msg);
+    if (msg == 0) {
+        currentLevel = 0;
+    }
+    nextLevel = msg;
+    advanceLevelOnNextLoop = false;
+    victoryLap = true;
+    if (msg != 0) {
+        centerText = 'level up!';
+    }
+});
+
+socket.on('winner', function (msg) {
+    nextLevel = 17;
+    advanceLevelOnNextLoop = false;
+    victoryLap = true;
+    winner = msg;
+    console.log('winner is: ' + msg);
 });
 
 socket.on('transportState', function (msg) {
@@ -81,8 +106,8 @@ function chooseSaxVoice() {
         loadScore();
         removeElements();
         Tone.start();
+        connectedDisplayFlag = true;
     }
-
     console.log(playerAssigned);
 }
 
@@ -92,16 +117,34 @@ function loadScore() {
         for (i = 0; i < numLevels; i++) {
             let path = 'assets/' + p + i.toString() + '.png';
             scorePages[i] = loadImage(path); //load the image
-            scorePages[i].resize(width,height/2); //resize the image
+            scorePages[i].resize(width, height / 2); //resize the image
         }
         scorePopulated = true;
     });
 }
 
 function showScore(_page, imgLocation) {
-    if (playerAssigned !== 0 && level !== undefined) {
-        image(_page, 0, imgLocation,width,height/2);
+    if (playerAssigned !== 0 && currentLevel !== undefined) {
+        image(_page, 0, imgLocation, width, height / 2);
     }
+}
+
+function centerTextDisplay(_centerText) {
+    let centertext = _centerText;
+
+    if (connectedDisplayFlag == true) {
+        centertext = 'connected';
+    }
+
+    if (winner && advanceLevelOnNextLoop == true) {
+        centertext = ('Winner: ' + winner);
+    }
+
+    noStroke();
+    fill(0);
+    textSize(32);
+    textAlign(CENTER);
+    text(centertext, width / 2, height / 2);
 }
 
 function playerChooserDisplay() {
@@ -115,17 +158,6 @@ function playerChooserDisplay() {
     playerChooser.changed(chooseSaxVoice);
 }
 
-function playMetronome(_status) {
-    if (_status == 1) {
-        Tone.Transport.scheduleRepeat((time) => {
-            metronomeSynth.triggerAttackRelease("A4", "8n", time);
-        }, "4n"); // "4n" is a quarter note, adjust as needed for different beat intervals
-    }
-    if (_status == 0) {
-        Tone.Transport.cancel();
-    }
-}
-
 
 function timeDisplay(_currentPosition) {
     fill(0);
@@ -133,49 +165,67 @@ function timeDisplay(_currentPosition) {
     textSize(20);
     stroke(0);
     strokeWeight(0);
-    textAlign(CENTER);
-    text(_currentPosition, 20, 20);
+    textAlign(LEFT);
+    text(_currentPosition, 30, 30);
 }
 
-function progressDisplay(prog){
-    fill(255,0,0);
-    rectMode(CORNERS);
-    let endYPos = width*prog;
-    console.log(prog);
-    rect(0,centerY-10,endYPos,centerY+10);
-}
-
-function drawMetronome(_beat) {
-    let metronomeCircleSize = 20;
-    strokeWeight(2);
-    stroke(0);
-    //draw empty circles for beats
-    for (i = 0; i < 4; i++) {
-        if (_beat == i) {
-            fill(255, 0, 0);
-        }
-        else {
-            noFill();
-        }
-        circle(metronomeCircleSize * i + metronomeCircleSize, height - metronomeCircleSize, metronomeCircleSize);
+function progressDisplay(prog) {
+    //progress bar
+    let progressColor;
+    if (advanceLevelOnNextLoop == true) {
+        progressColor = [0, 255, 0]; //green
     }
+    if (advanceLevelOnNextLoop == false) {
+        progressColor = [255, 0, 0]; //red
+    }
+    fill(progressColor[0], progressColor[1], progressColor[2], 127);
+    noStroke();
+    rectMode(CORNERS);
+    let endYPos = width * prog;
+    rect(0, centerY - 10, endYPos, centerY + 10);
+    //current level display
+    textSize(48);
+    fill(progressColor[0], progressColor[1], progressColor[2], 255);
+    stroke(0);
+    strokeWeight(3);
+    textAlign(LEFT);
+    text(currentLevel, 10, centerY);
+    //next level display
+    textAlign(RIGHT);
+    if (advanceLevelOnNextLoop == true) {
+        text(nextLevel, width - 10, centerY);
+    }
+    else {
+        text(currentLevel, width - 10, centerY);
+    }
+
 }
+
+
 
 //LOOK: Transport functions
 
 
 const eightBarTimer = new Tone.Loop((time) => {
-    if (level != 0){
-        Tone.Transport.loop = true; //start looping after level 0.
+    if (currentLevel != 0) {
+        Tone.Transport.loop = true; //start looping after currentLevel 0.
     }
     if (advanceLevelOnNextLoop == true) {
-        setTransportPosition(level);
+        setTransportPosition(currentLevel);
         advanceLevelOnNextLoop = false;
         victoryLap = false;
+        centerText = '';
+        currentLevel = nextLevel;
     }
-    if (victoryLap == true){
+    if (victoryLap == true) {
+        centerText = 'victory lap';
         advanceLevelOnNextLoop = true;
     }
+}, "8m");
+
+//always loop 8 measure segments, regardless of the other timer loop being on or off
+const progressTimer = new Tone.Loop((time) => {
+    //nothing happens in here, just use to track progress
 }, "8m");
 
 function scheduleStart(targetTime) {
@@ -186,6 +236,8 @@ function scheduleStart(targetTime) {
         return delay;
     }
 }
+
+//TODO: stop the transport loop after everyone jumps to the coda
 
 function setTransportPosition(_level) {
     //set the transport position to a multiple of 8 (for which page we're on).
@@ -204,12 +256,18 @@ function setTransportState(_state) {
         let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
         Tone.Transport.start(del);
         eightBarTimer.start();
+        progressTimer.start();
+        progressDisplayFlag = true;
+        connectedDisplayFlag = 0;
     }
     if (state == 0) {
         Tone.Transport.loop = false;
+        progressDisplayFlag = false;
         Tone.Transport.stop();
         eightBarTimer.stop();
         eightBarTimer.cancel();
+        progressTimer.stop();
+        progressTimer.cancel();
     }
 }
 

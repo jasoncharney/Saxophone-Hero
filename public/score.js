@@ -1,13290 +1,13450 @@
 let score = {
   "soprano": [
-    {
-      "time": 16,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 17,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 18,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 19,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 20,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 21,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 22,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 23,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 24,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 26,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 27,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 28,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 29,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 30,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 30.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 31,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 32,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 32.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 33,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 33.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 34,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 34.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 35,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 35.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 36,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 36.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 37,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 37.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 37.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 38,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 38.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 39,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 39.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 40,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 40.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 41,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 41.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 42,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 42.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 43,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 43.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 44,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 44.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 45,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 45.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 46,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 46.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 46.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 47.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 47.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 47.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 48,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 48.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 49,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 49.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 50,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 51,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 52,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 52.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 53,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 53.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 54,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 55,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 56,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 56.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 57,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 57.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 58,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 59,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 59.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 60,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 61,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 62.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 63,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 63.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 64,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 64.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 65,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 65.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 66,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 67,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 67.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 68,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 69,
-      "duration": 1.25,
-      "midi": 61
-    },
-    {
-      "time": 70.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 70.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 70.75,
-      "duration": 1.25,
-      "midi": 60
-    },
-    {
-      "time": 72,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 73.5,
-      "duration": 2.5,
-      "midi": 60
-    },
-    {
-      "time": 76.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 77,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 77.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 78.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 78.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 78.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 79,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 79.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 80,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 80.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 80.75,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 81.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 81.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 82.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 82.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 83,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 84,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 85.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 85.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 86,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 86.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 86.5,
-      "duration": 1.5,
-      "midi": 60
-    },
-    {
-      "time": 88,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 88.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 88.75,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 89.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 89.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 90.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 90.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 91,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 92.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 93,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 93.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 94.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 94.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 94.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 95.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 96.33229166666666,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 97.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 98,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 98.665625,
-      "duration": 0.6666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 99.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 61
-    },
-    {
-      "time": 100,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 101.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 101.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 101.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 102,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 103.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 103.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 104,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 105.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 105.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 106.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 106.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 107,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 107.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 108,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 108.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 108.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 108.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 109,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 109.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 109.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 110,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 110.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 110.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 110.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 111,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 111.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 111.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 112,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 112.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 113.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 113.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 114,
-      "duration": 2.75,
-      "midi": 60
-    },
-    {
-      "time": 116.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 116.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 117,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 117.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 118,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 118.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 119,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 120.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 120.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 121,
-      "duration": 0.6656250000000057,
-      "midi": 60
-    },
-    {
-      "time": 121.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 122,
-      "duration": 0.6656250000000057,
-      "midi": 60
-    },
-    {
-      "time": 122.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 123,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 123.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 124,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 124.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 124.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 124.5,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 124.83229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 125.165625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 125.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 125.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 125.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 126,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 126.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 126.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 127,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 127.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 128.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 128.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 129,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 129.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 129.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 130.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 130.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 131,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 131.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 131.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 132,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 132.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 132.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 133,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 133.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 133.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 134,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 136.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 136.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 137,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 137.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 137.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 138,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 138.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 139,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 139.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 139.25,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 140,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 140.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 141,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 141.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 141.665625,
-      "duration": 1.8343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 144,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 144.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 144.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 144.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 144.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 144.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 145,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 145.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 145.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 145.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 145.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 145.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 146.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 146.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 146.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 146.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 146.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 147,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 147.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 147.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 147.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 147.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 147.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 148,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 148.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 148.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 148.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 148.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 148.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 149,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 149.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 149.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 149.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 149.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 149.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 150,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 150.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 151,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 152.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 152.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 152.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 153,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 153.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 153.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 153.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 153.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 153.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 154,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 154.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 154.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 154.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 154.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 155,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 155.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 155.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 155.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 155.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 155.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 156,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 156.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 156.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 156.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 156.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 156.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 157,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 157.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 157.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 157.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 157.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 157.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 158,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 158.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 158.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 158.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 158.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 158.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 159,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 159.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 159.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 159.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 160,
-      "duration": 2.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 162.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 162.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 163,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 164,
-      "duration": 1.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 165.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 165.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 166,
-      "duration": 2.6656250000000057,
-      "midi": 60
-    },
-    {
-      "time": 168.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 168.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 169,
-      "duration": 2.5,
-      "midi": 60
-    },
-    {
-      "time": 169,
-      "duration": 2.5,
-      "midi": 61
-    },
-    {
-      "time": 172,
-      "duration": 3.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 175.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 175.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 176,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 176,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 176.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 176.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 177.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 178,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 178.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 179,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 179,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 179.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 179.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 180.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 181,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 181.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 182,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 182,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 182.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 182.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 183.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 183.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 184,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 185,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 185,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 185.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 185.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 186.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 187,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 187.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 188,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 188,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 188.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 188.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 189.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 190,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 190.5,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 190.5,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 191.25,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 191.25,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 192,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 192.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 194.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 195.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 196.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 196.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 198,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 198.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 199,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 199.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 201,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 201.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 202,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 202.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 203,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 203.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 203.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 204,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 204.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 205,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 205.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 207,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 207.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 207.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 209.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 209.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 209.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 210,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 210.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 210.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 210.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 210.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 211.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 211.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 212,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 212.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 212.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 212.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 212.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 213,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 213.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 214,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 214.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 214.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 214.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 214.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 215.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 216.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216.25,
-      "duration": 0.375,
-      "midi": 61
-    },
-    {
-      "time": 216.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 217,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 217.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 217.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 218.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 219,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 219.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 220,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 220.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 220.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 220.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 220.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 221,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 221.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 221.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 221.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 222,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 222.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 223,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 223.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 223.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 224,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 227.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 227.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 228.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 228.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 228.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 228.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 229,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 229.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 229.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 230,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 230.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 230.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 230.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 232,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 232.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 232.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 233,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 233.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 233.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 233.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 235,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 235.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 236,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 236.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.375,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 236.625,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.875,
-      "duration": 0.2906250000000057,
-      "midi": 60
-    },
-    {
-      "time": 237.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 237.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 237.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 237.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 240,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 240,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 241,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 241.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 241.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 241.625,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 241.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 242,
-      "duration": 0.0625,
-      "midi": 61
-    },
-    {
-      "time": 242.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 242.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 242.5,
-      "duration": 0.5625,
-      "midi": 61
-    },
-    {
-      "time": 243.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 243.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 243.75,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 244.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 244.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 244.5,
-      "duration": 0.4375,
-      "midi": 60
-    },
-    {
-      "time": 244.5,
-      "duration": 0.4375,
-      "midi": 61
-    },
-    {
-      "time": 244.9375,
-      "duration": 0.3125,
-      "midi": 61
-    },
-    {
-      "time": 245.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 245.5,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 245.6875,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 245.75,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 245.9375,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 246,
-      "duration": 0.4375,
-      "midi": 61
-    },
-    {
-      "time": 246.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 250,
-      "duration": 0.4375,
-      "midi": 61
-    },
-    {
-      "time": 250.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 252,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 252.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 252.375,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 252.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 252.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 253.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 253.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 253.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 254.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 254.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 254.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 255,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 255.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 255.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 256,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 256.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 256.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 256.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 257,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 257.33229166666666,
-      "duration": 0.08333333333331439,
-      "midi": 60
-    },
-    {
-      "time": 257.415625,
-      "duration": 0.08437500000002274,
-      "midi": 61
-    },
-    {
-      "time": 257.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 257.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 258,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 258.25,
-      "duration": 0.41562499999997726,
-      "midi": 60
-    },
-    {
-      "time": 258.665625,
-      "duration": 0.16666666666668561,
-      "midi": 60
-    },
-    {
-      "time": 258.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 259.08229166666666,
-      "duration": 0.08333333333331439,
-      "midi": 61
-    },
-    {
-      "time": 259.165625,
-      "duration": 0.08437500000002274,
-      "midi": 60
-    },
-    {
-      "time": 259.25,
-      "duration": 0.08229166666666288,
-      "midi": 61
-    },
-    {
-      "time": 259.33229166666666,
-      "duration": 0.08333333333331439,
-      "midi": 60
-    },
-    {
-      "time": 259.415625,
-      "duration": 0.08437500000002274,
-      "midi": 61
-    },
-    {
-      "time": 260,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 260,
-      "duration": 4,
-      "midi": 61
-    },
-    {
-      "time": 261,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 262,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 263,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 264.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 264.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 264.5,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 264.83229166666666,
-      "duration": 0.08333333333331439,
-      "midi": 60
-    },
-    {
-      "time": 264.915625,
-      "duration": 0.08437500000002274,
-      "midi": 61
-    },
-    {
-      "time": 265,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 265.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 265.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 266,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 266,
-      "duration": 2,
-      "midi": 61
-    },
-    {
-      "time": 267,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 268.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 268.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 268.5,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 268.83229166666666,
-      "duration": 0.08333333333331439,
-      "midi": 60
-    },
-    {
-      "time": 268.915625,
-      "duration": 0.08437500000002274,
-      "midi": 61
-    },
-    {
-      "time": 269,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 269,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 270,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 270.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 271,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 61
-    }
+      {
+          "time": 16,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 17,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 18,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 19,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 20,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 21,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 22,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 23,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 24,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 26,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 27,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 28,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 29,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 30,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 30.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 31,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 32,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 32.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 33,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 33.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 34,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 34.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 35,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 35.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 36,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 36.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 37,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 37.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 37.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 38,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 38.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 39,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 39.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 40,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 40.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 41,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 41.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 42,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 42.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 43,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 43.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 44,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 44.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 45,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 45.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 46,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 46.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 46.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 47.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 47.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 47.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 48,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 48.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 49,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 49.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 50,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 51,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 52,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 52.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 53,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 53.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 54,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 55,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 56,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 56.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 57,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 57.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 58,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 59,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 59.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 60,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 61,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 62.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 63,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 63.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 64,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 64.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 65,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 65.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 66,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 67,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 67.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 68,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 69,
+          "duration": 1.25,
+          "midi": 61
+      },
+      {
+          "time": 70.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 70.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 70.75,
+          "duration": 1.25,
+          "midi": 60
+      },
+      {
+          "time": 72,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 73.5,
+          "duration": 2.5,
+          "midi": 60
+      },
+      {
+          "time": 76.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 77,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 77.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 78.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 78.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 78.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 79,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 79.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 80,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 80.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 80.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 81.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 81.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 82.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 82.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 83,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 84,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 85.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 85.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 86,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 86.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 86.5,
+          "duration": 1.5,
+          "midi": 60
+      },
+      {
+          "time": 88,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 88.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 88.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 89.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 89.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 90.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 90.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 91,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 92.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 93,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 93.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 94.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 94.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 94.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 95.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 96.33229166666666,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 97.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 98,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 98.665625,
+          "duration": 0.6666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 99.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 61
+      },
+      {
+          "time": 100,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 101.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 101.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 101.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 102,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 103.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 103.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 104,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 105.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 105.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 106.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 106.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 107,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 107.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 108,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 108.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 108.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 108.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 109,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 109.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 109.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 110,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 110.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 110.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 110.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 111,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 111.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 111.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 112,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 112.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 113.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 113.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 114,
+          "duration": 2.75,
+          "midi": 60
+      },
+      {
+          "time": 116.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 116.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 117,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 117.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 118,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 118.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 119,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 120.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 120.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 121,
+          "duration": 0.6656250000000057,
+          "midi": 60
+      },
+      {
+          "time": 121.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 122,
+          "duration": 0.6656250000000057,
+          "midi": 60
+      },
+      {
+          "time": 122.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 123,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 123.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 124,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 124.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 124.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 124.5,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 124.83229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 125.165625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 125.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 125.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 125.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 126,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 126.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 126.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 127,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 127.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 128.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 128.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 129,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 129.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 129.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 130.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 130.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 131,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 131.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 131.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 132,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 132.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 132.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 133,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 133.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 133.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 134,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 136.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 136.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 137,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 137.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 137.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 138,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 138.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 139,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 139.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 139.25,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 140,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 140.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 141,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 141.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 141.665625,
+          "duration": 1.8343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 144,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 144.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 144.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 144.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 144.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 144.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 145,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 145.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 145.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 145.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 145.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 145.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 146.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 146.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 146.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 146.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 146.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 147,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 147.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 147.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 147.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 147.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 147.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 148,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 148.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 148.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 148.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 148.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 148.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 149,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 149.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 149.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 149.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 149.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 149.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 150,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 150.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 151,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 152.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 152.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 152.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 153,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 153.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 153.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 153.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 153.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 153.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 154,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 154.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 154.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 154.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 154.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 155,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 155.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 155.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 155.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 155.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 155.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 156,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 156.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 156.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 156.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 156.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 156.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 157,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 157.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 157.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 157.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 157.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 157.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 158,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 158.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 158.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 158.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 158.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 158.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 159,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 159.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 159.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 159.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 160,
+          "duration": 2.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 162.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 162.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 163,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 164,
+          "duration": 1.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 165.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 165.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 166,
+          "duration": 2.6656250000000057,
+          "midi": 60
+      },
+      {
+          "time": 168.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 168.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 169,
+          "duration": 2.5,
+          "midi": 60
+      },
+      {
+          "time": 169,
+          "duration": 2.5,
+          "midi": 61
+      },
+      {
+          "time": 172,
+          "duration": 3.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 175.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 175.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 176,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 176,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 176.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 176.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 177.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 178,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 178.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 179,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 179,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 179.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 179.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 180.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 181,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 181.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 182,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 182,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 182.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 182.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 183.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 183.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 184,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 185,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 185,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 185.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 185.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 186.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 187,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 187.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 188,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 188,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 188.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 188.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 189.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 190,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 190.5,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 190.5,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 191.25,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 191.25,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 192,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 192.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 194.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 195.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 196.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 196.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 198,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 198.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 199,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 199.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 201,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 201.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 202,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 202.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 203,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 203.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 203.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 204,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 204.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 205,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 205.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 207,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 207.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 207.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 209.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 209.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 209.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 210,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 210.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 210.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 210.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 210.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 211.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 211.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 212,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 212.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 212.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 212.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 212.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 213,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 213.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 214,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 214.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 214.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 214.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 214.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 215.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 216.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216.25,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 216.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 217,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 217.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 217.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 218.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 219,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 219.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 220,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 220.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 220.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 220.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 220.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 221,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 221.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 221.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 221.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 222,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 222.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 223,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 223.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 223.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 224,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 227.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 227.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 228.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 228.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 228.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 228.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 229,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 229.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 229.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 230,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 230.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 230.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 230.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 232,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 232.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 232.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 233,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 233.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 233.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 233.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 235,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 235.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 236,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 236.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.375,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 236.625,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.875,
+          "duration": 0.2906250000000057,
+          "midi": 60
+      },
+      {
+          "time": 237.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 237.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 237.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 237.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 240,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 240,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 241,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 241.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 241.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 241.625,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 241.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 242,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 242.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 242.5,
+          "duration": 0.625,
+          "midi": 61
+      },
+      {
+          "time": 243.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 243.75,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 244.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 244.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 244.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 244.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 244.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 245.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 245.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 245.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 245.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 245.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 246,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 246.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 246.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 246.75,
+          "duration": 0.375,
+          "midi": 60
+      },
+      {
+          "time": 247.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 250,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 250.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 250.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 251,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 252,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 252.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 252.375,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 252.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 252.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 253.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 253.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 253.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 254.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 254.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 254.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 255,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 255.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 255.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 256,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 256.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 256.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 256.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 257,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 257.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 257.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 257.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 258,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 258.25,
+          "duration": 0.41562499999997726,
+          "midi": 60
+      },
+      {
+          "time": 258.665625,
+          "duration": 0.16666666666668561,
+          "midi": 60
+      },
+      {
+          "time": 258.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 259,
+          "duration": 0.16562499999997726,
+          "midi": 61
+      },
+      {
+          "time": 259.165625,
+          "duration": 0.16666666666668561,
+          "midi": 61
+      },
+      {
+          "time": 259.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 259.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 260,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 260,
+          "duration": 4,
+          "midi": 61
+      },
+      {
+          "time": 261,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 262,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 263,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 264.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 264.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 264.5,
+          "duration": 0.16562499999997726,
+          "midi": 60
+      },
+      {
+          "time": 264.665625,
+          "duration": 0.16666666666668561,
+          "midi": 61
+      },
+      {
+          "time": 264.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 265,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 265.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 265.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 266,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 266,
+          "duration": 2,
+          "midi": 61
+      },
+      {
+          "time": 267,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 268.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 268.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 268.5,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 268.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 269,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 269,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 270,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 270.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 271,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 61
+      }
   ],
   "alto": [
-    {
-      "time": 16,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 17,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 18,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 19,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 20,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 21,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 22,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 23,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 24,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 26,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 27,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 28,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 29,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 30,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 30.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 31,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 32,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 33,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 34,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 35,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 35.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 35.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 36,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 36.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 37,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 37.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 38,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 39.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 40,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 41,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 42,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 43,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 44,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 45,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 46,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 47,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 47.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 48.5,
-      "duration": 1.5,
-      "midi": 60
-    },
-    {
-      "time": 50,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 51,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 52,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 53,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 54,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 55,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 57,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 58,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 59,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 59.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 60,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 61,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 62.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 63,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 63.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 64.5,
-      "duration": 2.5,
-      "midi": 61
-    },
-    {
-      "time": 67,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 67.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 67.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 67.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 68,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 69,
-      "duration": 3,
-      "midi": 60
-    },
-    {
-      "time": 72,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 73.5,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 74.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 75,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 75.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 76,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 77,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 77.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 78.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 78.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 78.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 79,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 79.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 80,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 80.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 80.5,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 81.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 81.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 82.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 82.5,
-      "duration": 1.5,
-      "midi": 60
-    },
-    {
-      "time": 84,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 84.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 84.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 84.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 85,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 86,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 86.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 87,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 87.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 87.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 88,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 88.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 88.75,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 89.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 89.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 90.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 90.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 91,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 92.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 93,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 93.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 94.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 94.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 94.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 95.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 96.33229166666666,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 97.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 97.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 98.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 98.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 99,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 99.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 99.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 100,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 100.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 100.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 100.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 101,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 101.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 101.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 102,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 102.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 102.665625,
-      "duration": 0.5843749999999943,
-      "midi": 61
-    },
-    {
-      "time": 103.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 103.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 103.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 104,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 104.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 105,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 105.665625,
-      "duration": 0.6666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 106.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 106.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 107,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 107.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 108,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 108.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 108.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 109,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 109.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 109.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 110,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 110.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 110.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 111,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 112.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 112.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 113,
-      "duration": 2.75,
-      "midi": 60
-    },
-    {
-      "time": 115.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 115.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 116,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 116.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 117,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 117.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 118,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 120.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 120.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 121,
-      "duration": 0.6656250000000057,
-      "midi": 60
-    },
-    {
-      "time": 121.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 122,
-      "duration": 0.6656250000000057,
-      "midi": 60
-    },
-    {
-      "time": 122.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 123,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 123.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 124,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 124.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 124.665625,
-      "duration": 0.5843749999999943,
-      "midi": 60
-    },
-    {
-      "time": 125.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 125.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 125.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 125.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 126,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 126.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 126.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 127,
-      "duration": 0.6656250000000057,
-      "midi": 60
-    },
-    {
-      "time": 127.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 128,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 128.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 128.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 128.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 129.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 129.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 129.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 130,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 130.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 131,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 131.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 131.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 132.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 132.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 133.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 133.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 133.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 134,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 134.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 135.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 135.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 135.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 135.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 136,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 136.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 136.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 136.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 137.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 137.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 137.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 138,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 138.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 138.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 139,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 139.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 139.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 140.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 140.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 141.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 141.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 141.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 142,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 142.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 143.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 143.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 143.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 143.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 145,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 145.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 145.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 145.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 145.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 145.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 146,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 146.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 146.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 146.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 146.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 146.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 147.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 147.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 147.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 147.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 147.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 148,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 148.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 148.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 148.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 148.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 148.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 149,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 149.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 149.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 149.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 149.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 149.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 150,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 150.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 150.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 150.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 150.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 150.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 151,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 151.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 152,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 153.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 153.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 153.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 154,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 154.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 154.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 154.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 154.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 154.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 155,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 155.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 155.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 155.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 155.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 156,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 156.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 156.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 156.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 156.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 156.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 157,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 157.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 157.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 157.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 157.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 157.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 158,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 158.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 158.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 158.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 158.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 158.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 159,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 159.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 159.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 159.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 160,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 160,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 160.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 160.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 160.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 160.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 161,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 161.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 161.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 161.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 162,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 162.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 162.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 162.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 163,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 163,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 163.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 163.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 163.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 163.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 164,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 164.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 164.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 164.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 165,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 165.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 166,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 166,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 166.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 166.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 166.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 166.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 167,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 167.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 167.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 167.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 168,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 168.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 168.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 169,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 169,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 169.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 169.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 169.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 169.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 170,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 170.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 170.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 170.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 171,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 171.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 171.75,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 171.75,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 172.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 172.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 172.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 172.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 173,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 173.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 173.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 173.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 174,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 174.25,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 175.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 175.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 175.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 175.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 175.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 176.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 176.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 177,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 177.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 177.75,
-      "duration": 0.875,
-      "midi": 61
-    },
-    {
-      "time": 178.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 178.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 178.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 179.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 179.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 180,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 180.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 180.75,
-      "duration": 0.875,
-      "midi": 61
-    },
-    {
-      "time": 181.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 181.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 181.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 182.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 182.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 183,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 183.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 183.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 184,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 184.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 184.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 185.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 185.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 186,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 186.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 186.75,
-      "duration": 0.875,
-      "midi": 61
-    },
-    {
-      "time": 187.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 187.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 187.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 188.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 188.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 189,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 190.25,
-      "duration": 0.875,
-      "midi": 60
-    },
-    {
-      "time": 191.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 191.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 192,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 192.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 194.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 195.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 196.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 196.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 198,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 198.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 199,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 199.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 201,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 201.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 202,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 202.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 203,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 203.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 203.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 204,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 204.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 205,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 205.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 207,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 207.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 207.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 209.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 209.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 209.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 210,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 210.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 210.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 210.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 210.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 211.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 211.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 212,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 212.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 212.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 212.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 212.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 213,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 213.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 216.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216.25,
-      "duration": 0.375,
-      "midi": 61
-    },
-    {
-      "time": 216.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 217,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 217.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 217.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 218.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 219,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 219.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 220,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 220.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 220.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 220.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 220.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 221,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 221.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 221.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 221.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 222,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 222.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 223,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 223.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 223.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 224,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 225.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 225.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 225.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 225.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 226,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 226.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 226.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 226.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 226.625,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 226.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 227.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 227.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 228.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 228.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 228.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 228.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 229,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 229.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 229.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 232,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 232.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 232.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 233,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 233.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 233.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 233.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 235,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 235.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 236,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 236.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.375,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 236.625,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.875,
-      "duration": 0.2906250000000057,
-      "midi": 60
-    },
-    {
-      "time": 237.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 237.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 237.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 237.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 240,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 240.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 240.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 240.625,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 240.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 241,
-      "duration": 0.0625,
-      "midi": 61
-    },
-    {
-      "time": 241.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 241.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 241.5,
-      "duration": 0.5625,
-      "midi": 61
-    },
-    {
-      "time": 242.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 242.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 242.75,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 243.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 243.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 243.5,
-      "duration": 0.4375,
-      "midi": 60
-    },
-    {
-      "time": 243.9375,
-      "duration": 0.3125,
-      "midi": 61
-    },
-    {
-      "time": 244.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 244.5,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 244.6875,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 244.75,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 244.9375,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 245,
-      "duration": 0.375,
-      "midi": 61
-    },
-    {
-      "time": 245.375,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 245.4375,
-      "duration": 0.0625,
-      "midi": 61
-    },
-    {
-      "time": 245.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 246,
-      "duration": 0.4375,
-      "midi": 61
-    },
-    {
-      "time": 246.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 250,
-      "duration": 0.4375,
-      "midi": 61
-    },
-    {
-      "time": 250.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 252.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 252.625,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 252.875,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 253.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 253.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 254,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 254.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 255,
-      "duration": 0.08229166666666288,
-      "midi": 61
-    },
-    {
-      "time": 255.08229166666666,
-      "duration": 0.08333333333334281,
-      "midi": 60
-    },
-    {
-      "time": 255.165625,
-      "duration": 0.08437499999999432,
-      "midi": 61
-    },
-    {
-      "time": 255.25,
-      "duration": 0.08229166666666288,
-      "midi": 60
-    },
-    {
-      "time": 255.33229166666666,
-      "duration": 0.08333333333334281,
-      "midi": 61
-    },
-    {
-      "time": 255.415625,
-      "duration": 0.08437499999999432,
-      "midi": 60
-    },
-    {
-      "time": 256.165625,
-      "duration": 0.16666666666668561,
-      "midi": 61
-    },
-    {
-      "time": 256.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 256.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 256.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 257.1,
-      "duration": 0.298958333333303,
-      "midi": 61
-    },
-    {
-      "time": 257.3989583333333,
-      "duration": 0.6010416666666742,
-      "midi": 60
-    },
-    {
-      "time": 257.3989583333333,
-      "duration": 0.6010416666666742,
-      "midi": 61
-    },
-    {
-      "time": 258,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 258.33229166666666,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 258.83229166666666,
-      "duration": 0.08333333333331439,
-      "midi": 60
-    },
-    {
-      "time": 258.915625,
-      "duration": 0.28333333333335986,
-      "midi": 61
-    },
-    {
-      "time": 259.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 259.3989583333333,
-      "duration": 0.20104166666669698,
-      "midi": 61
-    },
-    {
-      "time": 259.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 259.79895833333336,
-      "duration": 0.20104166666664014,
-      "midi": 61
-    },
-    {
-      "time": 260,
-      "duration": 0.6656249999999773,
-      "midi": 60
-    },
-    {
-      "time": 260,
-      "duration": 4,
-      "midi": 61
-    },
-    {
-      "time": 260.665625,
-      "duration": 0.6666666666666856,
-      "midi": 60
-    },
-    {
-      "time": 261.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 262,
-      "duration": 0.6656249999999773,
-      "midi": 60
-    },
-    {
-      "time": 262.665625,
-      "duration": 0.6666666666666856,
-      "midi": 60
-    },
-    {
-      "time": 263.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 264,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 264.33229166666666,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 264.83229166666666,
-      "duration": 0.08333333333331439,
-      "midi": 60
-    },
-    {
-      "time": 264.915625,
-      "duration": 0.28333333333335986,
-      "midi": 61
-    },
-    {
-      "time": 265.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 265.3989583333333,
-      "duration": 0.20104166666669698,
-      "midi": 61
-    },
-    {
-      "time": 265.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 265.79895833333336,
-      "duration": 0.20104166666664014,
-      "midi": 61
-    },
-    {
-      "time": 266,
-      "duration": 0.6656249999999773,
-      "midi": 60
-    },
-    {
-      "time": 266,
-      "duration": 2,
-      "midi": 61
-    },
-    {
-      "time": 266.665625,
-      "duration": 0.6666666666666856,
-      "midi": 60
-    },
-    {
-      "time": 267.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 268,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 268.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 268.3989583333333,
-      "duration": 0.20104166666669698,
-      "midi": 61
-    },
-    {
-      "time": 268.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 268.79895833333336,
-      "duration": 0.20104166666664014,
-      "midi": 61
-    },
-    {
-      "time": 269,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 269,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 270,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 271,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 271.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 61
-    }
+      {
+          "time": 16,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 17,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 18,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 19,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 20,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 21,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 22,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 23,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 24,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 26,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 27,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 28,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 29,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 30,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 30.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 31,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 32,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 33,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 34,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 35,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 35.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 35.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 36,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 36.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 37,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 37.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 38,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 39.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 40,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 41,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 42,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 43,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 44,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 45,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 46,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 47,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 47.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 48.5,
+          "duration": 1.5,
+          "midi": 60
+      },
+      {
+          "time": 50,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 51,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 52,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 53,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 54,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 55,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 57,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 58,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 59,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 59.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 60,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 61,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 62.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 63,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 63.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 64.5,
+          "duration": 2.5,
+          "midi": 61
+      },
+      {
+          "time": 67,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 67.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 67.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 67.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 68,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 69,
+          "duration": 3,
+          "midi": 60
+      },
+      {
+          "time": 72,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 73.5,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 74.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 75,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 75.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 76,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 77,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 77.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 78.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 78.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 78.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 79,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 79.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 80,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 80.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 80.5,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 81.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 81.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 82.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 82.5,
+          "duration": 1.5,
+          "midi": 60
+      },
+      {
+          "time": 84,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 84.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 84.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 84.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 85,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 86,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 86.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 87,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 87.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 87.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 88,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 88.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 88.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 89.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 89.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 90.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 90.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 91,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 92.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 93,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 93.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 94.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 94.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 94.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 95.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 96.33229166666666,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 97.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 97.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 98.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 98.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 99,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 99.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 99.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 100,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 100.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 100.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 100.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 101,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 101.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 101.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 102,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 102.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 102.665625,
+          "duration": 0.5843749999999943,
+          "midi": 61
+      },
+      {
+          "time": 103.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 103.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 103.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 104,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 104.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 105,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 105.665625,
+          "duration": 0.6666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 106.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 106.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 107,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 107.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 108,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 108.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 108.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 109,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 109.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 109.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 110,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 110.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 110.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 111,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 112.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 112.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 113,
+          "duration": 2.75,
+          "midi": 60
+      },
+      {
+          "time": 115.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 115.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 116,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 116.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 117,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 117.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 118,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 120.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 120.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 121,
+          "duration": 0.6656250000000057,
+          "midi": 60
+      },
+      {
+          "time": 121.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 122,
+          "duration": 0.6656250000000057,
+          "midi": 60
+      },
+      {
+          "time": 122.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 123,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 123.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 124,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 124.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 124.665625,
+          "duration": 0.5843749999999943,
+          "midi": 60
+      },
+      {
+          "time": 125.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 125.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 125.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 125.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 126,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 126.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 126.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 127,
+          "duration": 0.6656250000000057,
+          "midi": 60
+      },
+      {
+          "time": 127.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 128,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 128.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 128.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 128.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 129.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 129.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 129.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 130,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 130.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 131,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 131.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 131.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 132.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 132.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 133.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 133.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 133.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 134,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 134.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 135.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 135.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 135.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 135.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 136,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 136.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 136.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 136.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 137.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 137.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 137.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 138,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 138.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 138.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 139,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 139.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 139.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 140.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 140.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 141.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 141.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 141.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 142,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 142.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 143.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 143.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 143.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 143.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 145,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 145.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 145.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 145.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 145.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 145.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 146,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 146.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 146.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 146.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 146.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 146.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 147.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 147.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 147.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 147.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 147.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 148,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 148.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 148.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 148.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 148.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 148.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 149,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 149.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 149.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 149.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 149.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 149.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 150,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 150.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 150.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 150.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 150.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 150.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 151,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 151.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 152,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 153.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 153.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 153.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 154,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 154.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 154.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 154.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 154.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 154.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 155,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 155.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 155.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 155.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 155.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 156,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 156.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 156.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 156.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 156.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 156.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 157,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 157.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 157.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 157.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 157.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 157.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 158,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 158.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 158.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 158.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 158.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 158.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 159,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 159.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 159.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 159.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 160,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 160,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 160.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 160.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 160.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 160.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 161,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 161.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 161.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 161.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 162,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 162.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 162.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 162.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 163,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 163,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 163.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 163.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 163.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 163.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 164,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 164.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 164.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 164.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 165,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 165.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 166,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 166,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 166.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 166.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 166.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 166.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 167,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 167.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 167.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 167.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 168,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 168.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 168.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 169,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 169,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 169.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 169.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 169.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 169.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 170,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 170.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 170.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 170.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 171,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 171.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 171.75,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 171.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 172.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 172.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 172.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 172.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 173,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 173.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 173.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 173.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 174,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 174.25,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 175.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 175.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 175.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 175.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 175.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 176.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 176.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 177,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 177.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 177.75,
+          "duration": 0.875,
+          "midi": 61
+      },
+      {
+          "time": 178.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 178.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 178.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 179.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 179.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 180,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 180.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 180.75,
+          "duration": 0.875,
+          "midi": 61
+      },
+      {
+          "time": 181.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 181.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 181.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 182.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 182.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 183,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 183.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 183.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 184,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 184.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 184.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 185.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 185.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 186,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 186.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 186.75,
+          "duration": 0.875,
+          "midi": 61
+      },
+      {
+          "time": 187.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 187.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 187.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 188.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 188.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 189,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 190.25,
+          "duration": 0.875,
+          "midi": 60
+      },
+      {
+          "time": 191.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 191.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 192,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 192.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 194.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 195.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 196.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 196.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 198,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 198.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 199,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 199.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 201,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 201.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 202,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 202.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 203,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 203.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 203.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 204,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 204.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 205,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 205.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 207,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 207.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 207.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 209.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 209.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 209.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 210,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 210.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 210.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 210.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 210.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 211.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 211.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 212,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 212.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 212.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 212.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 212.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 213,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 213.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 216.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216.25,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 216.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 217,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 217.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 217.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 218.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 219,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 219.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 220,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 220.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 220.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 220.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 220.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 221,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 221.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 221.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 221.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 222,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 222.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 223,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 223.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 223.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 224,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 225.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 225.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 225.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 225.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 226,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 226.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 226.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 226.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 226.625,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 226.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 227.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 227.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 228.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 228.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 228.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 228.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 229,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 229.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 229.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 232,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 232.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 232.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 233,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 233.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 233.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 233.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 235,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 235.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 236,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 236.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.375,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 236.625,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.875,
+          "duration": 0.2906250000000057,
+          "midi": 60
+      },
+      {
+          "time": 237.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 237.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 237.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 237.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 240,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 240.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 240.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 240.625,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 240.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 241,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 241.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 241.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 241.5,
+          "duration": 0.625,
+          "midi": 61
+      },
+      {
+          "time": 241.75,
+          "duration": 0.375,
+          "midi": 60
+      },
+      {
+          "time": 242.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 242.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 242.75,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 243.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 243.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 243.5,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 243.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 244,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 244.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 244.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 244.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 245,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 245.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 245.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 246,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 246.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 246.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 246.75,
+          "duration": 0.375,
+          "midi": 60
+      },
+      {
+          "time": 247.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 250,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 250.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 250.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 251,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 252.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 252.625,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 252.875,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 253.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 253.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 254,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 254.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 255,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 255.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 255.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 256.165625,
+          "duration": 0.16666666666668561,
+          "midi": 61
+      },
+      {
+          "time": 256.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 256.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 256.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 257.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 257.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 257.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 257.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 257.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 258,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 258.33229166666666,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 258.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 259,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 259.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 259.3989583333333,
+          "duration": 0.20104166666669698,
+          "midi": 61
+      },
+      {
+          "time": 259.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 259.79895833333336,
+          "duration": 0.20104166666664014,
+          "midi": 61
+      },
+      {
+          "time": 260,
+          "duration": 0.6656249999999773,
+          "midi": 60
+      },
+      {
+          "time": 260,
+          "duration": 4,
+          "midi": 61
+      },
+      {
+          "time": 260.665625,
+          "duration": 0.6666666666666856,
+          "midi": 60
+      },
+      {
+          "time": 261.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 262,
+          "duration": 0.6656249999999773,
+          "midi": 60
+      },
+      {
+          "time": 262.665625,
+          "duration": 0.6666666666666856,
+          "midi": 60
+      },
+      {
+          "time": 263.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 264,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 264.33229166666666,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 264.83229166666666,
+          "duration": 0.36666666666667425,
+          "midi": 61
+      },
+      {
+          "time": 265.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 265.3989583333333,
+          "duration": 0.20104166666669698,
+          "midi": 61
+      },
+      {
+          "time": 265.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 265.79895833333336,
+          "duration": 0.20104166666664014,
+          "midi": 61
+      },
+      {
+          "time": 266,
+          "duration": 0.6656249999999773,
+          "midi": 60
+      },
+      {
+          "time": 266,
+          "duration": 2,
+          "midi": 61
+      },
+      {
+          "time": 266.665625,
+          "duration": 0.6666666666666856,
+          "midi": 60
+      },
+      {
+          "time": 267.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 268,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 268.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 268.3989583333333,
+          "duration": 0.20104166666669698,
+          "midi": 61
+      },
+      {
+          "time": 268.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 268.79895833333336,
+          "duration": 0.20104166666664014,
+          "midi": 61
+      },
+      {
+          "time": 269,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 269,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 270,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 271,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 271.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 61
+      }
   ],
   "tenor": [
-    {
-      "time": 16,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 17,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 18,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 19,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 20,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 21,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 22,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 23,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 24,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 26,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 27,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 28,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 29,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 30,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 30.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 31,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 32,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 33,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 33.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 34,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 35,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 35.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 36,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 36.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 37,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 37.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 38.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 38.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 38.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 39,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 39.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 40,
-      "duration": 2.5,
-      "midi": 61
-    },
-    {
-      "time": 42.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 43,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 43.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 44,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 44.5,
-      "duration": 1.5,
-      "midi": 60
-    },
-    {
-      "time": 46,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 46.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 47.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 47.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 48,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 48.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 49,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 49.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 50,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 51,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 52,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 53,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 54,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 55,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 56.5,
-      "duration": 1.5,
-      "midi": 60
-    },
-    {
-      "time": 58,
-      "duration": 2,
-      "midi": 61
-    },
-    {
-      "time": 60.5,
-      "duration": 2,
-      "midi": 60
-    },
-    {
-      "time": 62.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 63,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 63.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 64.5,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 65.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 66,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 66.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 67,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 67.5,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 68.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 69,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 69.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 70.25,
-      "duration": 1.75,
-      "midi": 60
-    },
-    {
-      "time": 72,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 72.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 72.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 72.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 73,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 73.5,
-      "duration": 2.5,
-      "midi": 61
-    },
-    {
-      "time": 76.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 77,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 77.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 78.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 78.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 78.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 79,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 79.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 80,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 80.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 80.5,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 81.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 81.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 82,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 82.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 82.75,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 83.25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 83.75,
-      "duration": 1.25,
-      "midi": 61
-    },
-    {
-      "time": 85.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 85.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 86,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 86.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 86.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 86.75,
-      "duration": 1.25,
-      "midi": 60
-    },
-    {
-      "time": 88,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 88.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 88.5,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 89.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 89.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 90,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 90.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 90.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 90.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 91,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 91.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 92.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 93,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 93.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 94.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 94.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 94.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 95.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 96,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 96.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 97,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 97.665625,
-      "duration": 0.6666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 98.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 98.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 99,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 99.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 100,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 100.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 101,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 101.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 101.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 102,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 102.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 103,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 103.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 103.665625,
-      "duration": 0.6666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 104.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 104.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 105,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 105.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 105.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 106,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 107,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 108,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 108.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 109,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 109.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 110,
-      "duration": 1.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 111.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 111.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 112,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 112.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 112.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 112.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 113.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 113.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 113.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 114,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 114.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 114.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 114.75,
-      "duration": 0.5822916666666629,
-      "midi": 61
-    },
-    {
-      "time": 115.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 115.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 116,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 116.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 116.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 116.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 117,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 117.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 117.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 117.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 118,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 118.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 118.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 118.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 119,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 119.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 119.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 120,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 120.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 120.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 120.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 121.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 121.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 121.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 122,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 122.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 122.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 122.75,
-      "duration": 0.5822916666666629,
-      "midi": 60
-    },
-    {
-      "time": 123.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 123.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 124,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 124.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 124.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 124.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 125.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 125.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 125.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 126,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 126.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 127,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 127.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 127.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 128,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 128.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 129.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 129.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 130,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 130.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 130.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 131.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 131.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 132,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 132.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 132.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 133,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 133.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 133.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 134,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 134.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 134.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 135,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 136.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 136.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 137,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 137.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 137.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 138,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 138.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 139,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 139.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 139.25,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 140,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 140.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 141,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 141.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 141.665625,
-      "duration": 1.8343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 144,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 144.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 144.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 144.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 145.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 145.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 146,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 146.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 146.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 146.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 147.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 147.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 148,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 148.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 148.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 148.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 149.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 149.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 150,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 150.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 150.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 150.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 151.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 151.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 151.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 151.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 152,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 153,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 153.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 153.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 154,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 154.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 154.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 154.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 155.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 155.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 156,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 156.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 156.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 156.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 157.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 157.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 158,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 158.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 158.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 158.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 159.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 159.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 159.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 159.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 160,
-      "duration": 2.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 162.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 162.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 163,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 164,
-      "duration": 1.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 165.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 165.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 166,
-      "duration": 2.6656250000000057,
-      "midi": 60
-    },
-    {
-      "time": 168.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 168.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 169,
-      "duration": 1.5,
-      "midi": 60
-    },
-    {
-      "time": 169,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 170.5,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 170.5,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 172,
-      "duration": 3.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 175.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 175.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 176.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 176.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 177,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 177.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 177.75,
-      "duration": 0.875,
-      "midi": 61
-    },
-    {
-      "time": 178.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 178.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 178.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 179.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 179.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 180,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 180.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 180.75,
-      "duration": 0.875,
-      "midi": 61
-    },
-    {
-      "time": 181.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 181.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 181.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 182.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 182.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 183,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 183.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 183.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 184,
-      "duration": 0.6656250000000057,
-      "midi": 61
-    },
-    {
-      "time": 184.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 184.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 185.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 185.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 186,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 186.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 186.75,
-      "duration": 0.875,
-      "midi": 61
-    },
-    {
-      "time": 187.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 187.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 187.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 188.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 188.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 189,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 190.25,
-      "duration": 0.875,
-      "midi": 60
-    },
-    {
-      "time": 191.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 191.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 192,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 192.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 194.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 195.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 196.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 196.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 198,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 198.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 199,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 199.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 201,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 201.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 202,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 202.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 203,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 203.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 203.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 204,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 204.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 205,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 205.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 207,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 207.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 207.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 209.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 209.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 209.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 210,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 210.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 210.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 210.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 210.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 211.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 211.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 212,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 212.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 212.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 212.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 212.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 213,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 213.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 216.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216.25,
-      "duration": 0.375,
-      "midi": 61
-    },
-    {
-      "time": 216.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 217,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 217.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 217.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 218.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 219,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 219.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 220,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 220.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 220.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 220.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 220.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 221,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 221.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 221.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 221.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 222,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 222.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 223,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 223.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 223.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 224,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 225.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 225.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 225.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 225.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 226,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 226.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 226.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 226.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 226.625,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 226.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 227.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 227.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 228.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 228.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 228.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 228.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 229,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 229.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 229.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 232,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 232.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 232.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 233,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 233.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 233.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 233.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 235,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 235.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 236,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 236.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.375,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 236.625,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.875,
-      "duration": 0.2906250000000057,
-      "midi": 60
-    },
-    {
-      "time": 237.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 237.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 237.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 237.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 240,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 240,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 241,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 241.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 241.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 241.625,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 241.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 242,
-      "duration": 0.0625,
-      "midi": 61
-    },
-    {
-      "time": 242.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 242.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 242.5,
-      "duration": 0.5625,
-      "midi": 61
-    },
-    {
-      "time": 243.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 243.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 243.75,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 244.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 244.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 244.5,
-      "duration": 0.4375,
-      "midi": 60
-    },
-    {
-      "time": 244.5,
-      "duration": 0.4375,
-      "midi": 61
-    },
-    {
-      "time": 244.9375,
-      "duration": 0.3125,
-      "midi": 61
-    },
-    {
-      "time": 245.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 245.5,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 245.6875,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 245.75,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 245.9375,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 246.1875,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 246.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 250.1875,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 250.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 252,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 252.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 252.375,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 252.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 252.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 253.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 253.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 253.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 254.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 254.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 254.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 255,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 255.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 255.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 256,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 256.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 256.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 256.375,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 256.625,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 257.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 257.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 257.875,
-      "duration": 0.3239583333333371,
-      "midi": 60
-    },
-    {
-      "time": 258.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 258.3989583333333,
-      "duration": 0.20104166666669698,
-      "midi": 60
-    },
-    {
-      "time": 258.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 259.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 259.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 260,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 260,
-      "duration": 4,
-      "midi": 61
-    },
-    {
-      "time": 261,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 262,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 263,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 264,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 264.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 264.3989583333333,
-      "duration": 0.20104166666669698,
-      "midi": 61
-    },
-    {
-      "time": 264.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 265,
-      "duration": 0.625,
-      "midi": 61
-    },
-    {
-      "time": 265.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 266,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 266,
-      "duration": 2,
-      "midi": 61
-    },
-    {
-      "time": 267,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 268,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 268.33229166666666,
-      "duration": 0.3333333333333144,
-      "midi": 61
-    },
-    {
-      "time": 268.665625,
-      "duration": 0.16666666666668561,
-      "midi": 60
-    },
-    {
-      "time": 268.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 269,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 269,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 270.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 271,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 61
-    }
+      {
+          "time": 16,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 17,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 18,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 19,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 20,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 21,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 22,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 23,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 24,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 26,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 27,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 28,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 29,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 30,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 30.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 31,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 32,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 33,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 33.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 34,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 35,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 35.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 36,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 36.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 37,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 37.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 38.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 38.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 38.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 39,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 39.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 40,
+          "duration": 2.5,
+          "midi": 61
+      },
+      {
+          "time": 42.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 43,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 43.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 44,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 44.5,
+          "duration": 1.5,
+          "midi": 60
+      },
+      {
+          "time": 46,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 46.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 47.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 47.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 48,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 48.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 49,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 49.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 50,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 51,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 52,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 53,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 54,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 55,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 56.5,
+          "duration": 1.5,
+          "midi": 60
+      },
+      {
+          "time": 58,
+          "duration": 2,
+          "midi": 61
+      },
+      {
+          "time": 60.5,
+          "duration": 2,
+          "midi": 60
+      },
+      {
+          "time": 62.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 63,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 63.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 64.5,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 65.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 66,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 66.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 67,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 67.5,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 68.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 69,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 69.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 70.25,
+          "duration": 1.75,
+          "midi": 60
+      },
+      {
+          "time": 72,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 72.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 72.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 72.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 73,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 73.5,
+          "duration": 2.5,
+          "midi": 61
+      },
+      {
+          "time": 76.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 77,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 77.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 78.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 78.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 78.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 79,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 79.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 80,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 80.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 80.5,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 81.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 81.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 82,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 82.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 82.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 83.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 83.75,
+          "duration": 1.25,
+          "midi": 61
+      },
+      {
+          "time": 85.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 85.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 86,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 86.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 86.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 86.75,
+          "duration": 1.25,
+          "midi": 60
+      },
+      {
+          "time": 88,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 88.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 88.5,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 89.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 89.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 90,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 90.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 90.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 90.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 91,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 91.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 92.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 93,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 93.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 94.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 94.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 94.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 95.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 96,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 96.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 97,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 97.665625,
+          "duration": 0.6666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 98.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 98.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 99,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 99.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 100,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 100.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 101,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 101.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 101.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 102,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 102.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 103,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 103.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 103.665625,
+          "duration": 0.6666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 104.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 104.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 105,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 105.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 105.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 106,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 107,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 108,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 108.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 109,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 109.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 110,
+          "duration": 1.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 111.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 111.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 112,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 112.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 112.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 112.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 113.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 113.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 113.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 114,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 114.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 114.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 114.75,
+          "duration": 0.5822916666666629,
+          "midi": 61
+      },
+      {
+          "time": 115.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 115.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 116,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 116.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 116.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 116.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 117,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 117.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 117.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 117.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 118,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 118.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 118.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 118.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 119,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 119.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 119.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 120,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 120.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 120.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 120.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 121.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 121.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 121.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 122,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 122.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 122.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 122.75,
+          "duration": 0.5822916666666629,
+          "midi": 60
+      },
+      {
+          "time": 123.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 123.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 124,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 124.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 124.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 124.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 125.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 125.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 125.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 126,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 126.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 127,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 127.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 127.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 128,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 128.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 129.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 129.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 130,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 130.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 130.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 131.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 131.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 132,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 132.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 132.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 133,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 133.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 133.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 134,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 134.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 134.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 135,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 136.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 136.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 137,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 137.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 137.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 138,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 138.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 139,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 139.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 139.25,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 140,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 140.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 141,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 141.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 141.665625,
+          "duration": 1.8343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 144,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 144.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 144.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 144.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 145.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 145.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 146,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 146.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 146.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 146.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 147.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 147.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 148,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 148.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 148.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 148.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 149.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 149.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 150,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 150.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 150.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 150.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 151.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 151.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 151.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 151.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 152,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 153,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 153.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 153.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 154,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 154.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 154.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 154.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 155.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 155.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 156,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 156.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 156.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 156.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 157.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 157.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 158,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 158.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 158.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 158.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 159.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 159.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 159.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 159.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 160,
+          "duration": 2.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 162.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 162.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 163,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 164,
+          "duration": 1.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 165.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 165.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 166,
+          "duration": 2.6656250000000057,
+          "midi": 60
+      },
+      {
+          "time": 168.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 168.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 169,
+          "duration": 1.5,
+          "midi": 60
+      },
+      {
+          "time": 169,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 170.5,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 170.5,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 172,
+          "duration": 3.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 175.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 175.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 176.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 176.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 177,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 177.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 177.75,
+          "duration": 0.875,
+          "midi": 61
+      },
+      {
+          "time": 178.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 178.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 178.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 179.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 179.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 180,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 180.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 180.75,
+          "duration": 0.875,
+          "midi": 61
+      },
+      {
+          "time": 181.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 181.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 181.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 182.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 182.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 183,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 183.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 183.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 184,
+          "duration": 0.6656250000000057,
+          "midi": 61
+      },
+      {
+          "time": 184.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 184.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 185.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 185.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 186,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 186.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 186.75,
+          "duration": 0.875,
+          "midi": 61
+      },
+      {
+          "time": 187.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 187.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 187.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 188.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 188.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 189,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 190.25,
+          "duration": 0.875,
+          "midi": 60
+      },
+      {
+          "time": 191.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 191.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 192,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 192.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 194.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 195.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 196.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 196.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 198,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 198.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 199,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 199.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 201,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 201.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 202,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 202.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 203,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 203.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 203.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 204,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 204.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 205,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 205.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 207,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 207.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 207.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 209.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 209.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 209.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 210,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 210.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 210.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 210.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 210.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 211.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 211.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 212,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 212.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 212.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 212.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 212.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 213,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 213.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 216.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216.25,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 216.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 217,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 217.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 217.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 218.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 219,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 219.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 220,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 220.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 220.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 220.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 220.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 221,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 221.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 221.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 221.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 222,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 222.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 223,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 223.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 223.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 224,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 225.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 225.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 225.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 225.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 226,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 226.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 226.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 226.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 226.625,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 226.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 227.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 227.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 228.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 228.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 228.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 228.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 229,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 229.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 229.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 232,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 232.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 232.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 233,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 233.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 233.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 233.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 235,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 235.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 236,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 236.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.375,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 236.625,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.875,
+          "duration": 0.2906250000000057,
+          "midi": 60
+      },
+      {
+          "time": 237.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 237.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 237.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 237.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 240,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 240,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 241,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 241.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 241.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 241.625,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 241.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 242,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 242.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 242.5,
+          "duration": 0.625,
+          "midi": 61
+      },
+      {
+          "time": 243.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 243.75,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 244.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 244.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 244.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 244.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 244.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 245.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 245.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 245.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 245.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 245.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 246.125,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 246.125,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 246.875,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 247.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 250.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 250.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 250.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 251,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 252,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 252.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 252.375,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 252.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 252.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 253.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 253.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 253.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 254.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 254.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 254.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 255,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 255.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 255.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 256,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 256.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 256.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 256.375,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 256.625,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 257.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 257.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 257.875,
+          "duration": 0.3239583333333371,
+          "midi": 60
+      },
+      {
+          "time": 258.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 258.3989583333333,
+          "duration": 0.20104166666669698,
+          "midi": 60
+      },
+      {
+          "time": 258.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 259.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 259.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 260,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 260,
+          "duration": 4,
+          "midi": 61
+      },
+      {
+          "time": 261,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 262,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 263,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 264,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 264.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 264.3989583333333,
+          "duration": 0.20104166666669698,
+          "midi": 61
+      },
+      {
+          "time": 264.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 265,
+          "duration": 0.625,
+          "midi": 61
+      },
+      {
+          "time": 265.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 266,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 266,
+          "duration": 2,
+          "midi": 61
+      },
+      {
+          "time": 267,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 268,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 268.33229166666666,
+          "duration": 0.3333333333333144,
+          "midi": 61
+      },
+      {
+          "time": 268.665625,
+          "duration": 0.16666666666668561,
+          "midi": 60
+      },
+      {
+          "time": 268.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 269,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 269,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 270.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 271,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 61
+      }
   ],
   "bari": [
-    {
-      "time": 16,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 17,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 18,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 19,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 20,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 21,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 22,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 23,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 24,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 25,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 26,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 27,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 28,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 29,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 30,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 30.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 31,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 32,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 33,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 34,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 35.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 35.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 35.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 36,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 37,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 38,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 39.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 39.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 39.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 40,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 41,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 42,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 43.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 43.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 43.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 44,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 45,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 46,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 47.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 47.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 47.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 48,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 48.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 49,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 49.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 50,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 51,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 52,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 53,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 54,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 55,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 57.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 58,
-      "duration": 2,
-      "midi": 61
-    },
-    {
-      "time": 60,
-      "duration": 2.5,
-      "midi": 60
-    },
-    {
-      "time": 62.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 63,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 63.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 64,
-      "duration": 3,
-      "midi": 61
-    },
-    {
-      "time": 67,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 67.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 67.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 67.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 68,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 69,
-      "duration": 2,
-      "midi": 60
-    },
-    {
-      "time": 71,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 71.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 71.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 71.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 72,
-      "duration": 1.5,
-      "midi": 61
-    },
-    {
-      "time": 73.5,
-      "duration": 2.5,
-      "midi": 60
-    },
-    {
-      "time": 76,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 76.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 77,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 77.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 78.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 78.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 78.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 79,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 79.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 80,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 80.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 80.5,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 81.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 81.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 82.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 82.5,
-      "duration": 1.5,
-      "midi": 60
-    },
-    {
-      "time": 84,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 84.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 84.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 84.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 85,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 86,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 86.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 86.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 87,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 87.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 87.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 88,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 88.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 88.5,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 89.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 89.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 90,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 90.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 90.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 90.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 91,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 92,
-      "duration": 2,
-      "midi": 60
-    },
-    {
-      "time": 94.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 94.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 94.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 95.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 95.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 96,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 96.33229166666666,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 97.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 97.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 98.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 98.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 99,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 99.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 99.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 100,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 100.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 100.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 100.75,
-      "duration": 0.5822916666666629,
-      "midi": 60
-    },
-    {
-      "time": 101.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 101.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 102,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 102.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 102.665625,
-      "duration": 0.5843749999999943,
-      "midi": 60
-    },
-    {
-      "time": 103.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 103.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 103.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 104.33229166666666,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 105.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 105.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 106.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 106.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 107,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 107.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 107.665625,
-      "duration": 0.3343749999999943,
-      "midi": 61
-    },
-    {
-      "time": 108,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 108.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 108.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 108.75,
-      "duration": 0.5822916666666629,
-      "midi": 60
-    },
-    {
-      "time": 109.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 109.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 110,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 110.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 110.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 110.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 112,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 112.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 112.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 112.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 113,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 113.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 113.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 114.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 114.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 115,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 115.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 115.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 115.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 116,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 116.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 116.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 116.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 117,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 117.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 117.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 118.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 118.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 119,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 119.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 119.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 119.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 120,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 120.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 120.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 120.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 121,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 121.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 121.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 122.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 122.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 123,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 123.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 123.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 123.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 123.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 124,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 124.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 124.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 124.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 125,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 125.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 125.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 126.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 126.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 127,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 127.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 127.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 127.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 128,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 128.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 128.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 128.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 129,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 129.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 129.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 130,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 130.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 130.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 130.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 131.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 131.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 131.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 132,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 132.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 132.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 133,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 133.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 133.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 134,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 134.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 134.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 134.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 135.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 135.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 135.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 135.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 136,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 136.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 136.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 136.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 137,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 137.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 137.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 138,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 138.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 138.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 138.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 139.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 139.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 139.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 140,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 140.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 140.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 141,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 141.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 141.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 142,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 142.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 142.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 142.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 143.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 143.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 143.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 143.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 144,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 144.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 144.665625,
-      "duration": 0.5843749999999943,
-      "midi": 60
-    },
-    {
-      "time": 145.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 145.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 145.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 146,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 146.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 146.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 148,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 148.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 148.665625,
-      "duration": 0.5843749999999943,
-      "midi": 60
-    },
-    {
-      "time": 149.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 149.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 149.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 150,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 150.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 150.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 151.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 151.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 151.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 151.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 152,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 152.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 152.665625,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 153.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 153.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 153.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 153.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 154,
-      "duration": 0.3322916666666629,
-      "midi": 60
-    },
-    {
-      "time": 154.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 61
-    },
-    {
-      "time": 154.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 156,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 156.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 156.665625,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 157.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 157.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 157.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 157.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 157.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 158,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 158.33229166666666,
-      "duration": 0.3333333333333428,
-      "midi": 60
-    },
-    {
-      "time": 158.665625,
-      "duration": 0.3343749999999943,
-      "midi": 60
-    },
-    {
-      "time": 159.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 159.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 159.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 159.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 160,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 160,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 160.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 160.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 161.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 162,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 162.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 163,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 163,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 163.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 163.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 164.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 165,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 165.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 166,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 166,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 166.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 166.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 167.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 168,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 169,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 169,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 169.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 169.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 170.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 171,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 171.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 172,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 172,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 172.75,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 172.75,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 173.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 174,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 174.5,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 174.5,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 175.25,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 175.25,
-      "duration": 0.75,
-      "midi": 61
-    },
-    {
-      "time": 176,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 176,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 176.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 176.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 176.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 176.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 177,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 177.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 177.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 177.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 178,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 178.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 178.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 178.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 179,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 179,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 179.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 179.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 179.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 179.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 180,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 180.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 180.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 180.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 181,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 181.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 182,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 182,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 182.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 182.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 182.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 182.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 183,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 183.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 183.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 183.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 184,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 184.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 184.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 184.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 185,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 185,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 185.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 185.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 185.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 185.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 186,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 186.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 186.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 186.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 186.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 187.75,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 187.75,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 188.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 188.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 188.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 188.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 189.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 190,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 190.25,
-      "duration": 0.75,
-      "midi": 60
-    },
-    {
-      "time": 191.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 191.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 191.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 192,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 192.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 192.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 193.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 193.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 194.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 194.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 195.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 196.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 196.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 196.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 196.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 197.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 197.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 198,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 198.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 198.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 199,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 199.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 199.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 199.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 200.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 200.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 201,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 201.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 201.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 202,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 202.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.625,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 202.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 202.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 203,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 203.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 203.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 204,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 204.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 204.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 205,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 205.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 205.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 206.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 206.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 207,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 207.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 207.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 208,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 208.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 209,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 211.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 211.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 212,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 212.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 212.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 212.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 212.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 213,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 213.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 213.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 215.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 215.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 216.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 216.25,
-      "duration": 0.375,
-      "midi": 61
-    },
-    {
-      "time": 216.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 217,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 217.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 217.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 217.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 61
-    },
-    {
-      "time": 218.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 218.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 218.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 219,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 219.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 219.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 220,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 220.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 220.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 220.6,
-      "duration": 0.19895833333333712,
-      "midi": 61
-    },
-    {
-      "time": 220.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 221,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 221.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 221.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 221.75,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 222,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 222.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 222.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 222.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 223,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 223.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 223.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 224,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 225.5,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 225.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 225.665625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 225.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 226,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 226.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 226.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 226.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 226.625,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 226.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 227.75,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 227.875,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.16562500000000568,
-      "midi": 60
-    },
-    {
-      "time": 228,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 228.165625,
-      "duration": 0.1666666666666572,
-      "midi": 60
-    },
-    {
-      "time": 228.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 228.5,
-      "duration": 0.16562500000000568,
-      "midi": 61
-    },
-    {
-      "time": 228.665625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 228.83229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 61
-    },
-    {
-      "time": 229,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 229.125,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 229.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 231.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 231.75,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 232,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 232.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 232.25,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 233,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 233.19895833333334,
-      "duration": 0.19999999999998863,
-      "midi": 60
-    },
-    {
-      "time": 233.39895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 233.6,
-      "duration": 0.19895833333333712,
-      "midi": 60
-    },
-    {
-      "time": 233.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 60
-    },
-    {
-      "time": 234.79895833333333,
-      "duration": 0.20104166666666856,
-      "midi": 61
-    },
-    {
-      "time": 235,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 235.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 235.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 236,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 236.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.375,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 236.625,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 236.875,
-      "duration": 0.2906250000000057,
-      "midi": 60
-    },
-    {
-      "time": 237.165625,
-      "duration": 0.1666666666666572,
-      "midi": 61
-    },
-    {
-      "time": 237.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 237.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 237.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 238.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 238.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 239.25,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 239.375,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 240,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 240.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 240.5,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 240.625,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 240.875,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 241,
-      "duration": 0.0625,
-      "midi": 61
-    },
-    {
-      "time": 241.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 241.125,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 241.5,
-      "duration": 0.5625,
-      "midi": 61
-    },
-    {
-      "time": 242.0625,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 242.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 242.75,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 243.25,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 243.375,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 243.5,
-      "duration": 0.4375,
-      "midi": 60
-    },
-    {
-      "time": 243.9375,
-      "duration": 0.3125,
-      "midi": 61
-    },
-    {
-      "time": 244.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 244.5,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 244.6875,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 244.75,
-      "duration": 0.1875,
-      "midi": 61
-    },
-    {
-      "time": 244.9375,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 245,
-      "duration": 0.375,
-      "midi": 61
-    },
-    {
-      "time": 245.375,
-      "duration": 0.0625,
-      "midi": 60
-    },
-    {
-      "time": 245.4375,
-      "duration": 0.0625,
-      "midi": 61
-    },
-    {
-      "time": 245.5,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 246.1875,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 246.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 246.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 60
-    },
-    {
-      "time": 248,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 250.1875,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 250.4375,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 60
-    },
-    {
-      "time": 250.9375,
-      "duration": 1.0625,
-      "midi": 61
-    },
-    {
-      "time": 252.5,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 252.625,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 252.875,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 253.125,
-      "duration": 0.125,
-      "midi": 61
-    },
-    {
-      "time": 253.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 254,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 254.25,
-      "duration": 0.25,
-      "midi": 60
-    },
-    {
-      "time": 255,
-      "duration": 0.08229166666666288,
-      "midi": 61
-    },
-    {
-      "time": 255.08229166666666,
-      "duration": 0.08333333333334281,
-      "midi": 60
-    },
-    {
-      "time": 255.165625,
-      "duration": 0.08437499999999432,
-      "midi": 61
-    },
-    {
-      "time": 255.25,
-      "duration": 0.08229166666666288,
-      "midi": 60
-    },
-    {
-      "time": 255.33229166666666,
-      "duration": 0.08333333333334281,
-      "midi": 61
-    },
-    {
-      "time": 255.415625,
-      "duration": 0.08437499999999432,
-      "midi": 60
-    },
-    {
-      "time": 256,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 256.33229166666666,
-      "duration": 0.3333333333333144,
-      "midi": 60
-    },
-    {
-      "time": 256.665625,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 257.165625,
-      "duration": 0.16666666666668561,
-      "midi": 60
-    },
-    {
-      "time": 257.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 257.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 257.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 258,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 258.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 259.33229166666666,
-      "duration": 0.3333333333333144,
-      "midi": 61
-    },
-    {
-      "time": 259.665625,
-      "duration": 0.33437500000002274,
-      "midi": 61
-    },
-    {
-      "time": 260,
-      "duration": 0.6656249999999773,
-      "midi": 60
-    },
-    {
-      "time": 260,
-      "duration": 4,
-      "midi": 61
-    },
-    {
-      "time": 260.665625,
-      "duration": 0.6666666666666856,
-      "midi": 60
-    },
-    {
-      "time": 261.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 262,
-      "duration": 0.6656249999999773,
-      "midi": 60
-    },
-    {
-      "time": 262.665625,
-      "duration": 0.6666666666666856,
-      "midi": 60
-    },
-    {
-      "time": 263.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 264,
-      "duration": 0.3322916666666629,
-      "midi": 61
-    },
-    {
-      "time": 264.33229166666666,
-      "duration": 0.3333333333333144,
-      "midi": 60
-    },
-    {
-      "time": 264.665625,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 265.165625,
-      "duration": 0.16666666666668561,
-      "midi": 60
-    },
-    {
-      "time": 265.33229166666666,
-      "duration": 0.16770833333333712,
-      "midi": 60
-    },
-    {
-      "time": 265.625,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 265.75,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 266,
-      "duration": 0.6656249999999773,
-      "midi": 60
-    },
-    {
-      "time": 266,
-      "duration": 2,
-      "midi": 61
-    },
-    {
-      "time": 266.665625,
-      "duration": 0.6666666666666856,
-      "midi": 60
-    },
-    {
-      "time": 267.33229166666666,
-      "duration": 0.6677083333333371,
-      "midi": 60
-    },
-    {
-      "time": 268,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 268.5,
-      "duration": 0.25,
-      "midi": 61
-    },
-    {
-      "time": 269,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 269,
-      "duration": 1,
-      "midi": 61
-    },
-    {
-      "time": 270,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 270.5,
-      "duration": 0.5,
-      "midi": 61
-    },
-    {
-      "time": 271.125,
-      "duration": 0.125,
-      "midi": 60
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 60
-    },
-    {
-      "time": 271.5,
-      "duration": 0.5,
-      "midi": 61
-    }
+      {
+          "time": 16,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 17,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 18,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 19,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 20,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 21,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 22,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 23,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 24,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 26,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 27,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 28,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 29,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 30,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 30.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 31,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 32,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 33,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 34,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 35.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 35.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 35.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 36,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 37,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 38,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 39.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 39.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 39.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 40,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 41,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 42,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 43.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 43.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 43.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 44,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 45,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 46,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 47.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 47.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 47.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 48,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 48.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 49,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 49.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 50,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 51,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 52,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 53,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 54,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 55,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 57.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 58,
+          "duration": 2,
+          "midi": 61
+      },
+      {
+          "time": 60,
+          "duration": 2.5,
+          "midi": 60
+      },
+      {
+          "time": 62.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 63,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 63.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 64,
+          "duration": 3,
+          "midi": 61
+      },
+      {
+          "time": 67,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 67.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 67.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 67.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 68,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 69,
+          "duration": 2,
+          "midi": 60
+      },
+      {
+          "time": 71,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 71.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 71.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 71.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 72,
+          "duration": 1.5,
+          "midi": 61
+      },
+      {
+          "time": 73.5,
+          "duration": 2.5,
+          "midi": 60
+      },
+      {
+          "time": 76,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 76.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 77,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 77.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 78.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 78.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 78.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 79,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 79.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 80,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 80.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 80.5,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 81.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 81.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 82.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 82.5,
+          "duration": 1.5,
+          "midi": 60
+      },
+      {
+          "time": 84,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 84.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 84.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 84.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 85,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 86,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 86.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 86.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 87,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 87.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 87.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 88,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 88.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 88.5,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 89.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 89.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 90,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 90.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 90.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 90.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 91,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 92,
+          "duration": 2,
+          "midi": 60
+      },
+      {
+          "time": 94.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 94.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 94.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 95.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 95.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 96,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 96.33229166666666,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 97.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 97.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 98.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 98.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 99,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 99.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 99.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 100,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 100.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 100.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 100.75,
+          "duration": 0.5822916666666629,
+          "midi": 60
+      },
+      {
+          "time": 101.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 101.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 102,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 102.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 102.665625,
+          "duration": 0.5843749999999943,
+          "midi": 60
+      },
+      {
+          "time": 103.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 103.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 103.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 104.33229166666666,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 105.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 105.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 106.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 106.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 107,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 107.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 107.665625,
+          "duration": 0.3343749999999943,
+          "midi": 61
+      },
+      {
+          "time": 108,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 108.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 108.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 108.75,
+          "duration": 0.5822916666666629,
+          "midi": 60
+      },
+      {
+          "time": 109.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 109.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 110,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 110.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 110.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 110.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 112,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 112.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 112.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 112.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 113,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 113.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 113.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 114.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 114.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 115,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 115.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 115.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 115.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 116,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 116.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 116.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 116.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 117,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 117.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 117.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 118.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 118.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 119,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 119.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 119.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 119.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 120,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 120.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 120.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 120.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 121,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 121.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 121.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 122.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 122.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 123,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 123.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 123.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 123.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 123.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 124,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 124.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 124.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 124.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 125,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 125.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 125.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 126.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 126.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 127,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 127.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 127.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 127.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 128,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 128.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 128.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 128.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 129,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 129.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 129.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 130,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 130.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 130.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 130.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 131.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 131.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 131.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 132,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 132.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 132.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 133,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 133.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 133.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 134,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 134.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 134.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 134.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 135.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 135.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 135.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 135.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 136,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 136.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 136.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 136.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 137,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 137.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 137.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 138,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 138.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 138.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 138.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 139.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 139.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 139.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 140,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 140.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 140.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 141,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 141.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 141.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 142,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 142.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 142.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 142.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 143.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 143.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 143.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 143.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 144,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 144.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 144.665625,
+          "duration": 0.5843749999999943,
+          "midi": 60
+      },
+      {
+          "time": 145.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 145.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 145.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 146,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 146.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 146.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 148,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 148.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 148.665625,
+          "duration": 0.5843749999999943,
+          "midi": 60
+      },
+      {
+          "time": 149.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 149.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 149.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 150,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 150.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 150.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 151.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 151.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 151.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 151.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 152,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 152.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 152.665625,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 153.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 153.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 153.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 153.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 154,
+          "duration": 0.3322916666666629,
+          "midi": 60
+      },
+      {
+          "time": 154.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 61
+      },
+      {
+          "time": 154.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 156,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 156.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 156.665625,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 157.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 157.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 157.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 157.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 157.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 158,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 158.33229166666666,
+          "duration": 0.3333333333333428,
+          "midi": 60
+      },
+      {
+          "time": 158.665625,
+          "duration": 0.3343749999999943,
+          "midi": 60
+      },
+      {
+          "time": 159.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 159.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 159.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 159.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 160,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 160,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 160.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 160.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 161.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 162,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 162.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 163,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 163,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 163.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 163.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 164.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 165,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 165.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 166,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 166,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 166.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 166.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 167.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 168,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 169,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 169,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 169.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 169.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 170.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 171,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 171.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 172,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 172,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 172.75,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 172.75,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 173.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 174,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 174.5,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 174.5,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 175.25,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 175.25,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 176,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 176,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 176.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 176.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 176.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 176.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 177,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 177.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 177.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 177.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 178,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 178.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 178.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 178.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 179,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 179,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 179.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 179.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 179.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 179.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 180,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 180.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 180.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 180.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 181,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 181.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 182,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 182,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 182.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 182.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 182.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 182.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 183,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 183.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 183.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 183.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 184,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 184.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 184.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 184.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 185,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 185,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 185.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 185.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 185.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 185.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 186,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 186.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 186.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 186.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 186.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 187.75,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 187.75,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 188.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 188.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 188.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 188.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 189.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 190,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 190.25,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 191.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 191.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 191.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 192,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 192.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 192.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 193.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 193.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 194.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 194.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 195.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 196.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 196.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 196.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 196.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 197.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 197.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 198,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 198.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 198.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 199,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 199.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 199.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 199.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 200.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 200.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 201,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 201.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 201.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 202,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 202.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.625,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 202.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 202.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 203,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 203.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 203.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 204,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 204.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 204.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 205,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 205.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 205.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 206.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 206.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 207,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 207.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 207.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 208,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 208.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 209,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 211.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 211.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 212,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 212.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 212.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 212.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 212.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 213,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 213.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 213.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 215.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 215.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 216.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 216.25,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 216.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 217,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 217.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 217.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 217.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 61
+      },
+      {
+          "time": 218.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 218.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 218.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 219,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 219.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 219.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 220,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 220.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 220.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 220.6,
+          "duration": 0.19895833333333712,
+          "midi": 61
+      },
+      {
+          "time": 220.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 221,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 221.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 221.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 221.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 222,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 222.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 222.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 222.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 223,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 223.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 223.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 224,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 225.5,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 225.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 225.665625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 225.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 226,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 226.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 226.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 226.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 226.625,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 226.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 227.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 227.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.16562500000000568,
+          "midi": 60
+      },
+      {
+          "time": 228,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 228.165625,
+          "duration": 0.1666666666666572,
+          "midi": 60
+      },
+      {
+          "time": 228.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 228.5,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 228.665625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 228.83229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 61
+      },
+      {
+          "time": 229,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 229.125,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 229.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 231.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 231.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 232,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 232.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 232.25,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 233,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 233.19895833333334,
+          "duration": 0.19999999999998863,
+          "midi": 60
+      },
+      {
+          "time": 233.39895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 233.6,
+          "duration": 0.19895833333333712,
+          "midi": 60
+      },
+      {
+          "time": 233.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 60
+      },
+      {
+          "time": 234.79895833333333,
+          "duration": 0.20104166666666856,
+          "midi": 61
+      },
+      {
+          "time": 235,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 235.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 235.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 236,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 236.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.375,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 236.625,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 236.875,
+          "duration": 0.2906250000000057,
+          "midi": 60
+      },
+      {
+          "time": 237.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 237.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 237.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 237.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 238.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 238.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 239.25,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 239.375,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 240,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 240.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 240.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 240.625,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 240.875,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 241,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 241.125,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 241.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 241.5,
+          "duration": 0.625,
+          "midi": 61
+      },
+      {
+          "time": 241.75,
+          "duration": 0.375,
+          "midi": 60
+      },
+      {
+          "time": 242.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 242.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 242.75,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 243.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 243.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 243.5,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 243.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 244,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 244.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 244.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 244.75,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 245,
+          "duration": 0.375,
+          "midi": 61
+      },
+      {
+          "time": 245.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 245.5,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 246.125,
+          "duration": 0.75,
+          "midi": 60
+      },
+      {
+          "time": 246.125,
+          "duration": 0.75,
+          "midi": 61
+      },
+      {
+          "time": 246.875,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 247.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.5,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 247.75,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 247.875,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 60
+      },
+      {
+          "time": 248,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 250.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 250.25,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 250.75,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 251,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.25,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 251.375,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 251.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 252.5,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 252.625,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 252.875,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 253.125,
+          "duration": 0.125,
+          "midi": 61
+      },
+      {
+          "time": 253.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 254,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 254.25,
+          "duration": 0.25,
+          "midi": 60
+      },
+      {
+          "time": 255,
+          "duration": 0.16562500000000568,
+          "midi": 61
+      },
+      {
+          "time": 255.165625,
+          "duration": 0.1666666666666572,
+          "midi": 61
+      },
+      {
+          "time": 255.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 256,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 256.33229166666666,
+          "duration": 0.3333333333333144,
+          "midi": 60
+      },
+      {
+          "time": 256.665625,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 257.165625,
+          "duration": 0.16666666666668561,
+          "midi": 60
+      },
+      {
+          "time": 257.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 257.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 257.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 258,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 258.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 259.33229166666666,
+          "duration": 0.3333333333333144,
+          "midi": 61
+      },
+      {
+          "time": 259.665625,
+          "duration": 0.33437500000002274,
+          "midi": 61
+      },
+      {
+          "time": 260,
+          "duration": 0.6656249999999773,
+          "midi": 60
+      },
+      {
+          "time": 260,
+          "duration": 4,
+          "midi": 61
+      },
+      {
+          "time": 260.665625,
+          "duration": 0.6666666666666856,
+          "midi": 60
+      },
+      {
+          "time": 261.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 262,
+          "duration": 0.6656249999999773,
+          "midi": 60
+      },
+      {
+          "time": 262.665625,
+          "duration": 0.6666666666666856,
+          "midi": 60
+      },
+      {
+          "time": 263.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 264,
+          "duration": 0.3322916666666629,
+          "midi": 61
+      },
+      {
+          "time": 264.33229166666666,
+          "duration": 0.3333333333333144,
+          "midi": 60
+      },
+      {
+          "time": 264.665625,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 265.165625,
+          "duration": 0.16666666666668561,
+          "midi": 60
+      },
+      {
+          "time": 265.33229166666666,
+          "duration": 0.16770833333333712,
+          "midi": 60
+      },
+      {
+          "time": 265.625,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 265.75,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 266,
+          "duration": 0.6656249999999773,
+          "midi": 60
+      },
+      {
+          "time": 266,
+          "duration": 2,
+          "midi": 61
+      },
+      {
+          "time": 266.665625,
+          "duration": 0.6666666666666856,
+          "midi": 60
+      },
+      {
+          "time": 267.33229166666666,
+          "duration": 0.6677083333333371,
+          "midi": 60
+      },
+      {
+          "time": 268,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 268.5,
+          "duration": 0.25,
+          "midi": 61
+      },
+      {
+          "time": 269,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 269,
+          "duration": 1,
+          "midi": 61
+      },
+      {
+          "time": 270,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 270.5,
+          "duration": 0.5,
+          "midi": 61
+      },
+      {
+          "time": 271.125,
+          "duration": 0.125,
+          "midi": 60
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 60
+      },
+      {
+          "time": 271.5,
+          "duration": 0.5,
+          "midi": 61
+      }
   ]
 }

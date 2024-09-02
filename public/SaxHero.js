@@ -24,8 +24,9 @@ let touchArray = new Array(2); //LOOK: only two touches on the screen at a time,
 
 let canvas; //reference the created canvas for using JS without p5
 
-let level = 0; //the current level we're on! -1 is the initial level
-let introMode = 0; //if true, then we advance from level 0 to level 1 automatically, bypassing other logic.
+let currentLevel = 0; //the current level we're on!
+let nextLevel = 1; //the level we'll advance to on the next loop
+//let introMode = 0; //if true, then we advance from level 0 to level 1 automatically, bypassing other logic.
 let advanceLevelOnNextLoop = false; //if true, the current loop is a "victory lap" and the next loop will be the next level.
 let victoryLap = false; //this current loop is a victory lap. We will do the loop one more time. Toggled in the level listener function.
 
@@ -53,25 +54,7 @@ let originalTransportStartTime; //if you join after it starts, you know when it 
 let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
 
 
-//Eight Bar Timer - for synchronizing level changes
 
-const eightBarTimer = new Tone.Loop((time) => {
-    if (level != 0){
-        Tone.Transport.loop = true; //start looping after level 0.
-        numberOfLoops++;//increase the number of loops by one
-        console.log('Level' + level + ': ' + numberOfLoops);
-    }
-    if (advanceLevelOnNextLoop == true) {
-        numberOfLoops = 0;
-        setTransportPosition(level);
-        levelUpOpacity = 255;
-        advanceLevelOnNextLoop = false;
-        victoryLap = false;
-    }
-    if (victoryLap == true){
-        advanceLevelOnNextLoop = true;
-    }
-}, "8m");
 
 function preload() {
     bg = loadImage('assets/grass.jpeg');
@@ -214,9 +197,12 @@ socket.on('originalTransportStartTime', function (msg) {
 //LOOK: Level advancing
 
 socket.on('level', function (msg) {
-    if (msg != level) {
-        level = msg;
-        console.log('Advance to level ' + level + '!');
+    if (msg == 0) {
+        currentLevel = 0;
+    }
+    if (msg != currentLevel) {
+        nextLevel = msg;
+        console.log('Advance to level ' + nextLevel + '!');
         levelUpOpacity = 255;
         advanceLevelOnNextLoop = false; //probably redundant
         victoryLap = true; //
@@ -277,13 +263,14 @@ function judgeTap(tapTime) {
         if (Math.abs(tapTime - noteTiming) <= timingMargin) {
             taps.push(1);
             matchedIndex = index;
-            return;
+            if (matchedIndex !== -1) {
+                thumblines[matchedIndex].fill = [255, 255, 0];
+            }
+            return; //if we matched, then return...
         }
     });
-    //taps.push(0); //LOOK: why did i have this "taps.push" thing here anyway
-    if (matchedIndex !== -1) {
-        thumblines[matchedIndex].fill = [0, 255, 0];
-    }
+    taps.push(0); // or push a 0 to the taps array.
+
 }
 
 function calculateAccuracy() {
@@ -299,6 +286,7 @@ function calculateAccuracy() {
 //Reset the flag to 0 after the loop resets.
 function sendAccuracy(_progress) {
     if (_progress >= 0.99 && sendAccuracyFlag == 0 && numberOfLoops > 1) {
+        console.log(taps);
         socket.emit('accuracy', [assignedTeam, accuracy]);
         sendAccuracyFlag = 1;
         //reset colors
