@@ -2,37 +2,68 @@
 
 //Eight Bar Timer - for synchronizing level changes
 
-const eightBarTimer = new Tone.Loop((time) => {
-    if (currentLevel != 0) {
-        Tone.Transport.loop = true; //start looping after level 0.
-        numberOfLoops++;//increase the number of loops by one
-        console.log('Level' + currentLevel + ': ' + numberOfLoops);
-    }
-    if (advanceLevelOnNextLoop == true) {
-        numberOfLoops = 0;
-        setTransportPosition(nextLevel);
-        levelUpOpacity = 255;
+function toggleLoop() {
+    Tone.Transport.schedule(function () {
+        if (currentLevel == 0) {
+            currentLevel = 1;
+            nextLevel = 1;
+            setTransportPosition(1);
+            Tone.Transport.loop = true;
+            introFlag = false;
+        }
+    }, "8:0:0");
+}
+
+
+
+
+const eightBarTimer = new Tone.Loop((time) => { //runs at the top of each loop
+    if (currentLevel == 0 && nextLevel == 1) {
         advanceLevelOnNextLoop = false;
         victoryLap = false;
-        currentLevel = nextLevel;
     }
-    if (victoryLap == true) {
-        levelUpOpacity = 255;
-        advanceLevelOnNextLoop = true;
+
+    if (introFlag == false) {
+
+        numberOfLoops++;//increase the number of loops by one
+
+        if (advanceLevelOnNextLoop == true) { //this is actually the beginning of a new level.
+            currentLevel = nextLevel;
+            setTransportPosition(currentLevel);
+            if (currentLevel == 17) {
+                hudnotification = new Hudnotification(winner + ' team wins!', 0.25);
+            }
+            dimShoeVolume(); //decrease shoe volume
+            numberOfLoops = 0;
+            advanceLevelOnNextLoop = false;
+            victoryLap = false;
+        }
+
+        if (victoryLap == true) {
+            advanceLevelOnNextLoop = true;
+            hudnotification = new Hudnotification('Victory Lap!', 3);
+        }
+
     }
-    for (let i = 0; i < thumblines.length; i++){
-        thumblines[i].fill = [255,255,255]; //TODO: if on the first part of the beat, how to get around?
-    }
+
 }, "8m");
 
-function scheduleStart(targetTime) {
-    const currentTime = Date.now();
-    const delay = targetTime - currentTime;
+const endOfEightBarTimer = new Tone.Loop((time) => { //runs on the last 8th note of each loop
 
-    if (delay > 0) {
-        return delay;
+    for (let i = 0; i < thumblines.length; i++) {
+        thumblines[i].fill = [255, 255, 255];
     }
-}
+    sendAccuracy();
+}, "8m");
+
+// function scheduleStart(targetTime) {
+//     const currentTime = Date.now();
+//     const delay = targetTime - currentTime;
+
+//     if (delay > 0) {
+//         return delay;
+//     }
+// }
 
 function setTransportPosition(_level) {
     //set the transport position to a multiple of 8 (for which page we're on).
@@ -41,32 +72,59 @@ function setTransportPosition(_level) {
     let newEnd = (newStartBar + 8).toString() + ":0:0";
     Tone.Transport.position = newStart;
     Tone.Transport.setLoopPoints(newStart, newEnd);
+    if (_level == 17) {
+        Tone.Transport.loop = false;
+        Tone.Transport.stop("+8");
+    }
 }
 
 
 function setTransportState(_state) {
+    console.log(_state);
+    let newStart = performance.now() + performance.timeOrigin;
+    console.log(newStart);
+    console.log(Date.now());
     let state = _state[0];
     let _targetTime = parseInt(_state[1]);
     if (state == 1) {
         taps = []; //to keep any taps out of the calculation that occured before the timer started
-        levelUpOpacity = 255;
+        hudnotification = new Hudnotification('Get ready!', 0.5);
         //the difference between the Max designated time and the browser's time, converted to seconds
-        let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
+        let del = '+' + (((_targetTime - Date.now()) * 0.001)).toString();
+        console.log(del);
         Tone.Transport.start(del);
-        eightBarTimer.start(); //TODO: Is this blocking?
+        eightBarTimer.start();
+        endOfEightBarTimer.start("+7:3:2");
+        toggleLoop();
     }
     if (state == 0) {
-        Tone.Transport.loop = false;
-        Tone.Transport.stop();
-        eightBarTimer.stop();
-        eightBarTimer.cancel();
-        playhead.reset();
+        resetTransport();
     }
+}
+
+function getHighPrecisionTime() {
+    let baseTime = Date.now();
+    //let preciseTime = baseTime + (performance.now() % 1000);
+    return baseTime + (performance.now() % 1000);
+}
+
+
+function resetTransport() {
+    Tone.Transport.loop = false;
+    Tone.Transport.stop();
+    eightBarTimer.stop();
+    eightBarTimer.cancel();
+    playhead.reset();
+}
+
+function demoLoop() {
+    setTransportPosition(0);
+    Tone.Transport.loop = true;
+    Tone.Transport.start();
 }
 
 function shoePlay(shoeSoundChoose) {
     //play the left shoe sound if the touch is to the left of the center, otherwise play right
-    //TODO: Fade out sound over a 3 levels.
     if (shoeSoundChoose < centerX) {
         shoeSampler.triggerAttackRelease("C#4", 0.2);
     }
@@ -80,7 +138,7 @@ function dimShoeVolume() {
         shoeVolume = 0;
     }
     else {
-        shoeVolume -= 12; //decrease every level up
+        shoeVolume = -currentLevel * 3; //-6 dB each level.
     }
     shoeSampler.volume.value = shoeVolume;
 }
@@ -101,4 +159,23 @@ function playMetronome(_status) {
     if (_status == 0) {
         Tone.Transport.cancel();
     }
+}
+
+
+
+function readableTime(epochTime) {
+    // Create a new Date object using the epoch time
+    let date = new Date(epochTime);
+
+    // Extract date and time components
+    let year = date.getFullYear();
+    let month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    let day = String(date.getDate()).padStart(2, '0');
+    let hours = String(date.getHours()).padStart(2, '0');
+    let minutes = String(date.getMinutes()).padStart(2, '0');
+    let seconds = String(date.getSeconds()).padStart(2, '0');
+    let milliseconds = String(date.getMilliseconds()).padStart(3, '0');
+
+    // Format the date and time as a string
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}.${milliseconds}`;
 }

@@ -16,7 +16,9 @@ let scorePopulated = false; //change flag when score images are loaded.
 
 let numLevels = 18; //including intro and coda
 
-let currentLevel;
+let introFlag; //when joining, query the introFlag state from the server.
+
+let currentLevel = 0; //initialize with level 0, always.
 let nextLevel; //"on deck" for when the victory lap ends
 
 let connectedDisplayFlag = false; //only display "connected" if this is  true. When reloading page, need to get this triggered from the server
@@ -37,7 +39,7 @@ function preload() {
 }
 
 function setup() {
-    frameRate(60);
+    //frameRate(60);
     createCanvas(window.innerWidth, window.innerHeight);
     centerX = width / 2;
     centerY = height / 2;
@@ -61,9 +63,9 @@ function draw() {
 
     centerTextDisplay(centerText);
 
-    // if (displayTime) {
-    //     timeDisplay(Tone.Transport.position);
-    // }
+    if (displayTime) {
+        timeDisplay(Tone.Transport.position);
+    }
 
     if (progressDisplayFlag) {
         progressDisplay(progressTimer.progress);
@@ -72,27 +74,44 @@ function draw() {
 
 
 
-//LOOK: Listeners
+//SECTION: Listeners
 
 socket.on('level', function (msg) {
-    console.log('next level: ' + msg);
-    if (msg == 0) {
-        currentLevel = 0;
-    }
     nextLevel = msg;
-    advanceLevelOnNextLoop = false;
-    victoryLap = true;
-    if (msg != 0) {
-        centerText = 'level up!';
+    console.log('Next Level: ' + msg);
+    //ignore the next block if it's intro mode. Intro flag toggled off in timer.
+    if (introFlag == false) {
+        if (nextLevel == currentLevel) {
+            advanceLevelOnNextLoop = false;
+        }
+
+        if (nextLevel == currentLevel + 1) {
+            advanceLevelOnNextLoop = false;
+            victoryLap = true;
+        }
+        //see 8-bar timer function for flipping states
+        if (nextLevel != currentLevel && nextLevel != 0) {
+            centerText = 'level up!';
+        }
     }
+
+
 });
 
 socket.on('winner', function (msg) {
-    nextLevel = 17;
+    nextLevel = 17; //everyone advances to Level 17 when the winner is delcared
     advanceLevelOnNextLoop = false;
     victoryLap = true;
     winner = msg;
     console.log('winner is: ' + msg);
+});
+
+socket.on('reset', function () {
+    location.reload();
+});
+
+socket.on('introFlag', function (msg) {
+    console.log(msg);
 });
 
 socket.on('transportState', function (msg) {
@@ -108,7 +127,6 @@ function chooseSaxVoice() {
         Tone.start();
         connectedDisplayFlag = true;
     }
-    console.log(playerAssigned);
 }
 
 function loadScore() {
@@ -133,7 +151,7 @@ function centerTextDisplay(_centerText) {
     let centertext = _centerText;
 
     if (connectedDisplayFlag == true) {
-        centertext = 'connected';
+        centertext = 'Connected: ' + playerAssigned;
     }
 
     if (winner && advanceLevelOnNextLoop == true) {
@@ -172,9 +190,11 @@ function timeDisplay(_currentPosition) {
 function progressDisplay(prog) {
     //progress bar
     let progressColor;
+
     if (advanceLevelOnNextLoop == true) {
         progressColor = [0, 255, 0]; //green
     }
+
     if (advanceLevelOnNextLoop == false) {
         progressColor = [255, 0, 0]; //red
     }
@@ -182,50 +202,64 @@ function progressDisplay(prog) {
     noStroke();
     rectMode(CORNERS);
     let endYPos = width * prog;
-    rect(0, centerY - 10, endYPos, centerY + 10);
+    rect(0, centerY - 20, endYPos, centerY + 20);
+    if (introFlag == false) {
+        levelDisplay(progressColor);
+    }
+}
+
+function levelDisplay(_progressColor) {
+    let levelColor = _progressColor;
+    let rightLevelDisplay = currentLevel;
     //current level display
     textSize(48);
-    fill(progressColor[0], progressColor[1], progressColor[2], 255);
+    fill(levelColor[0], levelColor[1], levelColor[2], 255);
     stroke(0);
     strokeWeight(3);
     textAlign(LEFT);
     text(currentLevel, 10, centerY);
+
     //next level display
     textAlign(RIGHT);
     if (advanceLevelOnNextLoop == true) {
-        text(nextLevel, width - 10, centerY);
+        rightLevelDisplay = nextLevel;
     }
-    else {
-        text(currentLevel, width - 10, centerY);
-    }
-
+    text(rightLevelDisplay, width - 10, centerY);
 }
 
 
 
-//LOOK: Transport functions
+//SECTION: Transport functions
 
 
-const eightBarTimer = new Tone.Loop((time) => {
-    if (currentLevel != 0) {
-        Tone.Transport.loop = true; //start looping after currentLevel 0.
-    }
-    if (advanceLevelOnNextLoop == true) {
-        setTransportPosition(currentLevel);
+const eightBarTimer = new Tone.Loop((time) => { //runs at the beginning of every 8 bar loop.
+    if (currentLevel == 0 && nextLevel == 1) {
         advanceLevelOnNextLoop = false;
         victoryLap = false;
-        centerText = '';
-        currentLevel = nextLevel;
-    }
-    if (victoryLap == true) {
-        centerText = 'victory lap';
-        advanceLevelOnNextLoop = true;
+    }//check this first – skip it if we've just finished the intro. Check toggleLoop() for looping on
+
+    if (introFlag == false) {
+        if (victoryLap == false) {
+            centerText = '';
+        }
+
+        if (advanceLevelOnNextLoop == true) {
+            currentLevel = nextLevel;
+            setTransportPosition(currentLevel);
+            advanceLevelOnNextLoop = false;
+            victoryLap = false;
+        }
+
+        if (victoryLap == true) {
+            centerText = 'victory lap';
+            advanceLevelOnNextLoop = true;
+        }
     }
 }, "8m");
 
-//always loop 8 measure segments, regardless of the other timer loop being on or off
 const progressTimer = new Tone.Loop((time) => {
-    //nothing happens in here, just use to track progress
+    //always loop 8 measure segments, regardless of the other timer loop being on or off
+    //nothing happens in here, just use to track progress for drawing the little display
 }, "8m");
 
 function scheduleStart(targetTime) {
@@ -259,6 +293,8 @@ function setTransportState(_state) {
         progressTimer.start();
         progressDisplayFlag = true;
         connectedDisplayFlag = 0;
+        toggleLoop();
+        //resetIntroFlag();
     }
     if (state == 0) {
         Tone.Transport.loop = false;
@@ -270,7 +306,23 @@ function setTransportState(_state) {
         progressTimer.cancel();
     }
 }
+// function resetIntroFlag(){ //if we start over (at beginning), the intro flag should reset to true.
+//     Tone.Transport.schedule(function(){
+//         introFlag = true;
+//     }, "0:0:1");
+// }
 
+function toggleLoop() {
+    Tone.Transport.schedule(function () {
+        if (currentLevel == 0) { //after we enter level 1, should already be looping.
+            currentLevel = 1;
+            nextLevel = 1;
+            setTransportPosition(1);
+            Tone.Transport.loop = true;
+            introFlag = false;
+        }
+    }, "8:0:0"); //start looping at 8:0:0, stop looping at (coda)
+}
 
 //LOOK: Utilities
 

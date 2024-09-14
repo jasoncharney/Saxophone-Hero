@@ -33,8 +33,11 @@ class Thumbline {
         this.ypos = this.position;
         this.fill = [255,255,255];
 
-        if (duration < 1) {
+        if (0.25 < duration < 1 ) {
             this.duration = -1; //placeholder value. Anything shorter than a half note will display as the same height rectangle
+        }
+        if (duration < 0.25){
+            this.duration = -2; //anything shorter than a 16th note will be slightly thinner too.
         }
         if (duration >= 1) {
             this.duration = duration;
@@ -48,7 +51,10 @@ class Thumbline {
             this.rectCenter = 0.75;
         }
         if (this.duration == -1) {
-            this.rectHeight = shoeSize * 0.25;
+            this.rectHeight = shoeSize * 0.3;
+        }
+        if (this.duration == -2){
+            this.rectHeight = shoeSize * 0.2;
         }
         else {
             this.rectHeight = shoeSize; // TODO: fix it so it's the whole length for a hold, need to calculate
@@ -65,7 +71,8 @@ class Thumbline {
     draw(_hashWidth) {
         fill(this.fill[0],this.fill[1],this.fill[2]);
         rectMode(CENTER);
-        noStroke();
+        stroke(0);
+        strokeWeight(0.25);
         setLineDash([]); //TODO: as score gets long, will it be more efficient to only render hashes on screen? Or does it not matter?
         rect(this.rectCenter*width, this.ypos, _hashWidth, this.rectHeight);
     }

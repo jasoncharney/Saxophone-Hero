@@ -1,6 +1,6 @@
 
 let sketch = (p) => {
-    let canvasWidth = document.getElementById('gameStatsContainer').clientWidth-20;
+    let canvasWidth = document.getElementById('gameStatsContainer').clientWidth - 20;
     let topOfDiv = document.getElementById('gameStatsContainer').getBoundingClientRect(top);
     let canvasHeight = window.innerHeight - topOfDiv.top - 20;
     //let canvasHeight = document.getElementById('gameStatsContainer').clientHeight;
@@ -12,23 +12,32 @@ let sketch = (p) => {
     let titleSize = 50;
     let playerNumberSize = 25;
     let padding = 20;
+    let saxImages = {};
 
     p.preload = function () {
         feetimg = p.loadImage('assets/two-shoes.png');
         varsityfont = p.loadFont('assets/VarsityTeam-Bold.otf');
         creatofont = p.loadFont('assets/CreatoDisplay-Regular.otf');
+        saxImages['soprano'] = p.loadImage('assets/soprano.png');
+        saxImages['alto'] = p.loadImage('assets/alto.png');
+        saxImages['tenor'] = p.loadImage('assets/tenor.png');
+        saxImages['bari'] = p.loadImage('assets/bari.png');
     }
 
     p.setup = function () {
         p.createCanvas(canvasWidth, canvasHeight);
-        feetResizeW = p.width/17;
+        feetResizeW = p.width / 17;
         feetimg.resize(feetResizeW, 0);
         feetResizeH = feetimg.height; //after resizing, declare this height
-        let meterLaneHeight = p.height*0.25;
+        let meterLaneHeight = p.height * 0.25;
+        Object.keys(saxImages).forEach(key => {
+            let saxToBeResized = saxImages[key];
+            saxToBeResized.resize(0, feetResizeH * 2);
+        });
         meters[0] = new TeamMeter('soprano', 0);
         meters[1] = new TeamMeter('alto', meterLaneHeight);
-        meters[2] = new TeamMeter('tenor', meterLaneHeight*2);
-        meters[3] = new TeamMeter('bari', meterLaneHeight*3);
+        meters[2] = new TeamMeter('tenor', meterLaneHeight * 2);
+        meters[3] = new TeamMeter('bari', meterLaneHeight * 3);
     };
 
     p.draw = function () {
@@ -55,6 +64,13 @@ let sketch = (p) => {
             this.locy = locy;
             this.playerNumber = playerNumbers[this.name];
             this.myLevel = levels[this.name];
+            this.mySaxImage = saxImages[this.name];
+            this.lowerLineDisplay = true;
+
+            if (this.name == 'bari') {
+                this.lowerLineDisplay = false;
+            }
+
             // this.titleSize = 50; //size of the "team" text
             // this.playerNumberSize = 25; //size of the player number indicator text
             // this.padding = 10; //vertical padding between elements
@@ -63,8 +79,8 @@ let sketch = (p) => {
         teamtitle(fontSet) {
             p.fill(255);
             p.noStroke();
-            p.drawingContext.shadowOffsetX = 2;
-            p.drawingContext.shadowOffsetY = 2;
+            p.drawingContext.shadowOffsetX = 5;
+            p.drawingContext.shadowOffsetY = 5;
             p.drawingContext.shadowColor = 'black';
             p.textSize(TeamMeter.titleSize);
             p.textFont(fontSet);
@@ -90,16 +106,20 @@ let sketch = (p) => {
             for (let i = 0; i < this.myLevel; i++) {
                 p.image(feetimg, x + i * feetimg.width, y);
             }
+            p.imageMode('CENTER');
+            p.image(saxImages[this.name], x + this.myLevel * feetimg.width, y - TeamMeter.padding);
         }
 
-        liner(){
-            let x = 0;
-            let y = this.locy + TeamMeter.titleSize + TeamMeter.playerNumberSize + TeamMeter.padding * 4 + feetResizeH;
-            p.stroke(255);
-            p.strokeWeight(5);
-            p.drawingContext.setLineDash([10,15]);
-            p.strokeCap(p.SQUARE);
-            p.line(x,y,p.width,y);
+        liner() {
+            if (this.lowerLineDisplay == true) {
+                let x = 0;
+                let y = this.locy + TeamMeter.titleSize + TeamMeter.playerNumberSize + TeamMeter.padding * 4 + feetResizeH;
+                p.stroke(255);
+                p.strokeWeight(5);
+                p.drawingContext.setLineDash([10, 15]);
+                p.strokeCap(p.SQUARE);
+                p.line(x, y, p.width, y);
+            }
         }
     }
 };

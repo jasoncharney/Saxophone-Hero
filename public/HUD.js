@@ -1,13 +1,22 @@
 var titleDisplay = 'SAXOPHONE HERO!';
 var titleFont;
 var hudFont;
-var displayInstruction = 'Wait for instructions.';
-var orientationInstruction = 'Turn to landscape mode!';
+var displayInstruction = 'Step on the hashes with your left and right thumbs. \n Make sure you march in time!';
+var orientationInstruction = 'Turn to landscape mode and refresh!';
 var hudStrokeWeight = 2;
 var hudSize = 0.02;
 var levelUpOpacity = 0; //decrease over some frames
+let hudnotification = null; //the big notification that appears at the top of the screen.
 
 function playerHUD() {
+    if (hudnotification) {
+        hudnotification.fade();
+        hudnotification.display();
+        if (hudnotification.isFaded()) {
+            hudnotification = null;
+        }
+    }
+
     if (initialized == false) {
         titleSize = height * 0.1;
         textFont(titleFont);
@@ -20,14 +29,15 @@ function playerHUD() {
     }
 
     if (initialized == true && choosePlayerStatus == 0) {
-        instructionSize = height * 0.1;
+        instructionSize = height * 0.075;
         textFont(hudFont);
         textSize(instructionSize);
         fill(255);
         stroke(0);
         strokeWeight(2);
         textAlign(CENTER);
-        text(displayInstruction, centerX, centerY);
+        textWrap(WORD);
+        text(displayInstruction, centerX, 100, width - 20);
         if (deviceOrientation == 'portrait') {
             text(orientationInstruction, centerX, centerY + textSize * 2);
         }
@@ -39,23 +49,23 @@ function playerHUD() {
         if (displayTime) {
             timeDisplay(Tone.Transport.position);
         }
-        if (currentLevel !== 0) {
+        if (currentLevel !== 0 && currentLevel !== 17) {
             levelDisplay(currentLevel);
         }
     }
-    if (Tone.Transport.state == 'started' && accuracy != undefined) {
+    if (Tone.Transport.state == 'started' && accuracy != undefined && introFlag == false) {
         accuracyDisplay(accuracy);
     }
     if (currentLevel == 0) {
-        levelUpDisplay('Get ready!');
+        //levelUpDisplay('Get ready!');
     }
     if (currentLevel > 0) {
         if (victoryLap == true && advanceLevelOnNextLoop == false) {
-            levelUpDisplay('Level up!');
+            //levelUpDisplay('Level up!');
         }
 
         if (advanceLevelOnNextLoop == true && currentLevel >= 1) {
-            levelUpDisplay('Victory lap!');
+            //levelUpDisplay('Victory lap!');
         }
     }
 
@@ -100,10 +110,10 @@ function accuracyDisplay(_accuracy) {
     strokeWeight(hudStrokeWeight);
     textAlign(CENTER);
     let acc = _accuracy;
-    if (acc == 'NaN'){
+    if (acc == 'NaN') {
         acc = 0;
     }
-    text((acc * 100).toString() + '%', centerX, height - 0.5 * hudSize);
+    text((acc * 100).toString() + '%', centerX, crossMark);
 }
 
 function levelUpDisplay(disp) {
@@ -160,7 +170,7 @@ function buttonSetup() {
 
 function teamAssignByTap(_team) {
     teamAssign(_team);
-    localStorage.setItem('storedTeam', assignedTeam); //TODO: maybe remove this.
+    resetTransport(); //reset transport after the demoloop
     //assign the teams and then remove all the buttons.
     document.getElementById('sopranoButton').remove();
     document.getElementById('altoButton').remove();
@@ -171,6 +181,8 @@ function teamAssignByTap(_team) {
 //when you assign the team, populate notes with the assigned team's score and let the server know
 function teamAssign(_team) {
     assignedTeam = _team;
+    thumblines = [];
+    noteTimings = [];
     populateNotes(assignedTeam);
     socket.emit('myTeam', assignedTeam);
 }
@@ -181,19 +193,21 @@ function initializeButton() {
     initButton.position(centerX - width * 0.125, height * 0.625);
     initButton.id('initButton');
     document.getElementById('initButton').addEventListener('click', function () { initializeMe() });
-    // document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });
+    //document.getElementById('initButton').addEventListener('click', function () { enterFullScreen() });
 }
 
 function initializeMe() {
     if (initialized == false) {
         Tone.start();
         unblockPlayback();
+        populateNotes('demo');
+        demoLoop();
         initialized = true;
         socket.emit('initializeMe');
-        console.log('initialized');
         document.getElementById('initButton').remove();
     }
 }
+
 
 function enterFullScreen() {
     const elem = document.documentElement;
@@ -206,4 +220,37 @@ function enterFullScreen() {
     } else if (elem.msRequestFullscreen) { // IE/Edge
         elem.msRequestFullscreen();
     }
+}
+
+class Hudnotification {
+    constructor(text, fadeRate) {
+        this.text = text;
+        this.opacity = 255; //starting opacity
+        this.isVisible = true; //tracking visibility
+        this.fadeRate = fadeRate; //how much it decreases in opacity each frame
+    }
+
+    fade() {
+        if (this.opacity > 0) {
+            this.opacity -= this.fadeRate;
+        } else {
+            this.isVisible = false;
+        }
+    }
+
+    isFaded() {
+        return !this.isVisible;
+    }
+
+    display() {
+        fill(255, this.opacity);
+        textFont(titleFont);
+        textSize(titleSize);
+        stroke(0, this.opacity);
+        strokeWeight(2);
+        textAlign(CENTER);
+        text(this.text, centerX, titleSize + 20);
+    }
+
+
 }

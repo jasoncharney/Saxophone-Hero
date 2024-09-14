@@ -2,7 +2,7 @@
 	"name" : "SaxophoneHero-Max",
 	"version" : 1,
 	"creationdate" : 3799075969,
-	"modificationdate" : 3807889943,
+	"modificationdate" : 3808415819,
 	"viewrect" : [ 0.0, 115.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -53,6 +53,11 @@
 ,
 			"shell.maxhelp" : 			{
 				"kind" : "helpfile",
+				"local" : 1
+			}
+,
+			"teamlevel.maxpat" : 			{
+				"kind" : "patcher",
 				"local" : 1
 			}
 

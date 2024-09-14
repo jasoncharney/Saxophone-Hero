@@ -1,0 +1,80 @@
+{
+	"pattrstorage" : 	{
+		"name" : "dsp-settings",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"soprano::Output" : [ 0.0 ],
+					"soprano::chorusbw" : [ 0.1 ],
+					"soprano::choruscenter" : [ 0.0 ],
+					"soprano::chorusfb" : [ 0.8 ],
+					"soprano::chorusrate" : [ 0.1 ],
+					"soprano::drywet" : [ 1.0 ],
+					"soprano::flangerbw" : [ 17.0 ],
+					"soprano::flangercenter" : [ 1.0 ],
+					"soprano::flangerfb" : [ 0.9 ],
+					"soprano::flangerrate" : [ 300.0 ],
+					"soprano::inputgain" : [ 128 ],
+					"soprano::interval" : [ "8va" ],
+					"soprano::pan" : [ 1.0 ],
+					"soprano::chorus-level" : [ 121 ],
+					"soprano::pitch-level" : [ 119 ],
+					"soprano::flanger-level" : [ 118 ],
+					"alto::Output" : [ 0.0 ],
+					"alto::chorusbw" : [ 0.1 ],
+					"alto::choruscenter" : [ 0.0 ],
+					"alto::chorusfb" : [ 0.8 ],
+					"alto::chorusrate" : [ 0.1 ],
+					"alto::drywet" : [ 1.0 ],
+					"alto::flangerbw" : [ 17.0 ],
+					"alto::flangercenter" : [ 1.0 ],
+					"alto::flangerfb" : [ 0.9 ],
+					"alto::flangerrate" : [ 300.0 ],
+					"alto::inputgain" : [ 121 ],
+					"alto::interval" : [ "8va" ],
+					"alto::pan" : [ 0.999999999999999 ],
+					"alto::chorus-level" : [ 117 ],
+					"alto::flanger-level" : [ 121 ],
+					"alto::pitch-level" : [ 122 ],
+					"tenor::Output" : [ 0.0 ],
+					"tenor::chorusbw" : [ 0.1 ],
+					"tenor::choruscenter" : [ 0.0 ],
+					"tenor::chorusfb" : [ 0.8 ],
+					"tenor::chorusrate" : [ 0.1 ],
+					"tenor::drywet" : [ 1.0 ],
+					"tenor::flangerbw" : [ 17.0 ],
+					"tenor::flangercenter" : [ 1.0 ],
+					"tenor::flangerfb" : [ 0.9 ],
+					"tenor::flangerrate" : [ 300.0 ],
+					"tenor::inputgain" : [ 127 ],
+					"tenor::interval" : [ "8va" ],
+					"tenor::pan" : [ 0.961538461538461 ],
+					"tenor::chorus-level" : [ 120 ],
+					"tenor::flanger-level" : [ 121 ],
+					"tenor::pitch-level" : [ 122 ],
+					"bari::Output" : [ 0.0 ],
+					"bari::chorusbw" : [ 0.1 ],
+					"bari::choruscenter" : [ 0.0 ],
+					"bari::chorusfb" : [ 0.8 ],
+					"bari::chorusrate" : [ 0.1 ],
+					"bari::drywet" : [ 1.0 ],
+					"bari::flangerbw" : [ 17.0 ],
+					"bari::flangercenter" : [ 1.0 ],
+					"bari::flangerfb" : [ 0.9 ],
+					"bari::flangerrate" : [ 300.0 ],
+					"bari::inputgain" : [ 129 ],
+					"bari::interval" : [ "8va" ],
+					"bari::pan" : [ 0.961538461538461 ],
+					"bari::chorus-level" : [ 120 ],
+					"bari::flanger-level" : [ 121 ],
+					"bari::pitch-level" : [ 118 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

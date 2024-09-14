@@ -25,6 +25,19 @@
     display: inline-block;
 }
 
+#wifi{
+    font: bold;
+    font-family: creato;
+    font-size: 32px;
+    text-align: right;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px black;
+    float: right;
+}
+
 #credits {
     color: white;
     font-family: creato;

@@ -1,8 +1,10 @@
 {
-	"hostIP": "192.168.0.77",
+	"hostIP": "192.168.80.119",
 	"expressPort": 3000,
 	"maxSendPort": 3339,
 	"maxListenPort": 3338,
 	"saxPlayerPort": 4994,
-	"projectorPort": 4997
+	"projectorPort": 4997,
+	"ssid": "Saxophone Hero",
+	"pw": "projectfusion"
 }

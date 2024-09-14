@@ -1,6 +1,5 @@
-outlets = 2;
+outlets = 1;
 
 function bang(){
-	outlet(0,Date.now().toString());
-	outlet(1,(Date.now()+4000).toString());
+	outlet(0,(Date.now()+4000));
 }

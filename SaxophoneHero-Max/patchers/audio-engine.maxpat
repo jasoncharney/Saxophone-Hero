@@ -40,6 +40,42 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 494.0, 629.0, 50.0, 22.0 ],
+					"text" : "recall 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 477.0, 589.0, 100.0, 22.0 ],
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 477.0, 549.0, 100.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -66,7 +102,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 606.0, 484.0, 279.0, 128.0 ],
+					"patching_rect" : [ 606.0, 507.0, 279.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 499.0, 279.0, 128.0 ],
 					"viewvisibility" : 1
@@ -82,10 +118,10 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 606.0, 673.0, 166.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 100, 172, 454, 300 ],
+						"client_rect" : [ 1199, 172, 2218, 870 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 100, 159, 476, 1266 ]
 					}
 ,
 					"text" : "pattrstorage dsp-settings",
@@ -126,7 +162,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 440.0, 78.0, 100.0, 22.0 ],
+					"patching_rect" : [ 440.0, 51.0, 100.0, 22.0 ],
 					"text" : "r level"
 				}
 
@@ -158,10 +194,10 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "saxDSP.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numinlets" : 1,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "signal" ],
 					"patching_rect" : [ 1225.0, 196.0, 347.0, 217.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1050.0, 54.0, 343.0, 404.0 ],
@@ -183,10 +219,10 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "saxDSP.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numinlets" : 1,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "signal" ],
 					"patching_rect" : [ 865.0, 196.0, 346.0, 217.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 704.0, 54.0, 344.0, 398.0 ],
@@ -208,10 +244,10 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "saxDSP.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numinlets" : 1,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "signal" ],
 					"patching_rect" : [ 497.0, 194.5, 340.0, 220.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 358.0, 54.0, 340.0, 398.0 ],
@@ -233,10 +269,10 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "saxDSP.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numinlets" : 1,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal" ],
+					"outlettype" : [ "signal", "signal", "signal" ],
 					"patching_rect" : [ 111.0, 193.0, 348.0, 220.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.0, 54.0, 340.0, 398.0 ],
@@ -282,7 +318,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 27.0, 10.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 1414.0, 627.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 1414.0, 652.0 ],
 					"proportion" : 0.5
 				}
 
@@ -304,33 +340,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
-					"order" : 0,
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 1 ],
-					"order" : 3,
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 1 ],
-					"order" : 2,
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 1 ],
-					"order" : 1,
-					"source" : [ "obj-15", 0 ]
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -338,6 +349,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
@@ -394,6 +412,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-7", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}

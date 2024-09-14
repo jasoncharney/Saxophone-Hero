@@ -1,6 +1,7 @@
 let socket = io('/projector');
 let gameAddress;
-let levels = 
+
+let levels =
 {
     "soprano": -1,
     "alto": -1,
@@ -16,7 +17,7 @@ let playerNumbers = {
 }
 
 //reload the page when it's resized
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     location.reload();
 });
 
@@ -31,15 +32,23 @@ socket.on('audienceURL', function (msg) {
     document.getElementById("linkGame").innerHTML = 'or type: ' + gameAddress;
 });
 
+socket.on('wifi', function (msg) {
+    document.getElementById("wifi").innerHTML = 'ssid: ' + msg.ssid + '<br>' + 'password: ' + msg.password;
+});
+
+socket.on('reset', function(){
+    location.reload();
+});
+
 socket.on('levels', function (msg) {
-    for (let level in msg){
+    for (let level in msg) {
         levels[level] = msg[level];
     }
     console.log(levels);
 });
 
 socket.on('numPlayers', function (msg) {
-    for (let player in msg){
+    for (let player in msg) {
         playerNumbers[player] = msg[player];
     }
     console.log(playerNumbers);
