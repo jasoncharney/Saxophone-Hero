@@ -10,6 +10,7 @@ function toggleLoop() {
             setTransportPosition(1);
             Tone.Transport.loop = true;
             introFlag = false;
+            pointsLoop = 0;
         }
     }, "8:0:0");
 }
@@ -18,18 +19,34 @@ function toggleLoop() {
 
 
 const eightBarTimer = new Tone.Loop((time) => { //runs at the top of each loop
+
+    // if (thumblineArray.length == 0) { //if it's empty to start with, let's populate with the current level notes.
+    //     thumblineArray.push(new ThumblineBlock(noteObject, calculateTransportRange(currentLevel), 0));
+    // }
+
+    // let nextPositionInThumblineArray = thumblineArray.length;
+
+    // thumblineArray.push(new ThumblineBlock(noteObject, calculateTransportRange(nextLevel), nextPositionInThumblineArray));
+
+
+
     if (currentLevel == 0 && nextLevel == 1) {
         advanceLevelOnNextLoop = false;
         victoryLap = false;
     }
 
     if (introFlag == false) {
-
+        addToThumblineBuffer(nextLevel, 16);
+        accuracyLoop = pointsLoop / notesPerLevel[currentLevel];
+        pointsnotification = new Pointsnotification(accuracyLoop, 1);
+        pointsLoop = 0;
+        accuracyLoop = 0;
         numberOfLoops++;//increase the number of loops by one
 
         if (advanceLevelOnNextLoop == true) { //this is actually the beginning of a new level.
             currentLevel = nextLevel;
             setTransportPosition(currentLevel);
+
             if (currentLevel == 17) {
                 hudnotification = new Hudnotification(winner + ' team wins!', 0.25);
             }
@@ -41,7 +58,7 @@ const eightBarTimer = new Tone.Loop((time) => { //runs at the top of each loop
 
         if (victoryLap == true) {
             advanceLevelOnNextLoop = true;
-            hudnotification = new Hudnotification('Victory Lap!', 3);
+            hudnotification = new Hudnotification('Victory Lap!', 5);
         }
 
     }
@@ -54,6 +71,7 @@ const endOfEightBarTimer = new Tone.Loop((time) => { //runs on the last 8th note
         thumblines[i].fill = [255, 255, 255];
     }
     sendAccuracy();
+    console.log('points: ' + points);
 }, "8m");
 
 // function scheduleStart(targetTime) {
@@ -70,12 +88,29 @@ function setTransportPosition(_level) {
     let newStartBar = _level * 8;
     let newStart = newStartBar.toString() + ":0:0";
     let newEnd = (newStartBar + 8).toString() + ":0:0";
+
+    let newStartBarTime = new Tone.Time(newStart).toSeconds(); //convert to seconds
+    let newEndBarTime = new Tone.Time(newEnd).toSeconds();
+
+    //populateLoop(1)
     Tone.Transport.position = newStart;
     Tone.Transport.setLoopPoints(newStart, newEnd);
     if (_level == 17) {
         Tone.Transport.loop = false;
         Tone.Transport.stop("+8");
     }
+}
+
+//just for getting the time ranges for new transport loop
+function calculateTransportRange(_level) {
+    let newStartBar = _level * 8;
+    let newStart = newStartBar.toString() + ":0:0";
+    let newEnd = (newStartBar + 8).toString() + ":0:0";
+
+    let newStartBarTime = new Tone.Time(newStart).toSeconds(); //convert to seconds
+    let newEndBarTime = new Tone.Time(newEnd).toSeconds();
+
+    return [newStartBarTime, newEndBarTime];
 }
 
 

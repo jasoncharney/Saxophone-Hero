@@ -1,7 +1,7 @@
 import json
 
 # Load the JSON file
-with open('score83024.json', 'r') as file:
+with open('soprano9-12.json', 'r') as file:
     data = json.load(file)
 
 # Keys to keep

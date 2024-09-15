@@ -31,6 +31,8 @@ let imageLocations = [0, 0]; // top left X location of the current score page/ne
 let centerText; //shows notifications in the middle of the progress bar (connected, audience choosing teams, start, level up, victory lap!, '')
 let winner; //the name of the winning voice. NULL until received from server (TODO: cleared on reset)
 
+let currentMeasure; //the current measure of the loop
+
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
@@ -201,8 +203,10 @@ function progressDisplay(prog) {
     fill(progressColor[0], progressColor[1], progressColor[2], 127);
     noStroke();
     rectMode(CORNERS);
-    let endYPos = width * prog;
-    rect(0, centerY - 20, endYPos, centerY + 20);
+    //let endYPos = width * prog; //This is for a smooth scrolling bar (original design).
+    //rect(0, centerY - 20, endYPos, centerY + 20);
+    let eighthWidth = width * 0.125;
+    rect(eighthWidth*currentMeasure, centerY - 20, eighthWidth*(currentMeasure+1), centerY + 20);
     if (introFlag == false) {
         levelDisplay(progressColor);
     }
@@ -260,7 +264,14 @@ const eightBarTimer = new Tone.Loop((time) => { //runs at the beginning of every
 const progressTimer = new Tone.Loop((time) => {
     //always loop 8 measure segments, regardless of the other timer loop being on or off
     //nothing happens in here, just use to track progress for drawing the little display
+    currentMeasure = -1; //reset the current measure. -1 so that progressTimerBeats can advance it to 0.
+
 }, "8m");
+
+const progressTimerBeats = new Tone.Loop((time) => {
+    currentMeasure++; //increase the measure count
+    console.log(currentMeasure);
+}, "1m");
 
 function scheduleStart(targetTime) {
     const currentTime = Date.now();
@@ -291,6 +302,7 @@ function setTransportState(_state) {
         Tone.Transport.start(del);
         eightBarTimer.start();
         progressTimer.start();
+        progressTimerBeats.start();
         progressDisplayFlag = true;
         connectedDisplayFlag = 0;
         toggleLoop();
@@ -304,6 +316,8 @@ function setTransportState(_state) {
         eightBarTimer.cancel();
         progressTimer.stop();
         progressTimer.cancel();
+        progressTimerBeats.stop();
+        progressTimerBeats.cancel();
     }
 }
 // function resetIntroFlag(){ //if we start over (at beginning), the intro flag should reset to true.

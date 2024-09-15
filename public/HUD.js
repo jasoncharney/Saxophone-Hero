@@ -4,9 +4,10 @@ var hudFont;
 var displayInstruction = 'Step on the hashes with your left and right thumbs. \n Make sure you march in time!';
 var orientationInstruction = 'Turn to landscape mode and refresh!';
 var hudStrokeWeight = 2;
-var hudSize = 0.02;
+var hudSize = 0.04;
 var levelUpOpacity = 0; //decrease over some frames
 let hudnotification = null; //the big notification that appears at the top of the screen.
+let pointsnotification = null; //the number of points shown at the end of each loop
 
 function playerHUD() {
     if (hudnotification) {
@@ -14,6 +15,14 @@ function playerHUD() {
         hudnotification.display();
         if (hudnotification.isFaded()) {
             hudnotification = null;
+        }
+    }
+
+    if (pointsnotification) {
+        pointsnotification.fade();
+        pointsnotification.display();
+        if (pointsnotification.isFaded()) {
+            pointsnotification = null;
         }
     }
 
@@ -54,21 +63,9 @@ function playerHUD() {
         }
     }
     if (Tone.Transport.state == 'started' && accuracy != undefined && introFlag == false) {
-        accuracyDisplay(accuracy);
+        //accuracyDisplay();
+        pointsDisplay(points, notesPerLevel[currentLevel]);
     }
-    if (currentLevel == 0) {
-        //levelUpDisplay('Get ready!');
-    }
-    if (currentLevel > 0) {
-        if (victoryLap == true && advanceLevelOnNextLoop == false) {
-            //levelUpDisplay('Level up!');
-        }
-
-        if (advanceLevelOnNextLoop == true && currentLevel >= 1) {
-            //levelUpDisplay('Victory lap!');
-        }
-    }
-
 }
 
 function levelDisplay(_level) {
@@ -114,6 +111,18 @@ function accuracyDisplay(_accuracy) {
         acc = 0;
     }
     text((acc * 100).toString() + '%', centerX, crossMark);
+}
+
+function pointsDisplay(_points, _numPoints) {
+    fill(255);
+    let pointsSize = hudSize * 2;
+    textFont(hudFont);
+    textSize(pointsSize);
+    stroke(0);
+    strokeWeight(hudStrokeWeight);
+    textAlign(LEFT, BOTTOM);
+    rectMode(CORNER);
+    text(_points, 10, pointsSize + 10);
 }
 
 function levelUpDisplay(disp) {
@@ -181,9 +190,14 @@ function teamAssignByTap(_team) {
 //when you assign the team, populate notes with the assigned team's score and let the server know
 function teamAssign(_team) {
     assignedTeam = _team;
+    notesPerLevel = score["notesPerLevel"][assignedTeam];
     thumblines = [];
+    thumblineBuffer = [];
     noteTimings = [];
     populateNotes(assignedTeam);
+    addToThumblineBuffer(0);
+    addToThumblineBuffer(1);
+    //countAllNoteEvents();
     socket.emit('myTeam', assignedTeam);
 }
 
@@ -250,6 +264,59 @@ class Hudnotification {
         strokeWeight(2);
         textAlign(CENTER);
         text(this.text, centerX, titleSize + 20);
+    }
+
+
+}
+
+class Pointsnotification {
+    constructor(accuracy, fadeRate) {
+        this.accuracy = accuracy;
+        this.opacity = 255; //starting opacity
+        this.isVisible = true; //tracking visibility
+        this.fadeRate = fadeRate; //how much it decreases in opacity each frame
+
+        if (this.accuracy == 1){
+            this.text = 'perfect!';
+        }
+        if (this.accuracy >= 0.8 && this.accuracy < 1.){
+            this.text = 'great!';
+        }
+        if (this.accuracy >= 0.6 && this.accuracy < 0.8){
+            this.text = 'okay!';
+        }
+        if (this.accuracy >= 0.4 && this.accuracy < 0.6){
+            this.text = 'hmm...';
+        }
+        if (this.accuracy >= 0.2 && this.accuracy < 0.4){
+            this.text = 'you can do better!';
+        }
+        if (this.accuracy < 0.2){
+            this.text = 'zzz...';
+        }
+
+    }
+
+    fade() {
+        if (this.opacity > 0) {
+            this.opacity -= this.fadeRate;
+        } else {
+            this.isVisible = false;
+        }
+    }
+
+    isFaded() {
+        return !this.isVisible;
+    }
+
+    display() {
+        fill(255, 215, 0, this.opacity);
+        textFont(titleFont);
+        textSize(titleSize);
+        stroke(0, this.opacity);
+        strokeWeight(2);
+        textAlign(CENTER);
+        text(this.text, centerX, centerY);
     }
 
 
