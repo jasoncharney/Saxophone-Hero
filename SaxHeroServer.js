@@ -7,8 +7,21 @@ let express = require('express');
 let osc = require('node-osc');
 let socket = require('socket.io');
 
-//initialize connection settings
+//initialize connection settings and make an object with the number of notes per level
 let connectSettings = JSON.parse(fs.readFileSync('connectSettings.json'));
+
+let notesPerLevel = JSON.parse(fs.readFileSync('notesPerLevel.json'));
+
+const levelTapScalar = 2; //base scalar of taps per level. 
+
+let averageNotesPerLevel = calculateAverageNotesPerLevel(notesPerLevel);
+
+
+
+//const deviationNotesPerLevel = calculateDeviations(notesPerLevel);
+let targetPointsPerLevel = {}; //we'll update these as we get more players choosing.
+
+//IMPORTANT: targetScorePerLevel = notesPerLevel * (numberOfPlayers - 1)
 
 //set up server/ports. Separate for sax app, audience member app, and projector display app.
 let app = express();
@@ -45,7 +58,7 @@ let oscClient = new osc.Client(connectSettings.hostIP, connectSettings.maxListen
 
 let nextEightBarTime; //send this time to latecomers. They'll join on the next loop.
 let transportState; //array w/ two values for the transport - state and the time it was turned on or off
-
+let gameStarted = false;
 let winner;
 
 //empty arrays for each group of audience members
@@ -59,8 +72,7 @@ let teamIDs = {
     "bari": []
 }
 
-//levels are current and next
-let teamLevels = {
+let teamLevels = { //levels are current and next
     "soprano": [0, 1],
     "alto": [0, 1],
     "tenor": [0, 1],
@@ -74,8 +86,15 @@ let teamAccuracies = {
     "bari": {}
 }
 
-//track the user ids for sax players who have joined and ID'd themselves.
-let saxIDs = {
+let saxIDs = { //track the user ids for sax players who have joined and ID'd themselves.
+
+    "soprano": 0,
+    "alto": 0,
+    "tenor": 0,
+    "bari": 0
+}
+
+let teamPoints = { //number of points earned per team (earned per level)
     "soprano": 0,
     "alto": 0,
     "tenor": 0,
@@ -134,15 +153,27 @@ oscServer.on('/stopreset', function (msg) {
     console.clear();
     console.log('Game stopped and reset.\n-----------------');
     printAddresses();
+    teamPoints = {
+        "soprano": 0,
+        "alto": 0,
+        "tenor": 0,
+        "bari": 0
+    }
     choosePlayerFlag = 0; //toggle player flag to 0
     winner = undefined;
+    gameStarted = false;
     client.emit('reset');
     projector.emit('reset');
     saxUser.emit('reset');
 });
 
 oscServer.on('/gameStarted', function (msg) {
+    gameStarted = true; //for player scores to reconnect.
+});
 
+oscServer.on('/endFlag', function (msg) {
+    client.emit('endFlag', msg[1]);
+    projector.emit('endFlag', msg[1]);
 });
 
 oscServer.on('/winner', function (msg) {
@@ -150,18 +181,22 @@ oscServer.on('/winner', function (msg) {
     console.log(winner + 'wins');
     client.emit('winner', winner);
     saxUser.emit('winner', winner);
-    projectio.emit('winner', winner);
+    projector.emit('winner', winner);
 });
 
 
 //LOOK: level-sending logic
 oscServer.on('/level', function (msg) {
-    console.log(msg[1]);
     let teamLevels = JSON.parse(msg[1]); //turn the levels into a JSON object
-    projector.emit('levels', teamLevels);
     if (choosePlayerFlag == 1) { //only attempt to send messages if players have been told to join teams
         updateLevelsAndNotify(teamLevels);
     }
+});
+
+oscServer.on('/projectorLevelUpdate', function (msg) {
+    let projectorLevels = JSON.parse(msg[1]);
+    console.log(projectorLevels);
+    projector.emit('levels', projectorLevels);
 });
 
 function updateLevelsAndNotify(newLevels) {
@@ -180,9 +215,8 @@ function sendLevelUpdateToTeam(team) {
             client.to(userID).emit('level', level);
         });
         let saxPlayer = saxIDs[team];
-        if (saxPlayer) {
-            saxUser.to(saxPlayer).emit('level', level);
-        }
+        saxUser.to(saxPlayer).emit('level', level);
+        console.log(saxPlayer + ' ' + team + ' ' + level);
     }
 }
 
@@ -223,7 +257,7 @@ function calculateAverageAccuracy(teamAccuracies) {
 function sendAccuracies() {
     const teamAverageAccuracies = calculateAverageAccuracy(teamAccuracies);
     oscClient.send('/accuracies', JSON.stringify(teamAverageAccuracies));
-    console.log('Accuracies:' + teamAverageAccuracies);
+    //console.log('Accuracies:' + teamAverageAccuracies);
 }
 
 
@@ -251,21 +285,22 @@ oscServer.on('/transportState', function (msg) {
     // if (transportState[0] == 1) {
     //     setTimeout(function () { setInterval(sendAccuracies, 16000) }, 16000); //TODO: maybe should not be aligned with the accuracy sends
     // }
-    // if (transportState[0] == 0) {
-    //     clearInterval(sendAccuracies);
-    // }
 });
 
 
 oscServer.on('/introFlag', function (msg) {
     introFlag = msg[1];
-    saxUser.emit('introFlag', introFlag);
     client.emit('introFlag', introFlag);
+    saxUser.emit('introFlag', introFlag);
 });
 
 oscServer.on('/projectorNotify', function (msg) {
     notification = msg[1];
     projector.emit('notification', notification);
+});
+
+oscServer.on('/clearPoints', function (msg) {
+    resetTeamPoints(msg[1]);//reset the points for the team that is starting a new level.
 });
 
 //LOOK: Websocket Connections
@@ -290,7 +325,8 @@ function onSaxPlayerConnect(socket) {
         saxIDs[msg] = socket.id;
         oscClient.send('/saxIDs', JSON.stringify(saxIDs));
         saxUser.to(socket.id).emit('introFlag', introFlag);
-
+        if (gameStarted) {
+        }
     });
     socket.on('disconnect', function () {
         for (let key in saxIDs) {
@@ -304,18 +340,17 @@ function onSaxPlayerConnect(socket) {
 }
 
 function onAudienceConnect(socket) {
-    client.to(socket.id).emit('connectionTime',Date.now());//send the current servertime
+    client.to(socket.id).emit('connectionTime', Date.now());//send the current servertime
     //user must be initialized through pressing the button on their startup screen.
+    if (gameStarted == true){
+        client.to(socket.id).emit('gameStarted'); //if game's already started, tough luck.
+    }
     socket.on('initializeMe', function (msg) {
         unassignedUsers.push(socket.id);
         oscClient.send('/numUnassignedUsers', unassignedUsers.length);
-        client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the "choose players" event already triggered, bring up selection screen right away
-
-        //When a player joins, request the next top of the loop from the server.
-        // if (originalTransportStartTime) {
-        //     client.to(socket.id).emit('originalTransportStartTime', originalTransportStartTime); //send them the original transport start time
-        // }
-
+        if (gameStarted == false) {
+            client.to(socket.id).emit('choosePlayer', choosePlayerFlag); //if the "choose players" event already triggered, bring up selection screen right away
+        }
     });
 
     socket.on('myTeam', function (msg) {
@@ -327,12 +362,15 @@ function onAudienceConnect(socket) {
             oscClient.send('/numUnassignedUsers', unassignedUsers.length);
         }
 
+        updateTargetPointsPerLevel(teamIDs);
+        console.log(targetPointsPerLevel);
         projector.emit('numPlayers', countPlayersInTeams(teamIDs));
         oscClient.send('/teamIDs', JSON.stringify(teamIDs));
+        oscClient.send('/targetPointsPerLevel', JSON.stringify(targetPointsPerLevel));
 
-       // if (nextEightBarTime && transportState[0] == 1) {//catch them up: next 8 bar loop, intro flag
-            //client.to(socket.id).emit('nextEightBarTime', nextEightBarTime); //TODO: 
-            //client.to(socket.id).emit('introFlag', introFlag); //TODO: get them caught up!
+        // if (nextEightBarTime && transportState[0] == 1) {//catch them up: next 8 bar loop, intro flag
+        //client.to(socket.id).emit('nextEightBarTime', nextEightBarTime); //TODO: 
+        //client.to(socket.id).emit('introFlag', introFlag); //TODO: get them caught up!
         //}
 
         client.to(socket.id).emit('level', teamLevels[team]); //send the current level of that team to them
@@ -343,12 +381,19 @@ function onAudienceConnect(socket) {
             updateAccuracies(msg[0], socket.id, parseFloat(msg[1]));
         }
     });
+    socket.on('points', function (msg) {
+        updateTeamPoints(msg);
+        oscClient.send('/teamPoints', JSON.stringify(teamPoints));
+        projector.emit('teamPoints', teamPoints);
+    });
 
     socket.on('disconnect', function () {
         if (unassignedUsers.indexOf(socket.id) !== -1) {
             unassignedUsers.splice(unassignedUsers.indexOf(socket.id), 1);
         }
         removePlayer(socket.id);
+        updateTargetPointsPerLevel(teamIDs);
+        oscClient.send('/targetPointsPerLevel', JSON.stringify(targetPointsPerLevel));
         projector.emit('numPlayers', countPlayersInTeams(teamIDs));
         oscClient.send('/teamIDs', JSON.stringify(teamIDs));
         oscClient.send('/numberofUsers', unassignedUsers.length);
@@ -391,3 +436,78 @@ function countPlayersInTeams(_teams) {
     return playerCounts;
 
 }
+
+function updateTargetPointsPerLevel(_teams) { //multiply number of notes per level by number of connected players in team
+    let numPlayersPerTeam = countPlayersInTeams(_teams);
+    for (let team in numPlayersPerTeam) {
+        targetPointsPerLevel[team] = notesPerLevel[team].map(num => num * (numPlayersPerTeam[team] - 1)); //one fewer than number of players.
+    }
+}
+
+function updateTeamPoints(_assignedTeam) {
+    if (teamPoints.hasOwnProperty(_assignedTeam)) {
+        teamPoints[_assignedTeam]++; //add one point to team total
+    }
+    console.log(teamPoints);
+}
+
+function resetTeamPoints(_assignedTeam) {
+    if (teamPoints.hasOwnProperty(_assignedTeam)) {
+        teamPoints[_assignedTeam] = 0; //add one point to team total
+    }
+}
+
+function calculateAverageNotesPerLevel(_notesPerLevel) {
+    const numberOfLevels = _notesPerLevel.soprano.length; //number of levels
+    const totalTeams = Object.keys(_notesPerLevel).length; //number of teams
+    let averageTapsPerLevel = new Array(numberOfLevels).fill(0);
+
+    for (let level = 0; level < numberOfLevels; level++) {
+        let sumTaps = 0;
+        for (let team in _notesPerLevel) {
+            sumTaps += _notesPerLevel[team][level];
+        }
+        averageTapsPerLevel[level] = sumTaps / totalTeams;
+    }
+    return averageTapsPerLevel;
+
+}
+
+function calculateScaledTarget(baseTarget, teamTaps, averageTaps, difficultyExponent) {
+    const scaledTarget = {};
+
+    for (let team in teamTaps) {
+        scaledTarget[team] = [];
+        for (let level = 0; level < teamTaps[team].length; level++) {
+            let deviation = teamTaps[team][level] / averageTaps[level];
+            if (deviation > 1.2) {
+                deviation = 1.2;
+            }
+            else if (deviation < 0.8) {
+                deviation = 0.8;
+            }
+            const target = baseTarget * Math.pow(deviation, difficultyExponent);
+            scaledTarget[team].push(target);
+        }
+    }
+    return scaledTarget;
+}
+
+function calculateBaseTarget(teamTaps, scalarPerLevel) {//calculate the number of taps per each level (see scalar above)
+    const baseTarget = {};
+    for (let team in teamTaps) {
+        baseTarget[team] = [];
+        for (let level = 0; level < teamTaps[team].length; level++) {
+            let baseValue = teamTaps[team][level] * scalarPerLevel; //multiply all by scalar
+            baseTarget[team].push(baseValue);
+        }
+    }
+    return baseTarget;
+}
+
+// function calculateDeviations(_notesPerLevel) {
+//     let deviations = {};
+//     for (let team in _notesPerLevel) {
+//         deviations[team] = _notesPerLevel()
+//     }
+// }

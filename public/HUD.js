@@ -27,18 +27,20 @@ function playerHUD() {
     }
 
     if (initialized == false) {
-        titleSize = height * 0.1;
+        titleSize = height * 0.2;
         textFont(titleFont);
         textSize(titleSize);
         fill(255);
         stroke(0);
         strokeWeight(2);
         textAlign(CENTER);
-        text(titleDisplay, centerX, centerY);
+        textWrap(WORD);
+        rectMode(CENTER);
+        text(titleDisplay, centerX, centerY, width - 20);
     }
 
     if (initialized == true && choosePlayerStatus == 0) {
-        instructionSize = height * 0.075;
+        const instructionSize = height * 0.075;
         textFont(hudFont);
         textSize(instructionSize);
         fill(255);
@@ -46,11 +48,18 @@ function playerHUD() {
         strokeWeight(2);
         textAlign(CENTER);
         textWrap(WORD);
-        text(displayInstruction, centerX, 100, width - 20);
+        rectMode(CENTER);
+        text(displayInstruction, centerX, centerY - centerY * 0.05, width - 20);
+        textAlign(RIGHT);
+        text('<--- Points you\'ve earned for your team this level', width - 20, instructionSize + 20);
         if (deviceOrientation == 'portrait') {
-            text(orientationInstruction, centerX, centerY + textSize * 2);
+            text(orientationInstruction, centerX, centerY, width - 20);
         }
     }
+    if (initialized && gameStartedFlag == true) {
+       gameStartedDisplay();
+    }
+
     if (initialized && assignedTeam) {
         teamDisplay(assignedTeam);
     }
@@ -66,6 +75,10 @@ function playerHUD() {
         //accuracyDisplay();
         pointsDisplay(points, notesPerLevel[currentLevel]);
     }
+    if (Tone.Transport.state == 'started' && choosePlayerStatus == 0) {
+        pointsDisplay(points, 0);
+    }
+    textAlign(CENTER);
 }
 
 function levelDisplay(_level) {
@@ -147,6 +160,19 @@ function pingDisplay(_myLatency) {
     text('ping: ' + round(_myLatency), width - 10, hudSize);
 }
 
+function gameStartedDisplay(){
+    const instructionSize = height * 0.075;
+    textFont(hudFont);
+    textSize(instructionSize);
+    fill(255);
+    stroke(0);
+    strokeWeight(2);
+    textAlign(CENTER);
+    textWrap(WORD);
+    rectMode(CENTER);
+    text('Game has started! Watch the projector or look over your neighbor\'s shoulder.', centerX, centerY, width - 20);
+}
+
 //Set up the buttons to appear on screen when triggered.
 
 function buttonSetup() {
@@ -191,12 +217,8 @@ function teamAssignByTap(_team) {
 function teamAssign(_team) {
     assignedTeam = _team;
     notesPerLevel = score["notesPerLevel"][assignedTeam];
+    populateNotes(assignedTeam); //create the one set of notes for which we'll create subsets for thumblines.
     thumblines = [];
-    thumblineBuffer = [];
-    noteTimings = [];
-    populateNotes(assignedTeam);
-    addToThumblineBuffer(0);
-    addToThumblineBuffer(1);
     //countAllNoteEvents();
     socket.emit('myTeam', assignedTeam);
 }
@@ -214,12 +236,23 @@ function initializeMe() {
     if (initialized == false) {
         Tone.start();
         unblockPlayback();
-        populateNotes('demo');
-        demoLoop();
-        initialized = true;
-        socket.emit('initializeMe');
         document.getElementById('initButton').remove();
+        initialized = true;
+        if (gameStartedFlag == false) {
+            demoShow(); //show the stuff for the demo screen.
+            socket.emit('initializeMe');
+        }
+
     }
+}
+
+function demoShow() {
+    populateNotes('demo');
+    for (let i = 0; i < 10; i++) { //add a bunch of thumblines for demo
+        addToThumblineBuffer(0, i * 16);
+    }
+    points = 0;
+    Tone.Transport.start();
 }
 
 
@@ -242,6 +275,9 @@ class Hudnotification {
         this.opacity = 255; //starting opacity
         this.isVisible = true; //tracking visibility
         this.fadeRate = fadeRate; //how much it decreases in opacity each frame
+        this.fontSize = titleSize * 0.5;
+        textAlign(CENTER, BASELINE);
+        textWrap(WORD);
     }
 
     fade() {
@@ -262,8 +298,9 @@ class Hudnotification {
         textSize(titleSize);
         stroke(0, this.opacity);
         strokeWeight(2);
-        textAlign(CENTER);
-        text(this.text, centerX, titleSize + 20);
+        textAlign(CENTER, BASELINE);
+        textWrap(WORD);
+        text(this.text, centerX, titleSize + 20, width - 20);
     }
 
 
@@ -276,22 +313,22 @@ class Pointsnotification {
         this.isVisible = true; //tracking visibility
         this.fadeRate = fadeRate; //how much it decreases in opacity each frame
 
-        if (this.accuracy == 1){
+        if (this.accuracy == 1) {
             this.text = 'perfect!';
         }
-        if (this.accuracy >= 0.8 && this.accuracy < 1.){
+        if (this.accuracy >= 0.8 && this.accuracy < 1.) {
             this.text = 'great!';
         }
-        if (this.accuracy >= 0.6 && this.accuracy < 0.8){
+        if (this.accuracy >= 0.6 && this.accuracy < 0.8) {
             this.text = 'okay!';
         }
-        if (this.accuracy >= 0.4 && this.accuracy < 0.6){
+        if (this.accuracy >= 0.4 && this.accuracy < 0.6) {
             this.text = 'hmm...';
         }
-        if (this.accuracy >= 0.2 && this.accuracy < 0.4){
+        if (this.accuracy >= 0.2 && this.accuracy < 0.4) {
             this.text = 'you can do better!';
         }
-        if (this.accuracy < 0.2){
+        if (this.accuracy < 0.2) {
             this.text = 'zzz...';
         }
 

@@ -121,7 +121,7 @@
 						"client_rect" : [ 1199, 172, 2218, 870 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 100, 159, 476, 1266 ]
+						"storage_rect" : [ 100, 100, 476, 1083 ]
 					}
 ,
 					"text" : "pattrstorage dsp-settings",

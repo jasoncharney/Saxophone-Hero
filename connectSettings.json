@@ -1,5 +1,5 @@
 {
-	"hostIP": "192.168.0.77",
+	"hostIP": "10.194.22.145",
 	"expressPort": 3000,
 	"maxSendPort": 3339,
 	"maxListenPort": 3338,

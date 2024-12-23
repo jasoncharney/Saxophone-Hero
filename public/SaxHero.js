@@ -19,8 +19,6 @@ let shoeSize = 0.1; //the size of the shoe graphic
 
 let crossMark = window.innerHeight * 0.66; //the point at which the lines cross the playhead, where you tap each thumb. 2/3 of the way down the screen
 
-let touchArray = new Array(2); //LOOK: only two touches on the screen at a time, please! this might be a problem, actually
-
 let canvas; //reference the created canvas for using JS without p5
 
 let currentLevel = 0; //the current level we're on!
@@ -31,7 +29,7 @@ let victoryLap = false; //this current loop is a victory lap. We will do the loo
 let introFlag; //special condition for start of game
 let displayTime = false; //draw the transport position at the bottom of the screen for troubleshooting
 
-let notesObject; //assign this from the single score file at team assignment time
+let allNotes; //assign this from the single score file at team assignment time
 let notesPerLevel;
 let noteTimings = []; //single array that only contains the "seconds" of note events from the assigned voice.
 let taps = []; //array that stores all the taps for a level (hits and misses)
@@ -45,10 +43,7 @@ let numberOfLoops = 0; //the number of times we've been through a level.
 let sendAccuracyFlag = 0; //flip to 1 once a loop to send the accuracy to the server just once.
 
 let thumblines = []; //notes as hash marks
-let thumblineBuffer = [];
-let thumblineArray = []; //holds the thumbline blocks
 
-let playhead; //the invisible line that moves all hashmarks
 let hashWidth; //calculated width of each hashmark based on the screen
 let hashFraction = 0.33; //width of the hash as a percentage of the full screen.
 
@@ -66,8 +61,7 @@ let myStartTime = performance.now();
 //Metronome for testing
 let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
 
-
-
+let gameStartedFlag = false; //only gets turned to "true" for latecomers.
 
 function preload() {
     bg = loadImage('assets/grass.jpeg');
@@ -107,19 +101,11 @@ function setup() {
 
     initializeButton();
 
-    //set the static fields for the Playhead and Thumbline classes
-
+    //set the static fields for the Thumbline classes
     Thumbline.pixelsPerSecond = height / secondsPerWindow;
     Thumbline.zeroPoint = crossMark;
+    Thumbline.hashWidth = width * hashFraction;
 
-
-    hashWidth = width * hashFraction;
-
-
-    playhead = new Playhead(crossMark, window.innerHeight / secondsPerWindow);
-
-    playhead.reset();
-    //setTimeout(function(){setInterval(console.log(readableTime(Date.now())))},1000);
 }
 
 //LOOK: P5 Draw function.
@@ -131,19 +117,12 @@ function draw() {
     if (initialized) {
         crossMarkDraw();
     }
-    // if (Tone.Transport.state == 'started') {
-    //     for (let thumbline of thumblines) {
-    //         thumbline.update(Tone.Transport.seconds);
-    //         thumbline.draw();//TODO: loop around to reflect the Transport loop. currentLevel and nextLevel logic! two arrays.
-    //     }
-    // }
+
     if (Tone.Transport.state == 'started') {
         thumblines.forEach((thumbline, index) => {
+            thumbline.update(Tone.Transport.seconds);
             thumbline.fade(15);
             thumbline.display();
-            if (thumbline.isFaded()) {
-                thumblines.splice(index, 1);
-            }
         });
     }
     if (initialized) {
@@ -154,33 +133,23 @@ function draw() {
 
 //Notes functions
 
-function populateNotes(team) {
-    notesObject = score[team];
+function populateNotes(team) {//just run this once when the team is chosen.
+    allNotes = score[team];
+}
 
-    for (let i = 0; i < notesObject.length; i++) {
-        thumblines.push(new Thumbline(notesObject[i].time, notesObject[i].duration, notesObject[i].midi)); //make the thumblines
-        let screenHalf; //variable to say which thumb this hash belongs to.
-        if (notesObject[i].midi == 61) {
-            screenHalf = 0; //zone starts at left side of screen
-        }
-        if (notesObject[i].midi == 60) {
-            screenHalf = centerX; //zone starts in the middle.
-        }
-        let t = new Tone.Time(notesObject[i].time).toBarsBeatsSixteenths();
-        t = t.split(':');
-        noteTimings.push([notesObject[i].time, screenHalf]); //just collect all the timings into a single array
+function addToThumblineBuffer(_level, offset) { //push a subset of thumblines to the buffer.
+    let levelRange = calculateTransportRange(_level);
+    //let newNotes = filterNotesInRange(allNotes, levelRange[0], levelRange[1]);
+    let newNotes = offsetNotesInRange(allNotes, levelRange[0], levelRange[1], 0);
+
+    let newNoteArray = Object.values(newNotes); //objects don't have a length!
+
+    for (let i = 0; i < newNoteArray.length; i++) {
+        thumblines.push(new Thumbline(newNoteArray[i].time, newNoteArray[i].duration, newNoteArray[i].midi, offset));
     }
 }
 
-function addToThumblineBuffer(_level, offset) {
-    let levelObjectRange = calculateTransportRange(_level);
-    let newNotes = filterNotesInRange(notesObject, levelObjectRange[0], levelObjectRange[1]);
-    for (let i = 0; i < newNotes.length; i++) {
-        thumblines.push(new Thumbline(newNotes[i].time, newNotes[i].duration, newNotes[i].midi, offset));
-    }
-}
-
-function filterNotesInRange(notes, startTime, endTime) {
+function filterNotesInRange(notes, startTime, endTime) { //just the notes in the time of the level
     return Object.values(notes).filter(note => note.time >= startTime && note.time < endTime);
 }
 
@@ -205,19 +174,11 @@ function offsetNotesInRange(notes, startTime, endTime, offsetTime) {
     return offsetNotes;
 }
 
-function populateLoop(_whichLoop, _level) {
-    notesObject = score[team];
-
-    let range = calculateTransportRange(_level);
-
-    offsetNotesInRange(loopStart, range[0], range[1])
-}
-
 function populateDemoNotes() {
-    notesObject = score[demo];
-    for (let i = 0; i < notesObject.length; i++) {
-        thumblines.push(new Thumbline(notesObject[i].time, notesObject[i].duration, notesObject[i].midi, pixelsPerSecond, zeroPoint)); //make the thumblines
-        noteTimings.push([notesObject[i].time, notesObject[i].midi]); //just collect all the timings into a single array
+    allNotes = score[demo];
+    for (let i = 0; i < allNotes.length; i++) {
+        thumblines.push(new Thumbline(allNotes[i].time, allNotes[i].duration, allNotes[i].midi, pixelsPerSecond, zeroPoint)); //make the thumblines
+        noteTimings.push([allNotes[i].time, allNotes[i].midi]); //just collect all the timings into a single array
     }
 }
 
@@ -252,9 +213,12 @@ function drawShoes() {
 socket.on('choosePlayer', function (msg) {
 
     choosePlayerStatus = msg;
-    if (choosePlayerStatus == 1) {
+    if (choosePlayerStatus == 1 && gameStartedFlag == false) {
         buttonSetup();
         resetTransport();
+    }
+    if (gameStartedFlag == true){
+
     }
 });
 
@@ -279,7 +243,6 @@ socket.on('transportState', function (msg) {
 // });
 
 socket.on('introFlag', function (msg) {
-    console.log(msg);
     if (msg == 0) {
         introFlag = false;
         //taps = []; //clear taps buffer when intro turns off, or rejoining!
@@ -287,6 +250,10 @@ socket.on('introFlag', function (msg) {
     if (msg == 1) {
         introFlag = true;
     }
+});
+
+socket.on('gameStarted', function (){
+    gameStartedFlag = true;
 });
 
 socket.on('reset', function () { //reload the page if we get the reset message.
@@ -310,7 +277,7 @@ socket.on('level', function (msg) {
         if (nextLevel == currentLevel + 1) {
             advanceLevelOnNextLoop = false;
             victoryLap = true;
-            hudnotification = new Hudnotification('Level up to level ' + nextLevel + '!', 0.5);
+            hudnotification = new Hudnotification('Level up to level ' + nextLevel + '!', 1);
         }
 
         if (nextLevel > currentLevel + 1) {
@@ -346,58 +313,54 @@ socket.on('winner', function (msg) { //winner is sent from the server, but every
 //Then your own transport should be at the beginning of an 8-bar loop. Test this idea!!!
 
 addEventListener('touchstart', function (event) {
-    let touch = event.touches[event.touches.length - 1];
-    if (initialized) {
-        shoePlay(touch.clientX); //TODO: why is this sluggish on mobile? Is it because of the draw frame lineup? Use Tone to draw the frames?
-    }
-    if (assignedTeam != undefined && Tone.Transport.state == 'started' && introFlag == false) {
-        judgeTap(Tone.Transport.seconds, touch.clientX);
-        accuracy = calculateAccuracy();
-        points = calculateNumberOfPoints();
-    }
-    if (assignedTeam == undefined && Tone.Transport.state == 'started') {
-        judgeTap(Tone.Transport.seconds, touch.clientX);
-    }
+    for (let i = 0; i < event.touches.length; i++) {
+        //let touch = event.touches[event.touches.length - 1];
+        let touch = event.touches[i];
 
+        if (initialized) {
+            shoePlay(touch.clientX); //TODO: why is this sluggish on mobile? Is it because of the draw frame lineup? Use Tone to draw the frames?
+        }
+        if (assignedTeam != undefined && Tone.Transport.state == 'started' && introFlag == false) {
+            judgeTap(touch.clientX, touch.clientY);
+            accuracy = calculateAccuracy();
+        }
+        if (Tone.Transport.state == 'started') {
+            judgeTap(touch.clientX, touch.clientY);
+        }
+    }
 });
 
 
-function judgeTap(tapTime, xLocation) {
+function judgeTap(xPos, yPos) {
 
-    //how accurate was the tap?
-    //PROCESS: 1. Look up time of tap relative to the transport. 
-    // 2. Look up the time in the score object.
-    // 3. If there's a thumbline that is crossing the line ±margin of error,
-    // then it's deemed accurate. Otherwise: not accurate.
-    // Extra taps decrease the accuracy.
+    let positionMargin = shoeSize; //pixels by which the tap can deviate and still count
 
-    //If you don't tap, your accuracy does not diminish. So you can join a team and just watch without playing.
-    //Also, a little secret here...it doesn't matter which thumb goes where!
+    function checkPosition(tapXpos, tapYpos) {
+        if (tapYpos > crossMark + shoeSize || tapYpos < crossMark - shoeSize) {// don't even bother if it's not close to the line.
+            return -1;
+        }
+        for (let i = 0; i < thumblines.length; i++) {
+            if (Math.abs(tapYpos - thumblines[i].ypos) <= positionMargin) {
+                if (thumblines[i].thumb == 0 && tapXpos <= centerX || thumblines[i].thumb == 1 && tapXpos > centerX) {
+                    taps.push(1);
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
 
-    let timingMargin = 0.125; //seconds by which the tap can deviate and still count
-    let matchedIndex = -1;
-    console.log(xLocation);
-
-    // noteTimings.forEach((noteTiming, index) => {
-    //     if (Math.abs(tapTime - noteTiming[0]) <= timingMargin) {
-    //         if (xLocation > noteTiming[1] && xLocation < noteTiming[1] + centerX) {
-    //             taps.push(1);
-    //             matchedIndex = index;
-    //             return; //if we matched, then exit
-    //         }
-    //     }
-    thumblines.forEach((noteTiming, index) => {
-
-    });
-
-    //IMPORTANT: //TODO: add some calculation here for position on screen...needs to be at least a little close vertically...
+    let matchedIndex = checkPosition(xPos, yPos);
 
     if (matchedIndex !== -1) {
-        thumblines[matchedIndex].fill = [255, 215, 0]; //make it gold if it was right
-        thumblines[matchedIndex].fade(); //IMPORTANT: change this to fadeToggle() - see below
-        //thumblines[matchedIndex].fadeToggle();
+        if (thumblines[matchedIndex].fadeFlag == false){ //you don't get to send multiple points for the same hash.
+            thumblines[matchedIndex].fill = [255, 215, 0]; //make it gold if it was right
+            thumblines[matchedIndex].fadeToggle();
+            pointsLoop++; //add points to the loop.
+            points++; //add to total points for the level.
+            sendPoints(); //send updated point count to the server.
+        } 
 
-        pointsLoop++; //add points to the loop.
     }
 
     if (matchedIndex == -1) {
@@ -415,19 +378,15 @@ function calculateAccuracy() {
     return ((hitSum / taps.length).toFixed(2));
 }
 
-function calculateNumberOfPoints() {
-    const hitInit = 0;
-    const hitSum = taps.reduce(
-        (accumulator, currentValue) => accumulator + currentValue, hitInit
-    );
-    return (hitSum);
-}
-
 //send my current accuracy value to the sever only once per 8 bars, at the end of each loop.
 //Reset the flag to 0 after the loop resets.
 function sendAccuracy() {
     socket.emit('accuracy', [assignedTeam, accuracy]);
     console.log('accuracy: ' + accuracy);
+}
+
+function sendPoints() {
+    socket.emit('points', assignedTeam); //we are just adding one point to the team score.
 }
 
 addEventListener('touchmove', function (event) {
@@ -453,7 +412,7 @@ function crossMarkDraw() {
     strokeCap(SQUARE);
     setLineDash([5, 10]);
     line(0, crossMark, width, crossMark);
-    line(width / 2, 0, width / 2, height);
+    //line(width / 2, 0, width / 2, height);
 }
 
 //draw the hashmarks as dotted lines like on a football field.
@@ -480,7 +439,7 @@ function unblockPlayback() {
 
 
 function countAllNoteEvents() { //count all of the note events per part in an array and post to the console
-    let notes = notesObject;
+    let notes = allNotes;
     let range;
     let notesNumberList = [];
     for (i = 0; i < 18; i++) {

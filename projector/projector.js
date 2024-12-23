@@ -1,5 +1,8 @@
 let socket = io('/projector');
 let gameAddress;
+let winner;
+let endFlag = false;
+let teamPoints;
 
 let levels =
 {
@@ -36,15 +39,34 @@ socket.on('wifi', function (msg) {
     document.getElementById("wifi").innerHTML = 'ssid: ' + msg.ssid + '<br>' + 'password: ' + msg.password;
 });
 
-socket.on('reset', function(){
+socket.on('reset', function () {
     location.reload();
 });
 
+socket.on('winner', function (msg) {
+    winner = msg;
+});
+
 socket.on('levels', function (msg) {
+    levels = msg;
+    console.log(levels);
     for (let level in msg) {
         levels[level] = msg[level];
     }
-    console.log(levels);
+});
+
+socket.on('teamPoints', function (msg){
+    teamPoints = msg;
+});
+
+socket.on('endFlag', function (msg) {
+    console.log('endFlag' + msg);
+    if (msg == 0) {
+        endFlag = false;
+    }
+    if (msg == 1) {
+        endFlag = true;
+    }
 });
 
 socket.on('numPlayers', function (msg) {

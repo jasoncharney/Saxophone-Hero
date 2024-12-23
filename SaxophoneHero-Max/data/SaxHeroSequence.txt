@@ -14,6 +14,7 @@ choosePlayer 1;
 ------------------------ 5;
 0 5 allAudienceLevels 0 1;
 gameStarted bang;
+endFlag 0;
 instructions "Game has started.";
 projectorInstructions "Let's go!";
 transportStatus 1;

@@ -2,15 +2,17 @@
 
 //Eight Bar Timer - for synchronizing level changes
 
+//at eight bars into the beginning of the game, set some specific functions.
 function toggleLoop() {
     Tone.Transport.schedule(function () {
         if (currentLevel == 0) {
             currentLevel = 1;
             nextLevel = 1;
             setTransportPosition(1);
-            Tone.Transport.loop = true;
+            Tone.Transport.loop = false;
             introFlag = false;
             pointsLoop = 0;
+            points = 0;
         }
     }, "8:0:0");
 }
@@ -28,30 +30,33 @@ const eightBarTimer = new Tone.Loop((time) => { //runs at the top of each loop
 
     // thumblineArray.push(new ThumblineBlock(noteObject, calculateTransportRange(nextLevel), nextPositionInThumblineArray));
 
-
-
     if (currentLevel == 0 && nextLevel == 1) {
         advanceLevelOnNextLoop = false;
         victoryLap = false;
+        addToThumblineBuffer(0, 0);
+        addToThumblineBuffer(1, 16);
     }
 
     if (introFlag == false) {
-        addToThumblineBuffer(nextLevel, 16);
+        addToThumblineBuffer(nextLevel, Tone.Transport.seconds + 16);
         accuracyLoop = pointsLoop / notesPerLevel[currentLevel];
-        pointsnotification = new Pointsnotification(accuracyLoop, 1);
+        if (victoryLap == false && points > 0) {
+            pointsnotification = new Pointsnotification(accuracyLoop, 1);
+        }
         pointsLoop = 0;
         accuracyLoop = 0;
         numberOfLoops++;//increase the number of loops by one
 
         if (advanceLevelOnNextLoop == true) { //this is actually the beginning of a new level.
             currentLevel = nextLevel;
-            setTransportPosition(currentLevel);
+            //setTransportPosition(currentLevel);
 
             if (currentLevel == 17) {
                 hudnotification = new Hudnotification(winner + ' team wins!', 0.25);
             }
             dimShoeVolume(); //decrease shoe volume
             numberOfLoops = 0;
+            points = 0;
             advanceLevelOnNextLoop = false;
             victoryLap = false;
         }
@@ -67,21 +72,14 @@ const eightBarTimer = new Tone.Loop((time) => { //runs at the top of each loop
 
 const endOfEightBarTimer = new Tone.Loop((time) => { //runs on the last 8th note of each loop
 
-    for (let i = 0; i < thumblines.length; i++) {
-        thumblines[i].fill = [255, 255, 255];
-    }
+    thumblines.forEach((thumbline, index) => { //remove faded and offscreen thumblines
+        if (thumbline.isFaded() || thumbline.isOffScreen()) {
+            thumblines.splice(index, 1);
+        }
+    });
     sendAccuracy();
     console.log('points: ' + points);
 }, "8m");
-
-// function scheduleStart(targetTime) {
-//     const currentTime = Date.now();
-//     const delay = targetTime - currentTime;
-
-//     if (delay > 0) {
-//         return delay;
-//     }
-// }
 
 function setTransportPosition(_level) {
     //set the transport position to a multiple of 8 (for which page we're on).
@@ -92,7 +90,6 @@ function setTransportPosition(_level) {
     let newStartBarTime = new Tone.Time(newStart).toSeconds(); //convert to seconds
     let newEndBarTime = new Tone.Time(newEnd).toSeconds();
 
-    //populateLoop(1)
     Tone.Transport.position = newStart;
     Tone.Transport.setLoopPoints(newStart, newEnd);
     if (_level == 17) {
@@ -115,19 +112,15 @@ function calculateTransportRange(_level) {
 
 
 function setTransportState(_state) {
-    console.log(_state);
-    let newStart = performance.now() + performance.timeOrigin;
-    console.log(newStart);
-    console.log(Date.now());
     let state = _state[0];
     let _targetTime = parseInt(_state[1]);
     if (state == 1) {
         taps = []; //to keep any taps out of the calculation that occured before the timer started
-        hudnotification = new Hudnotification('Get ready!', 0.5);
         //the difference between the Max designated time and the browser's time, converted to seconds
         let del = '+' + (((_targetTime - Date.now()) * 0.001)).toString();
         console.log(del);
         Tone.Transport.start(del);
+        hudnotification = new Hudnotification('Get ready!', 0.5);
         eightBarTimer.start();
         endOfEightBarTimer.start("+7:3:2");
         toggleLoop();
@@ -149,7 +142,6 @@ function resetTransport() {
     Tone.Transport.stop();
     eightBarTimer.stop();
     eightBarTimer.cancel();
-    playhead.reset();
 }
 
 function demoLoop() {

@@ -14,7 +14,7 @@ let scorePages = [];
 
 let scorePopulated = false; //change flag when score images are loaded.
 
-let numLevels = 18; //including intro and coda
+let numLevels = 18; //including intro and coda + blank for the last half page (loading image)
 
 let introFlag; //when joining, query the introFlag state from the server.
 
@@ -33,71 +33,107 @@ let winner; //the name of the winning voice. NULL until received from server (TO
 
 let currentMeasure; //the current measure of the loop
 
+let scoreBuffer; //graphics buffersto hold the current page
+
 const metronomeSynth = new Tone.MembraneSynth().toDestination();
 metronomeSynth.pitchDecay = 0;
 metronomeSynth.release = 0.01;
+
+let scoreWidth;
+let scoreHeight;
 
 function preload() {
 }
 
 function setup() {
-    //frameRate(60);
+    frameRate(60);
     createCanvas(window.innerWidth, window.innerHeight);
+
+    scoreWidth = width;
+    scoreHeight = height;
+
     centerX = width / 2;
     centerY = height / 2;
+
     imageLocations[1] = centerY;
+
+    scoreBuffer = createGraphics(scoreWidth, scoreHeight);
 
 
     playerChooserDisplay();
 
 }
 
-//LOOK: Draw function
+//LOOK: Instead of the p5 draw method...
 
 function draw() {
-    background(255);
     if (scorePopulated == true) {
-        showScore(scorePages[currentLevel], imageLocations[0]);
+        if (currentLevel == 17) {
+            background(255);
+            image(scoreBuffer, 0, 0);
+            if (playerAssigned == winner) {
+                centerText = 'You win! Take your solo!';
+            }
+            else {
+                centerText = 'Game Over...maybe next time?';
+            }
+            return;
+        }
+        else {
+            //showScore(scorePages[currentLevel], imageLocations[0]);
+            image(scoreBuffer, 0, 0);
+        }
         if (currentLevel < 17) { //don't display on coda level
-            showScore(scorePages[currentLevel + 1], imageLocations[1]);
+            //showScore(scorePages[currentLevel + 1], imageLocations[1]);
+            image(scoreBuffer, 0, 0);
         }
     }
 
     centerTextDisplay(centerText);
 
-    if (displayTime) {
-        timeDisplay(Tone.Transport.position);
-    }
+    // if (displayTime) {
+    //     timeDisplay(Tone.Transport.position);
+    // }
 
-    if (progressDisplayFlag) {
+    if (progressDisplayFlag && currentLevel != 17) {
         progressDisplay(progressTimer.progress);
     }
 }
 
 
+// function syncWithTransport() {
+//     if (Tone.Transport.state == 'started') {
+//         requestAnimationFrame(drawMethods);
+//     }
+// }
 
 //SECTION: Listeners
 
 socket.on('level', function (msg) {
-    nextLevel = msg;
-    console.log('Next Level: ' + msg);
+    if (msg != 1) {
+        nextLevel = msg;
+    }
+
+    console.log('Next Level: ' + nextLevel);
     //ignore the next block if it's intro mode. Intro flag toggled off in timer.
-    if (introFlag == false) {
+    if (introFlag == false && victoryLap == false) {
+
         if (nextLevel == currentLevel) {
             advanceLevelOnNextLoop = false;
         }
-
         if (nextLevel == currentLevel + 1) {
             advanceLevelOnNextLoop = false;
             victoryLap = true;
         }
+        if (nextLevel > currentLevel + 1) {
+            victoryLap = true;
+            advanceLevelOnNextLoop = false;
+        }
         //see 8-bar timer function for flipping states
-        if (nextLevel != currentLevel && nextLevel != 0) {
+        if (nextLevel != currentLevel && nextLevel != 1) {
             centerText = 'level up!';
         }
     }
-
-
 });
 
 socket.on('winner', function (msg) {
@@ -112,8 +148,19 @@ socket.on('reset', function () {
     location.reload();
 });
 
+socket.on('gameStartedFlag', function () {
+
+})
+
 socket.on('introFlag', function (msg) {
-    console.log(msg);
+    if (msg == 0) {
+        introFlag = false;
+        nextLevel = 1;
+    }
+    if (msg == 1) {
+        currentLevel = 0;
+        introFlag = true;
+    }
 });
 
 socket.on('transportState', function (msg) {
@@ -124,30 +171,59 @@ function chooseSaxVoice() {
     playerAssigned = playerChooser.selected();
     if (playerAssigned != 0) {
         socket.emit('myVoice', playerAssigned);
-        loadScore();
         removeElements();
+        loadScore();
         Tone.start();
+        document.title = "Player: " + playerAssigned;
         connectedDisplayFlag = true;
+
     }
 }
 
 function loadScore() {
-    return new Promise((resolve, reject) => {
+    let loading = new Promise(function (resolve, reject) {
         let p = playerAssigned.slice(0, 1); //the first letter of the voice name
+        let imagePromises = []; //array to store promises for loading images
+
         for (i = 0; i < numLevels; i++) {
             let path = 'assets/' + p + i.toString() + '.png';
-            scorePages[i] = loadImage(path); //load the image
-            scorePages[i].resize(width, height / 2); //resize the image
+            imagePromises.push(new Promise((resolve) => {
+                scorePages[i] = loadImage(path);
+                scorePages[i].resize(scoreWidth, scoreHeight / 2);
+                resolve(); //resolve promise for this image
+
+            }));
         }
+
+        Promise.all(imagePromises).then(resolve).catch(reject);
+    });
+
+    return loading.then(function () {
+        updateScoreBuffer(0);
         scorePopulated = true;
+    }).catch(function (error) {
+        console.error("Error loading images: ", error);
     });
 }
 
-function showScore(_page, imgLocation) {
-    if (playerAssigned !== 0 && currentLevel !== undefined) {
-        image(_page, 0, imgLocation, width, height / 2);
+//background(255);
+//requestAnimationFrame(drawMethods);
+
+
+function updateScoreBuffer(p) { //update the score image.
+    scoreBuffer.clear();
+    scoreBuffer.background(255);
+    scoreBuffer.image(scorePages[p], 0, imageLocations[0], scoreWidth, scoreHeight / 2);
+    if (p < 17) {
+        scoreBuffer.image(scorePages[p + 1], 0, imageLocations[1], scoreWidth, scoreHeight / 2);
     }
 }
+
+// function showScore(_page, imgLocation) {
+//     //if (playerAssigned !== 0 && currentLevel !== undefined) {
+//     image(_page, 0, imgLocation, width, height / 2);
+//     //}
+// }
 
 function centerTextDisplay(_centerText) {
     let centertext = _centerText;
@@ -206,7 +282,7 @@ function progressDisplay(prog) {
     //let endYPos = width * prog; //This is for a smooth scrolling bar (original design).
     //rect(0, centerY - 20, endYPos, centerY + 20);
     let eighthWidth = width * 0.125;
-    rect(eighthWidth*currentMeasure, centerY - 20, eighthWidth*(currentMeasure+1), centerY + 20);
+    rect(eighthWidth * currentMeasure, centerY - 20, eighthWidth * (currentMeasure + 1), centerY + 20);
     if (introFlag == false) {
         levelDisplay(progressColor);
     }
@@ -237,10 +313,11 @@ function levelDisplay(_progressColor) {
 
 
 const eightBarTimer = new Tone.Loop((time) => { //runs at the beginning of every 8 bar loop.
-    if (currentLevel == 0 && nextLevel == 1) {
-        advanceLevelOnNextLoop = false;
-        victoryLap = false;
-    }//check this first – skip it if we've just finished the intro. Check toggleLoop() for looping on
+
+    // if (currentLevel == 0 && nextLevel == 1) {
+    //     advanceLevelOnNextLoop = false;
+    //     victoryLap = false;
+    // }
 
     if (introFlag == false) {
         if (victoryLap == false) {
@@ -249,9 +326,14 @@ const eightBarTimer = new Tone.Loop((time) => { //runs at the beginning of every
 
         if (advanceLevelOnNextLoop == true) {
             currentLevel = nextLevel;
+            updateScoreBuffer(currentLevel);
             setTransportPosition(currentLevel);
             advanceLevelOnNextLoop = false;
             victoryLap = false;
+            if (currentLevel == 17) {
+                Tone.Transport.stop('+0.25');
+                centerText = ' ';
+            }
         }
 
         if (victoryLap == true) {
@@ -270,7 +352,6 @@ const progressTimer = new Tone.Loop((time) => {
 
 const progressTimerBeats = new Tone.Loop((time) => {
     currentMeasure++; //increase the measure count
-    console.log(currentMeasure);
 }, "1m");
 
 function scheduleStart(targetTime) {
@@ -300,12 +381,15 @@ function setTransportState(_state) {
         //the difference between the Max designated time and the browser's time, converted to seconds
         let del = '+' + ((_targetTime - Date.now()) * 0.001).toString();
         Tone.Transport.start(del);
+        toggleLoop();
+        updateScoreBuffer(0);
+        //drawLoop.start();
         eightBarTimer.start();
         progressTimer.start();
         progressTimerBeats.start();
         progressDisplayFlag = true;
         connectedDisplayFlag = 0;
-        toggleLoop();
+        //requestAnimationFrame(syncWithTransport); //kick off the request animation frame recursion
         //resetIntroFlag();
     }
     if (state == 0) {
@@ -325,6 +409,11 @@ function setTransportState(_state) {
 //         introFlag = true;
 //     }, "0:0:1");
 // }
+// const drawLoop = new Tone.Loop((time) => {
+//     drawMethods();
+// }, "8n").start(0);
+
+
 
 function toggleLoop() {
     Tone.Transport.schedule(function () {
@@ -334,6 +423,8 @@ function toggleLoop() {
             setTransportPosition(1);
             Tone.Transport.loop = true;
             introFlag = false;
+            victoryLap = false;
+            advanceLevelOnNextLoop = false;
         }
     }, "8:0:0"); //start looping at 8:0:0, stop looping at (coda)
 }
