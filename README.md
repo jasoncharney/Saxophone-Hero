@@ -1,19 +1,27 @@
 # Saxophone Hero
  code for Sky Macklay's piece for "Saxophone Hero," commissioned by Project Fusion
 
-## Disclaimer
-This README is currently a development journal/list of "to-dos" and process notes for me to reference. Eventually this will be reformatted into a guide to setting up the piece and running it for a performance.
+## Setup diagram
+[image here]
 
-# Process Notes
+## Requirements
 
-How to do various things. Links to resources.
+### Computer & Software
+The game is run via a dedicated computer. Max software runs the game and handles audio processing. A Node server handles the interactive scores for players, audience game, and projector HUD output.
+- Networking capabilities (WiFi or Ethernet) required. Not tested on Windows; works on macOS Ventura+.
+- [Node.js](https://nodejs.org/en). This runs the server application on the host computer.
+- [Max](https://cycling74.com/downloads). No license is required to open the software.
+- Wireless network - recommend using a separate wireless router not connected to the Internet. It must be publicly accessible.
 
-## Converting MIDI Files
+### Audio
+- Audio interface with 4 microphone inputs and at least 3 audio outputs.
+- Four microphones, one for each saxophonist
+- Headphone amplifiers/wireless receivers with at least 4 channels of output for click track, and headphones
+- Stereo output to PA system.
 
-Right now every user gets the whole score and the subset of their notes is assigned when they choose a player. **06/26/2024**
-1. Export MIDI file from Sibelius to Logic. All the "bongos" tracks should be regions that have MIDI notes 60 and 61 (L and R thumbs)
-2. Export individual track (entire score) as Type 1 MIDI.
-3. Drop on the [ToneJS MIDI parser tool](https://tonejs.github.io/Midi/) and copy/paste the results into the score.js file, which contains a single JS object called "score" with 4 keys: soprano, alto, tenor, and bari.
-4. Delete everything from the JSON score except the array of objects originally assigned to the `notes` key. A complete note object just contains:
- `'voice':[{note1},{note2}...{noteN}]`
- 5. The relevant info is 
+### Mobile Devices
+- Saxophonists must have a laptop or tablet updated to the latest software version, running Safari or Google Chrome. The score is served dynamically to each player over the network.
+- Audience members can connect via WiFi network on Android or iOS mobile devices. They should be instructed to turn off mobile data (if connected to a WiFI network without internet) and to turn their phone sideways for bets results. Any mobile browser should work as long as it supports WebAudio and the latest version of HTML5; only Chrome and Safari have been tested on iOS and Android.
+
+## Instructions for technician running the software.
+- 
