@@ -1,34 +1,31 @@
 var currentLevel = 0;
 var levelList = [];
-var mode = 0; //mode 0: equally likely 3, 4, or 5 repetitions.
 
 function bang(){
 	currentLevel = 0;
 	outlet(0,currentLevel);
 	currentLevel++;
 	outlet(0,currentLevel);
-	modeZero();
+	var rep = shuffleAndGetFirstElement([2,3,4]);
 	while (currentLevel >= 1 && currentLevel < 17){
-		var choice = Math.random();
-		if (choice < 0.375){
-			currentLevel++;
+		if (currentLevel == 1){
+			rep = shuffleAndGetFirstElement([2,3]);
 		}
-		outlet(0,currentLevel);
+		for (var i = 0; i < rep; i++){
+			outlet(0,currentLevel);
+		}
+			currentLevel++; //increase level
+			rep = shuffleAndGetFirstElement([2,3,4]); // calculate new number of repetitions
+		
 	}
 }
 
-function modeZero(){
-	let reps = [3,4,5];
-	for (let i = reps.length - 1; i > 0; i--) { 
-    
-    // Generate random index 
-    const j = Math.floor(Math.random() * (i + 1));
-                  
-    // Swap elements at indices i and j
-    const temp = reps[i];
-    reps[i] = reps[j];
-    reps[j] = temp;
-}
-	var rep = reps[0];
-	post(rep);
+function shuffleAndGetFirstElement(arr) {
+    // Shuffle the array using the Fisher-Yates algorithm
+    for (var i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
+    }
+    // Return the first element of the shuffled array
+    return arr[0];
 }

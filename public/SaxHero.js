@@ -18,7 +18,7 @@ let shoeVolume = 0;//dBFS - decreases per level
 let shoeSize = 0.1; //the size of the shoe graphic
 
 let crossMark = window.innerHeight * 0.66; //the point at which the lines cross the playhead, where you tap each thumb. 2/3 of the way down the screen
-
+let downbeatMarkLocations; //where to draw the lines that display where the downbeat is
 let canvas; //reference the created canvas for using JS without p5
 
 let currentLevel = 0; //the current level we're on!
@@ -43,6 +43,7 @@ let numberOfLoops = 0; //the number of times we've been through a level.
 let sendAccuracyFlag = 0; //flip to 1 once a loop to send the accuracy to the server just once.
 
 let thumblines = []; //notes as hash marks
+let downbeats = [];//hashmarks for downbeats
 
 let hashWidth; //calculated width of each hashmark based on the screen
 let hashFraction = 0.33; //width of the hash as a percentage of the full screen.
@@ -59,7 +60,7 @@ let originalTransportStartTime; //if you join after it starts, you know when it 
 let myStartTime = performance.now();
 
 //Metronome for testing
-let metronomeEnabled = false; //change to false to turn it off. Just here for diagnostics.
+let metronomeEnabled = true; //change to false to turn it off. Just here for diagnostics.
 
 let gameStartedFlag = false; //only gets turned to "true" for latecomers.
 
@@ -100,14 +101,15 @@ function setup() {
     crossMark = height * 0.66;
 
     initializeButton();
+    addDownbeatHashes();
 
-    //set the static fields for the Thumbline classes
+    //set the static fields for the Thumbline and DownbeatHash classes
     Thumbline.pixelsPerSecond = height / secondsPerWindow;
     Thumbline.zeroPoint = crossMark;
     Thumbline.hashWidth = width * hashFraction;
-
+    DownbeatHash.pixelsPerSecond = height / secondsPerWindow;
+    DownbeatHash.zeroPoint = crossMark;
 }
-
 //LOOK: P5 Draw function.
 
 function draw() {
@@ -124,6 +126,10 @@ function draw() {
             thumbline.fade(15);
             thumbline.display();
         });
+        downbeats.forEach((downbeat, index) => {
+            downbeat.update(eightBarTimer.progress * 16);
+            downbeat.display();
+        });
     }
     if (initialized) {
         drawShoes();
@@ -131,7 +137,7 @@ function draw() {
     playerHUD();
 }
 
-//Notes functions
+//LOOK: //Notes functions
 
 function populateNotes(team) {//just run this once when the team is chosen.
     allNotes = score[team];
@@ -146,6 +152,12 @@ function addToThumblineBuffer(_level, offset) { //push a subset of thumblines to
 
     for (let i = 0; i < newNoteArray.length; i++) {
         thumblines.push(new Thumbline(newNoteArray[i].time, newNoteArray[i].duration, newNoteArray[i].midi, offset));
+    }
+}
+
+function addDownbeatHashes() { //add downbeat hashes that scroll along with the thumblines. Use the same set for every loop.
+    for (let i = 0; i < 15; i++) {
+        downbeats.push(new DownbeatHash(i * 2000));
     }
 }
 
@@ -217,7 +229,7 @@ socket.on('choosePlayer', function (msg) {
         buttonSetup();
         resetTransport();
     }
-    if (gameStartedFlag == true){
+    if (gameStartedFlag == true) {
 
     }
 });
@@ -236,11 +248,9 @@ socket.on('transportState', function (msg) {
     setTransportState(msg);
 });
 
-// socket.on('nextEightBarTime', function (msg) { //catch them up with the current position!
-//     let nextLoopStart = parseInt(msg[1]) + 16000;//8 bars from now!
-//     setTransportState([1, nextLoopStart]);
-//     setTransportPosition(nextLevel);
-// });
+socket.on('levelList', function (msg){
+    console.log(msg);
+});
 
 socket.on('introFlag', function (msg) {
     if (msg == 0) {
@@ -252,7 +262,7 @@ socket.on('introFlag', function (msg) {
     }
 });
 
-socket.on('gameStarted', function (){
+socket.on('gameStarted', function () {
     gameStartedFlag = true;
 });
 
@@ -353,13 +363,13 @@ function judgeTap(xPos, yPos) {
     let matchedIndex = checkPosition(xPos, yPos);
 
     if (matchedIndex !== -1) {
-        if (thumblines[matchedIndex].fadeFlag == false){ //you don't get to send multiple points for the same hash.
+        if (thumblines[matchedIndex].fadeFlag == false) { //you don't get to send multiple points for the same hash.
             thumblines[matchedIndex].fill = [255, 215, 0]; //make it gold if it was right
             thumblines[matchedIndex].fadeToggle();
             pointsLoop++; //add points to the loop.
             points++; //add to total points for the level.
             sendPoints(); //send updated point count to the server.
-        } 
+        }
 
     }
 
@@ -412,7 +422,8 @@ function crossMarkDraw() {
     strokeCap(SQUARE);
     setLineDash([5, 10]);
     line(0, crossMark, width, crossMark);
-    //line(width / 2, 0, width / 2, height);
+    //draw the downbeat locations
+
 }
 
 //draw the hashmarks as dotted lines like on a football field.
@@ -449,4 +460,3 @@ function countAllNoteEvents() { //count all of the note events per part in an ar
     }
     console.log(notesNumberList);
 }
-

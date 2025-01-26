@@ -101,6 +101,13 @@ let teamPoints = { //number of points earned per team (earned per level)
     "bari": 0
 }
 
+let teamFullLevels = {
+    "soprano": [],
+    "alto": [],
+    "tenor": [],
+    "bari": []
+}; //object to get team full levels from Max
+
 //current notification on the projector screen
 let notification;
 
@@ -287,6 +294,10 @@ oscServer.on('/transportState', function (msg) {
     // }
 });
 
+oscServer.on('/fullLevels', function (msg){
+    teamFullLevels = JSON.parse(msg[1]);
+});
+
 
 oscServer.on('/introFlag', function (msg) {
     introFlag = msg[1];
@@ -342,7 +353,7 @@ function onSaxPlayerConnect(socket) {
 function onAudienceConnect(socket) {
     client.to(socket.id).emit('connectionTime', Date.now());//send the current servertime
     //user must be initialized through pressing the button on their startup screen.
-    if (gameStarted == true){
+    if (gameStarted == true) {
         client.to(socket.id).emit('gameStarted'); //if game's already started, tough luck.
     }
     socket.on('initializeMe', function (msg) {
@@ -374,6 +385,7 @@ function onAudienceConnect(socket) {
         //}
 
         client.to(socket.id).emit('level', teamLevels[team]); //send the current level of that team to them
+        client.to(socket.id).emit('levelList', teamFullLevels[team]);
     });
 
     socket.on('accuracy', function (msg) {

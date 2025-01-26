@@ -11,6 +11,7 @@ projectorLaunchButton 1;
 0 4 instructions "Audience is choosing players.";
 projectorInstructions "Choose your team!";
 choosePlayer 1;
+generateFullLevels bang;
 ------------------------ 5;
 0 5 allAudienceLevels 0 1;
 gameStarted bang;
