@@ -201,6 +201,7 @@ function loadScore() {
     return loading.then(function () {
         updateScoreBuffer(0);
         scorePopulated = true;
+        console.log('score loaded');
     }).catch(function (error) {
         console.error("Error loading images: ", error);
     });
@@ -235,12 +236,13 @@ function centerTextDisplay(_centerText) {
     if (winner && advanceLevelOnNextLoop == true) {
         centertext = ('Winner: ' + winner);
     }
-
-    noStroke();
-    fill(0);
-    textSize(32);
-    textAlign(CENTER);
-    text(centertext, width / 2, height / 2);
+    if (centertext) {
+        noStroke();
+        fill(0);
+        textSize(32);
+        textAlign(CENTER);
+        text(centertext, width / 2, height / 2);
+    }
 }
 
 function playerChooserDisplay() {
@@ -314,10 +316,10 @@ function levelDisplay(_progressColor) {
 
 const eightBarTimer = new Tone.Loop((time) => { //runs at the beginning of every 8 bar loop.
 
-    // if (currentLevel == 0 && nextLevel == 1) {
-    //     advanceLevelOnNextLoop = false;
-    //     victoryLap = false;
-    // }
+    if (currentLevel == 0 && nextLevel == 1) {
+        advanceLevelOnNextLoop = false;
+        victoryLap = false;
+    }
 
     if (introFlag == false) {
         if (victoryLap == false) {

@@ -121,14 +121,15 @@ let sketch = (p) => {
             p.textAlign(p.LEFT, p.TOP);
             let teamString = 'team ' + this.name;
             p.text(teamString, 0, this.locy);
-            if (teamPoints) {
-                p.fill(255);
-                p.noStroke();
-                p.textFont(fontSet2);
-                p.textSize(TeamMeter.titleSize);
-                p.textAlign(p.RIGHT, p.TOP);
-                p.text(teamPoints[this.name] + ' points', p.width-20, this.locy);
-            }
+            //uncomment to display points on the projector
+            // if (teamPoints) {
+            //     p.fill(255);
+            //     p.noStroke();
+            //     p.textFont(fontSet2);
+            //     p.textSize(TeamMeter.titleSize);
+            //     p.textAlign(p.RIGHT, p.TOP);
+            //     p.text(teamPoints[this.name] + ' points', p.width-20, this.locy);
+            // }
         }
 
         numPlayers(fontSet) {
